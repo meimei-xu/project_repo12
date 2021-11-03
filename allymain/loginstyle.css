@@ -15,11 +15,11 @@ body {
 .form {
   position: relative;
   z-index: l;
-  background: #ffff;
+  background: rgba(255, 255, 255, 0.5);
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
-  text-align: cnerter;
+  text-align: center;
 }
 
 .form input {
@@ -45,4 +45,14 @@ body {
   color: #f2f2f2;
   font-size: 14px;
   cursor: pointer;
+}
+
+.message {
+  font-family: "Roboto", sans-serif;
+  font-size: 13;
+  cursor: pointer;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
 }
