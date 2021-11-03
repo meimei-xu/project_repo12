@@ -55,4 +55,20 @@ body {
 
 .title {
   font-family: "Roboto", sans-serif;
+  color: rgb(40, 78, 121);
+}
+
+.signup-block {
+  width: 360px;
+  padding: 0px;
+  margin: auto;
+}
+.signup-form {
+  position: relative;
+  z-index: l;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 20px;
+  text-align: center;
 }
