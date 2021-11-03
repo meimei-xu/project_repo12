@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD:noivamain/sidebar_template.html
 <html>
   <title>W3.CSS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,36 +17,37 @@
       <a href="#" class="w3-bar-item w3-button">Link 2</a>
       <a href="#" class="w3-bar-item w3-button">Link 3</a>
     </div>
-=======
-<html lang="en">
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
->>>>>>> e513d4835106cc5a9e2d315f65dbee0261a31bf0:noivamain/homepage_template.html
+    <html lang="en">
+      <title>W3.CSS</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+      <body>
+        <!-- Page Content -->
+        <div class="w3-teal">
+          <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">
+            ☰
+          </button>
+          <div class="w3-container">
+            <h1>My Page</h1>
+          </div>
+        </div>
 
-    <!-- Page Content -->
-    <div class="w3-teal">
-      <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-      <div class="w3-container">
-        <h1>My Page</h1>
-      </div>
-    </div>
+        <div class="w3-container">
+          <p>This sidebar is hidden by default, (style="display:none")</p>
+          <p>You must click on the "hamburger" icon (top left) to open it.</p>
+          <p>The sidebar will hide a part of the page content.</p>
+        </div>
 
-    <div class="w3-container">
-      <p>This sidebar is hidden by default, (style="display:none")</p>
-      <p>You must click on the "hamburger" icon (top left) to open it.</p>
-      <p>The sidebar will hide a part of the page content.</p>
-    </div>
+        <script>
+          function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+          }
 
-    <script>
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-      }
-
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-    </script>
+          function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+          }
+        </script>
+      </body>
+    </html>
   </body>
 </html>
