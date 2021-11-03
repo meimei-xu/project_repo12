@@ -9,5 +9,29 @@
 </head>
 <body>
     
+<!-- Sidebar -->
+<div class= "sidebar" id= "mySidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
+</a>
+    <a href="#">User Profile</a>
+    <a href="#">Long-term Goals</a>
+    <a href="#">Daily Tasks</a>
+    <a href="#">Timer</a>
+    <a href="#">Music</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<!-- JS to open and close sidebar with overlay effect -->
+<script>
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+    
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+
 </body>
 </html>
