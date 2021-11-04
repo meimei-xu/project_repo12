@@ -1,42 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600;700&family=Open+Sans:wght@500&display=swap');
+
 body {
     background-image: url(/images/homebackground.png);
     height: 100vh;
     background-size: cover;
     background-position: center;
-    font-family: "Roboto", sans-serif;
 }
 
+/* The side navigation menu */
+.menubtn {
+  position: absolute; 
+  top: 30px; 
+  right: 30px; 
+  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 65px; 
+  color:rgb(19, 109, 94); 
+  cursor:pointer;
+}
+
+/* The side navigation menu */
 .sidebar {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255, 0.8);
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.6);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
   }
 
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #0c533c;
-    display: block;
-    transition: 0.3s;
-  }
+/* The sidebar user profile link */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #0c533c;
+  display: block;
+  transition: 0.1s;
+  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 35px;
+}
 
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+/* The sidebar function links */
+.sidebar b {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #0c533c;
+  display: block;
+  transition: 0.1s;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-family: 'Dosis', sans-serif; font-weight: 600; font-size: 150px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
