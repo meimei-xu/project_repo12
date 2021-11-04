@@ -71,9 +71,9 @@ body {
   top: 0;
   right: 25px;
   font-family: 'Dosis', sans-serif; font-weight: 500; font-size: 125px;
+  text-decoration: none;
   color:#0b544e;
   margin-left: 50px;
-  cursor:pointer;
 }
 
 /* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */
