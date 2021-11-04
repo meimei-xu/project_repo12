@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Open+Sans&display=swap");
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/images/loginbackground.png);
   height: 100vh;
   background-size: cover;
@@ -70,8 +70,6 @@ body {
 
 .title {
   font-family: "Dosis", sans-serif;
-  font-size: 300;
-  font-weight: 600;
   color: rgb(40, 78, 121);
 }
 
@@ -97,7 +95,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   float: right;
-  bottom: 4px;
+  bottom: 4.5px;
   right: 60px;
   color: rgb(40, 78, 121);
 }
