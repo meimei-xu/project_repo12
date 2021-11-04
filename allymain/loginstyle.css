@@ -8,11 +8,12 @@ body {
 
 .login-page {
   width: 360px;
-  padding: 10% 0 0;
+  padding: 5% 0 0;
   margin: auto;
 }
 
 .form {
+  border-radius: 15px;
   position: relative;
   z-index: l;
   background: rgba(255, 255, 255, 0.5);
@@ -23,6 +24,7 @@ body {
 }
 
 .form input {
+  border-radius: 40px;
   font-family: "Roboto", sans-serif;
   outline: 1;
   background: #f2f2f2;
@@ -35,11 +37,14 @@ body {
 }
 
 .form button {
+  margin: auto;
+  position: relative;
+  border-radius: 40px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: rgb(40, 78, 121);
-  width: 100%;
+  width: 70%;
   border: 0;
   padding: 15px;
   color: #f2f2f2;
@@ -48,9 +53,12 @@ body {
 }
 
 .message {
+  position: relative;
+  top: 20px;
   font-family: "Roboto", sans-serif;
   font-size: 13;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .title {
@@ -64,11 +72,25 @@ body {
   margin: auto;
 }
 .signup-form {
+  border-radius: 15px;
   position: relative;
   z-index: l;
   background: rgba(255, 255, 255, 0.5);
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 20px;
-  text-align: center;
+  padding: 40px;
+}
+
+.signup {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  float: right;
+}
+
+.note {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  float: left;
 }
