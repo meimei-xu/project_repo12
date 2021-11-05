@@ -56,3 +56,38 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+/*title*/
+.form h1 {
+  color: rgb(40, 78, 121);
+  font-family: "Dosis", sans-serif;
+}
+/*paragraph*/
+.form p {
+  color: rgb(40, 78, 121);
+  font-family: "Dosis", sans-serif;
+}
+/*know your password white background*/
+.knowpass-element {
+  border-radius: 15px;
+  position: relative;
+  z-index: l;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+/*paragraph*/
+.knowpass-element p {
+  color: rgb(40, 78, 121);
+  font-family: "Open-sans", sans-serif;
+  float: left;
+}
+/*link*/
+.knowpass-element a {
+  color: rgb(40, 78, 121);
+  font-family: "Open-sans", sans-serif;
+  float: right;
+  font-weight: bold;
+  text-decoration: none;
+}
