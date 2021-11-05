@@ -79,11 +79,23 @@ body, html {
 
 .accordion-item-header {
     padding: 30px;
+    min-height: 20px; /* edit this later on */
     line-height: 10px;
     font-family: 'Open Sans', sans-serif; font-size: 30px;
     text-align: center;
     position: relative;
     cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
 }
 
 /* Position and style the close button (top right corner) */
