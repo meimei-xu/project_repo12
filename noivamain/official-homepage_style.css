@@ -1,26 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
 
-body {
-    background-image: url(/images/homebackground.png);
-    height: 160vh;
-    background-size: cover;
-    background-position: center;
+body, html {
+    height: 100%;
+    margin: 0;
 }
 
-/* The side navigation menu */
+/*The background image */
+.bg {
+    /* The image used */
+    background-image: url(/images/homebackground.png);
+  
+    /* Full height */
+    height: 160vh;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The sidebar button */
 .menubtn {
-  border-radius: 100px;  
-  background-color: #0b544e; 
-  position: absolute; 
-  top: 30px; 
-  right: 30px; 
-  padding: 5px 20px 10px 20px;  
-  display: inline-block;
-  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 65px; 
-  text-align: center;
-  text-decoration: none;
-  color:rgb(253, 253, 253); 
-  cursor:pointer;
+    border-radius: 100px;  
+    background-color: #0b544e; 
+    position: absolute; 
+    top: 30px; 
+    right: 30px; 
+    padding: 5px 20px 10px 20px;  
+    display: inline-block;
+    font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 65px; 
+    text-align: center;
+    text-decoration: none;
+    color:rgb(253, 253, 253); 
+    cursor:pointer;
 }
 
 /* The side navigation menu */
@@ -33,11 +45,10 @@ body {
     right: 0;
     background-color: rgb(255, 255, 255, 0.6);
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     transition: 0.5s;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
+    padding-top: 60px;
+}
 
 /* The sidebar user profile link */
 .sidebar a.one {
@@ -49,8 +60,8 @@ body {
   font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 40px;
 }
 
-/* The sidebar function accordion */
-.accordion {
+/* The sidebar function links */
+.sidebar a.two {
   border-radius: 10px; 
   padding: 20px; 
   text-decoration: none;
@@ -60,32 +71,7 @@ body {
   font-family: 'Open Sans', sans-serif; font-size: 30px;
   background-color: #0b544e;
   text-align: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  width: 80%;
-  transition: 0.4s;
-  margin-top: 35px;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-/* Hovering change in colour */
-.active, .accordion:hover {
-  background-color: rgb(43, 102, 211);
-}
-
-/* The sidebar function panel */
-.panel {
-  padding: 0px 18px;
-  background-color: rgb(43, 102, 211);
-  color:rgb(253, 253, 253);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  font-family: 'Dosis', sans-serif; font-weight: 400; font-size: 15px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 5% 10%;
 }
 
 /* Position and style the close button (top right corner) */
@@ -97,6 +83,15 @@ body {
   text-decoration: none;
   color:#0b544e;
   margin-left: 50px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0b544e;
+  font-family: 'Open Sans', sans-serif; font-size: 20px;
+  color:rgb(253, 253, 253);
+  padding: 8px;
+  text-align: center;
 }
 
 /* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */
