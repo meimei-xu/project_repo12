@@ -1,53 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap");
 
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
 /*The background image */
 .bg {
-    /* The image used */
-    background-image: url(/images/homebackground.png);
-  
-    /* Full height */
-    height: 160vh;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* The image used */
+  background-image: url(/images/homebackground.png);
+
+  /* Full height */
+  height: 160vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* The sidebar button */
 .menubtn {
-    border-radius: 100px;  
-    background-color: #0b544e; 
-    position: absolute; 
-    top: 30px; 
-    right: 30px; 
-    padding: 5px 20px 10px 20px;  
-    display: inline-block;
-    font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 65px; 
-    text-align: center;
-    text-decoration: none;
-    color:rgb(253, 253, 253); 
-    cursor:pointer;
+  border-radius: 100px;
+  background-color: #0b544e;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 5px 20px 10px 20px;
+  display: inline-block;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 65px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(253, 253, 253);
+  cursor: pointer;
 }
 
 /* The side navigation menu */
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: rgb(255, 255, 255, 0.6);
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255, 0.6);
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 /* The sidebar user profile link */
@@ -57,45 +60,63 @@ body, html {
   color: #0b544e;
   display: block;
   transition: 0.3s;
-  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 40px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+.sidebar a.one:hover {
+  color: #46a59d;
 }
 
 /* The sidebar function links */
 .sidebar a.two {
-  border-radius: 10px; 
-  padding: 20px; 
+  border-radius: 10px;
+  padding: 20px;
   text-decoration: none;
   color: #ffffff;
   display: block;
   transition: 0.3s;
-  font-family: 'Open Sans', sans-serif; font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
   background-color: #0b544e;
   text-align: center;
   margin: 5% 10%;
 }
-
+.sidebar a.two:hover {
+  background-color: #46a59d;
+}
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
-  font-family: 'Dosis', sans-serif; font-weight: 500; font-size: 125px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  font-size: 125px;
   text-decoration: none;
-  color:#0b544e;
+  color: #0b544e;
   margin-left: 50px;
+}
+.sidebar .closebtn:hover {
+  color: #46a59d;
 }
 
 /* Footer */
 .footer {
   background-color: #0b544e;
-  font-family: 'Open Sans', sans-serif; font-size: 20px;
-  color:rgb(253, 253, 253);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: rgb(253, 253, 253);
   padding: 8px;
   text-align: center;
 }
 
 /* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
 }
