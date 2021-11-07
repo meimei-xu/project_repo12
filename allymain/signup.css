@@ -56,6 +56,9 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+.form button:hover {
+  background-color: rgb(100, 145, 197);
+}
 /*title*/
 .form h1 {
   color: rgb(40, 78, 121);
@@ -87,4 +90,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   margin-right: -140px;
+}
+.Login-block a:hover {
+  color: rgb(100, 145, 197);
 }

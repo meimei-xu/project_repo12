@@ -55,6 +55,9 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+.form button:hover {
+  background-color: rgb(100, 145, 197);
+}
 
 .message {
   position: relative;
@@ -66,6 +69,9 @@ body {
   cursor: pointer;
   white-space: nowrap;
   color: rgb(40, 78, 121);
+}
+.message:hover {
+  color: rgb(100, 145, 197);
 }
 
 .title {
@@ -98,6 +104,9 @@ body {
   bottom: 4.5px;
   right: 60px;
   color: rgb(40, 78, 121);
+}
+.signup:hover {
+  color: rgb(100, 145, 197);
 }
 
 .note {
