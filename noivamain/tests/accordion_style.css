@@ -75,13 +75,13 @@ body, html {
 .accordion-item {
     background-color: #0b544e;
     color:rgb(253, 253, 253);
-    margin: 20px 0;
+    margin: 35px 0;
     border-radius: 10px;
 }
 
 /*The sidebar accordion item header */
 .accordion-item-header {
-    padding: 30px;
+    padding: 35px;
     min-height: 20px; /* edit this later on */
     line-height: 10px;
     font-family: 'Open Sans', sans-serif; font-size: 30px;
@@ -99,6 +99,16 @@ body, html {
 
 .accordion-item-header.active::after {
   content: "\2212";
+}
+
+.accordion-item-body {
+  display: none;
+  padding: 20px;
+  line-height: 5px;
+}
+
+.accordion-item-header.active + .accordion-item-body {
+  display: block;
 }
 
 /* Position and style the close button (top right corner) */
