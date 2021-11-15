@@ -1,3 +1,4 @@
+/*Adding fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
 
 body, html {
@@ -33,25 +34,26 @@ body, html {
     text-decoration: none;
     color:rgb(253, 253, 253); 
     cursor:pointer;
+    border: none;
 }
 
 /* The side navigation menu */
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top of other elements */
+    top: 0; /* Stay at the top */
+    right: 0; /* Place on right side of page */
     background-color: rgb(255, 255, 255, 0.6);
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: 0.5s;
-    padding-top: 60px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: scroll; /* Always shows vertical scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 40px; /* Place content 40px from the top */
 }
 
 /* The sidebar user profile link */
-.sidebar a.one {
+.sidebar a.user-profile {
   padding: 25px 5px 10px 45%;
   text-decoration: none;
   color: #0b544e;
@@ -77,6 +79,7 @@ body, html {
     border-radius: 10px;
 }
 
+/*The sidebar accordion item header */
 .accordion-item-header {
     padding: 30px;
     min-height: 20px; /* edit this later on */
