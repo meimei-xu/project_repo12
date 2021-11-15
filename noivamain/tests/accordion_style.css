@@ -1,4 +1,4 @@
-/*Adding fonts from Google Fonts */
+/* Adding fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
 
 body, html {
@@ -6,7 +6,7 @@ body, html {
     margin: 0;
 }
 
-/*The background image */
+/* The background image */
 .bg {
     /* The image used */
     background-image: url(/images/homebackground.png);
@@ -71,16 +71,16 @@ body, html {
   margin-right: 10%;
 }
 
-/*The sidebar accordion individual items */
+/* The accordion individual items */
 .accordion-item {
     background-color: #0b544e;
-    color:rgb(253, 253, 253);
     margin: 35px 0;
     border-radius: 10px;
 }
 
-/*The sidebar accordion item header */
+/* The accordion item header */
 .accordion-item-header {
+    color:rgb(253, 253, 253);
     padding: 35px;
     min-height: 20px; /* edit this later on */
     line-height: 10px;
@@ -88,8 +88,14 @@ body, html {
     text-align: center;
     position: relative;
     cursor: pointer;
+    transition: 0.2s;
 }
 
+.accordion-item-header:hover {
+  color:rgb(133, 167, 146);
+}
+
+/* Symbol on accordion item header when not active */
 .accordion-item-header::after {
   content: "\002B";
   font-size: 30px;
@@ -97,18 +103,23 @@ body, html {
   right: 40px;
 }
 
+/* Symbol on accordion item header when active */
 .accordion-item-header.active::after {
   content: "\2212";
 }
 
+/* Container of accordion item body */
 .accordion-item-body {
-  display: none;
-  padding: 20px;
-  line-height: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
-.accordion-item-header.active + .accordion-item-body {
-  display: block;
+/* Content of accordion item body */
+.accordion-item-body-content {
+  color:rgb(253, 253, 253);
+  padding: 20px;
+  line-height: 5px;
 }
 
 /* Position and style the close button (top right corner) */
@@ -120,6 +131,12 @@ body, html {
   text-decoration: none;
   color:#0b544e;
   margin-left: 50px;
+  transition: 0.3s;
+}
+
+/* Hover effect on close button */
+.sidebar .closebtn:hover {
+  color: #259976;
 }
 
 /* Footer */
