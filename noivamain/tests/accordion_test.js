@@ -4,10 +4,17 @@
 function openNav() {
     document.getElementById("mySidebar").style.width = "60%";
 }
-
+  
 // Closes/hides sidebar by setting its width to 0 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }
 
+// Changing sign on accordion item header
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+        accordionItemHeader.classList.toggle("active");
+    });
+});

@@ -1,11 +1,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
 
-body {
-    background-image: url(/images/homebackground.png);
-    height: 160vh;
-    background-size: cover;
-    background-position: center;
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/*The background image */
+.bg {
+  /* The image used */
+  background-image: url(/images/homebackground.png);
+
+  /* Full height */
+  height: 160vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* The side navigation menu button*/
@@ -98,6 +110,15 @@ body {
   text-decoration: none;
   color:#0b544e;
   margin-left: 50px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0b544e;
+  font-family: 'Open Sans', sans-serif; font-size: 20px;
+  color:rgb(253, 253, 253);
+  padding: 8px;
+  text-align: center;
 }
 
 /* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */

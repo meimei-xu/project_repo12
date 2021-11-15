@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
     <link rel="stylesheet" href="/noivamain/tests/og_homepage_style.css" />
+    <script src="/noivamain/tests/og_homepage.js" defer></script>
 </head>
 <body>
+
+<!-- Background -->
+<div class="bg"></div>
 
 <!-- Sidebar -->
 <div class= "sidebar" id= "mySidebar">
@@ -42,40 +46,10 @@
 <!-- Menu hamburger icon -->
 <div class= "menubtn"onclick="openNav()">&#9776;</div>
 
-<!-- JS to open and close sidebar -->
-<script>
-
-/* Open sidebar */
-function openNav() {
-    document.getElementById("mySidebar").style.width = "60%";
-}
-
-/* Close/hide sidebar */
-function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-}
-
-/* Accordion Function */
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-
-</script>
+<!-- Footer -->
+<div class="footer">
+  <p>&copy; growyourforest.com | Designed by Ally Guo & Noiva Chiu</p>
+</div>
 
 </body>
 </html>
