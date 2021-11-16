@@ -4,7 +4,6 @@
 function openNav() {
   document.getElementById("mySidebar").style.width = "60%";
   document.getElementById("hamburger").hidden = true;
-  console.log(document.getElementById("hamburger").style.display);
   document.getElementById("hamburger").style.display = "none";
 }
 
