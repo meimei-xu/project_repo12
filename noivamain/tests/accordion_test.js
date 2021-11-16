@@ -19,10 +19,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
         // Opening and closing the accordion
         const accordionItemBody = accordionItemHeader.nextElementSibling;
-        if(accordionItemHeader.classList.contains("active")) {
+
+        if (accordionItemHeader.classList.contains("active")) {
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        }
-        else {
+        } else {
             accordionItemBody.style.maxHeight = "0";
         }
     });
