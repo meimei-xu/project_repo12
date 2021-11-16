@@ -20,20 +20,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
         // Opening and closing the accordion
         const accordionItemBody = accordionItemHeader.nextElementSibling;
 
-        // testing
-        const musicItemBody = accordionItemHeader.nextElementSibling;
-
-        if(accordionItemHeader.classList.contains("active")) {
+        if (accordionItemHeader.classList.contains("active")) {
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-
-            // testing
-            musicItemBody.style.maxHeight = musicItemBody.scrollHeight + "px";
-        }
-        else {
+        } else {
             accordionItemBody.style.maxHeight = "0";
-
-            // testing
-            musicItemBody.style.maxHeight = "0";
         }
     });
 });

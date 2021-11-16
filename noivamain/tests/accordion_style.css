@@ -86,16 +86,16 @@ body, html {
 .accordion-item {
   background-color: #0b544e;
   margin: 35px 0;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /* The accordion item header */
 .accordion-item-header {
   color:rgb(253, 253, 253);
-  padding: 35px;
+  padding: 40px;
   min-height: 20px; /* edit this later on */
   line-height: 10px;
-  font-family: 'Open Sans', sans-serif; font-size: 30px;
+  font-family: 'Open Sans', sans-serif; font-size: 35px;
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -123,7 +123,7 @@ body, html {
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 
 /* Content of accordion item body */
@@ -133,22 +133,50 @@ body, html {
   line-height: 5px;
 }
 
-.music-item {
+/* Music function box */
+.music-box {
   background-color: rgb(253, 253, 253, 0.8);
-  margin: 20px 0;
+  margin: 0px 35px 35px; 
   border-radius: 10px;
 }
 
-.music-item-body {
-  max-height:0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+/* Music function box header */
+.music-box-header {
+  color: #0b544e;
+  text-align: center;
+  position: relative;
+  padding: 40px;
+  font-family: 'Dosis', sans-serif; font-weight: 600; font-size: 35px;
 }
 
-.music-item-body-content {
-  color: black;
-  padding: 15px;
+.music-box-cont {
+  color:#0b544e;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.music-box-btn {
+  border-radius: 50%;  
+  background-color: #0b544e; 
+  border: none;
+  padding: 44px 45px;
+  text-align: center;
+  color:rgb(253, 253, 253); 
+  cursor:pointer;
+}
+
+/*.menu-box-btn::after {
+  content: "\002B";
+  font-size: 20px;
+}
+*/
+/*
+.menu-box-btn.active::after {
+  content: "\2212";
+}
+*/
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
