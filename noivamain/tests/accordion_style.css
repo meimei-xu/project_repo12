@@ -157,26 +157,10 @@ body, html {
   justify-content: center;
 }
 
-.music-box-btn {
-  border-radius: 50%;  
-  background-color: #0b544e; 
-  border: none;
-  padding: 44px 45px;
-  text-align: center;
-  color:rgb(253, 253, 253); 
-  cursor:pointer;
+#musicIcon {
+  width: 110px;
+  cursor: pointer;
 }
-
-/*.menu-box-btn::after {
-  content: "\002B";
-  font-size: 20px;
-}
-*/
-/*
-.menu-box-btn.active::after {
-  content: "\2212";
-}
-*/
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {

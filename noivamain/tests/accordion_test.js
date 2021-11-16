@@ -27,3 +27,20 @@ accordionItemHeaders.forEach(accordionItemHeader => {
         }
     });
 });
+
+// Playing music and changing the icon
+var songOne = document.getElementById("songOne");
+var songTwo = document.getElementById("songTwo");
+
+var musicIcon = document.getElementById("musicIcon");
+
+musicIcon.onclick = function() {
+    if (songOne.paused) {
+        songOne.play();
+        musicIcon.src = '/images/pausebutton.png';
+    } else {
+        songOne.pause();
+        musicIcon.src = '/images/playbutton.png';
+    }
+}
+
