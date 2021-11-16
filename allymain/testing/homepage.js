@@ -1,30 +1,32 @@
 // Opening & closing sidebar functions
 
-// Open sidebar
+// Opens sidebar by setting its wideth to 60% of the screen
 function openNav() {
   document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("hamburger").hidden = true;
   document.getElementById("hamburger").style.display = "none";
 }
 
-// Close/hide sidebar
+// Closes/hides sidebar by setting its width to 0
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("hamburger").style.display = "block";
 }
 
-//accordion function
-var acc = document.getElementsByClassName("accordion");
-var i;
+// Changing sign on accordion item header
+const accordionItemHeaders = document.querySelectorAll(
+  ".accordion-item-header"
+);
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+accordionItemHeaders.forEach((accordionItemHeader) => {
+  accordionItemHeader.addEventListener("click", (event) => {
+    accordionItemHeader.classList.toggle("active");
+
+    // Opening and closing the accordion
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if (accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     } else {
-      panel.style.display = "block";
+      accordionItemBody.style.maxHeight = "0";
     }
   });
-}
+});
