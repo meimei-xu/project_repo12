@@ -3,7 +3,6 @@
 // Opens sidebar by setting its wideth to 60% of the screen
 function openNav() {
   document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("hamburger").hidden = true;
   document.getElementById("hamburger").style.display = "none";
 }
 
