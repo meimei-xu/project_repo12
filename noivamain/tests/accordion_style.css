@@ -20,6 +20,15 @@ body, html {
     background-size: cover;
 }
 
+/* The logo placement */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 110px;
+  height: 110px;
+}
+
 /* The sidebar button */
 .menubtn {
     border-radius: 100px;  
@@ -44,7 +53,7 @@ body, html {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top of other elements */
     top: 0; /* Stay at the top */
-    right: 0; /* Place on right side of page */
+    right: 0; /* P z-index: 1;lace on right side of page */
     background-color: rgb(255, 255, 255, 0.6);
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: scroll; /* Always shows vertical scroll */
@@ -88,7 +97,7 @@ body, html {
     text-align: center;
     position: relative;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .accordion-item-header:hover {
@@ -133,6 +142,7 @@ body, html {
   margin-left: 50px;
   transition: 0.3s;
 }
+
 
 /* Hover effect on close button */
 .sidebar .closebtn:hover {
