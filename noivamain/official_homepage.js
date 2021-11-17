@@ -12,7 +12,7 @@ function closeNav() {
   document.getElementById("hamburger").style.display = "block";
 }
 
-// Changing sign on accordion item header
+// Switches the accordion header to "active" and back
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 accordionItemHeaders.forEach((accordionItemHeader) => {
@@ -21,6 +21,7 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
     // Opening and closing the accordion
     const accordionItemBody = accordionItemHeader.nextElementSibling;
+    
     if (accordionItemHeader.classList.contains("active")) {
       accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     } else {
