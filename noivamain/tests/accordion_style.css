@@ -123,7 +123,7 @@ body, html {
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 /* Content of accordion item body */
@@ -158,35 +158,40 @@ body, html {
   justify-content: center;
 }
 
-#musicIconOne:hover {
-  opacity: 0.8;
-}
-
 /* Music function individual icons */
 
 #musicIconOne {
-  width: 110px;
+  width: 100px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 #musicIconTwo {
-  width: 110px;
+  width: 100px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 #musicIconThree {
-  width: 110px;
+  width: 100px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 #musicIconFour {
-  width: 110px;
+  width: 100px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+/* Hover effect over music buttons */
+#musicIconOne:hover {opacity: 0.8;}
+#musicIconTwo:hover {opacity: 0.8;}
+#musicIconThree:hover {opacity: 0.8;}
+#musicIconFour:hover {opacity: 0.8;}
+
 .music-control-cont {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 25px;
   display: flex;
   align-items: center;

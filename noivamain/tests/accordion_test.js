@@ -10,21 +10,24 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }
 
-// Changing sign on accordion item header
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+$(document).ready(function(){
 
-accordionItemHeaders.forEach(accordionItemHeader => {
-    accordionItemHeader.addEventListener("click", event => {
-        accordionItemHeader.classList.toggle("active");
+    // Changing sign on accordion item header
+    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
-        // Opening and closing the accordion
-        const accordionItemBody = accordionItemHeader.nextElementSibling;
+    accordionItemHeaders.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", event => {
+            accordionItemHeader.classList.toggle("active");
 
-        if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        } else {
-            accordionItemBody.style.maxHeight = "0";
-        }
+            // Opening and closing the accordion
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+
+            if (accordionItemHeader.classList.contains("active")) {
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            } else {
+                accordionItemBody.style.maxHeight = "0";
+            }
+        });
     });
 });
 
