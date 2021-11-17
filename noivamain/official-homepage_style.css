@@ -48,17 +48,19 @@ body, html {
 
 /* The side navigation menu */
 .sidebar {
-    height: 100%; /* 100% Full-height */
+    max-height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top of other elements */
     top: 0; /* Stay at the top */
+    bottom: 0;
     right: 0; /* P z-index: 1;lace on right side of page */
     background-color: rgb(255, 255, 255, 0.6);
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: scroll; /* Always shows vertical scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     padding-top: 40px; /* Place content 40px from the top */
+    padding-bottom: 20px;
 }
 
 /* The sidebar user profile link */
@@ -82,22 +84,22 @@ body, html {
 
 /* The accordion individual items */
 .accordion-item {
-    background-color: #0b544e;
-    margin: 35px 0;
-    border-radius: 10px;
+  background-color: #0b544e;
+  margin: 35px 0;
+  border-radius: 15px;
 }
 
 /* The accordion item header */
 .accordion-item-header {
-    color:rgb(253, 253, 253);
-    padding: 35px;
-    min-height: 20px; /* edit this later on */
-    line-height: 10px;
-    font-family: 'Open Sans', sans-serif; font-size: 30px;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s;
+  color:rgb(253, 253, 253);
+  padding: 40px;
+  min-height: 20px; /* edit this later on */
+  line-height: 10px;
+  font-family: 'Open Sans', sans-serif; font-size: 35px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .accordion-item-header:hover {
@@ -121,7 +123,7 @@ body, html {
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
 }
 
 /* Content of accordion item body */
@@ -129,6 +131,70 @@ body, html {
   color:rgb(253, 253, 253);
   padding: 20px;
   line-height: 5px;
+}
+
+/* Music function box */
+.music-box {
+  background-color: rgb(253, 253, 253, 0.8);
+  margin: 0px 35px 35px; 
+  border-radius: 10px;
+}
+
+/* Music function box header */
+.music-box-header {
+  color: #0b544e;
+  text-align: center;
+  position: relative;
+  padding: 40px;
+  font-family: 'Dosis', sans-serif; font-weight: 600; font-size: 35px;
+}
+
+/* Music function box container */
+.music-box-cont {
+  color:#0b544e;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Music function individual icons */
+#musicIconOne {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#musicIconTwo {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#musicIconThree {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#musicIconFour {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect over music buttons */
+#musicIconOne:hover {opacity: 0.8;}
+#musicIconTwo:hover {opacity: 0.8;}
+#musicIconThree:hover {opacity: 0.8;}
+#musicIconFour:hover {opacity: 0.8;}
+
+.music-control-cont {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Position and style the close button (top right corner) */
