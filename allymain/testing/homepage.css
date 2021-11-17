@@ -76,26 +76,57 @@ html {
   font-size: 40px;
 }
 
-/* User Profile pop up */
-.bg-modal {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+/* User Profile pop up ----------------------------------*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content {
-  width: 600px;
-  height: 600px;
-  background-color: white;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  z-index: 2;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
 }
 
+/* Modal Content */
+.modal-content {
+  background-color: #9bc4b8;
+  margin: auto;
+  padding: 20px;
+  width: 51%;
+  height: 80%;
+  margin-left: 566.5px;
+  margin-top: -66px;
+}
+.modal-btn {
+  background-color: transparent;
+  color: #0b544e;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  padding-right: 50px;
+  padding-left: 65px;
+  padding-top: 15px;
+  outline: none;
+  border: none;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 100px;
+  font-family: "Dosis", sans-serif;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ----------------------------- */
 /* The sidebar accordion */
 .accordion {
   width: 80%;
