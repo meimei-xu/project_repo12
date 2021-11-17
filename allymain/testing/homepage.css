@@ -99,6 +99,7 @@ html {
   height: 80%;
   margin-left: 566.5px;
   margin-top: -66px;
+  border-radius: 10px;
 }
 .modal-btn {
   background-color: transparent;
@@ -114,10 +115,13 @@ html {
 }
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  background-color: transparent;
+  color: #0b544e;
+  border: none;
   float: right;
   font-size: 100px;
   font-family: "Dosis", sans-serif;
+  margin-top: -55px;
 }
 
 .close:hover,
@@ -200,6 +204,7 @@ html {
   color: #0b544e;
   margin-left: 50px;
   transition: 0.3s;
+  margin-top: -28px;
 }
 
 /* Hover effect on close button */
