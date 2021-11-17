@@ -100,6 +100,24 @@ html {
   margin-left: 566.5px;
   margin-top: -66px;
   border-radius: 10px;
+  text-align: center;
+}
+.modal-content img {
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* To change username */
+.username {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-top: 10px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #0b544e;
 }
 .modal-btn {
   background-color: transparent;
@@ -109,7 +127,7 @@ html {
   font-size: 50px;
   padding-right: 50px;
   padding-left: 65px;
-  padding-top: 15px;
+  padding-bottom: 15px;
   outline: none;
   border: none;
 }
@@ -121,12 +139,12 @@ html {
   float: right;
   font-size: 100px;
   font-family: "Dosis", sans-serif;
-  margin-top: -55px;
+  margin-top: -450px;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: rgb(133, 167, 146);
   text-decoration: none;
   cursor: pointer;
 }
@@ -204,7 +222,7 @@ html {
   color: #0b544e;
   margin-left: 50px;
   transition: 0.3s;
-  margin-top: -28px;
+  margin-top: -20px;
 }
 
 /* Hover effect on close button */
