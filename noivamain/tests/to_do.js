@@ -12,7 +12,7 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 const CHANGE = "editable";
 
-var status = "all", timer = null, delay = 260, click = 0;//double click
+var status = "all", timer = null, delay = 260, click = 0; //double click
 
 clear.addEventListener("click", function () {
     localStorage.clear();
