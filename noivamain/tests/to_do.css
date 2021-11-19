@@ -64,6 +64,7 @@ body{
 }
 .display i.All:hover{
   cursor: pointer;
+  color: rgb(236, 245, 114);
 }
 
 .display i.fulfill{
@@ -75,6 +76,7 @@ body{
 }
 .display i.fulfill:hover{
   cursor: pointer;
+  color: rgb(236, 245, 114);
 }
 
 .display i.unfinished{
@@ -86,7 +88,9 @@ body{
 }
 .display i.unfinished:hover{
   cursor: pointer;
+  color: rgb(236, 245, 114);
 }
+
 /*  -----content-----  */
 .content{
   width: 380px;

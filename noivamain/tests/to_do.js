@@ -18,6 +18,7 @@ clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
 });
+
 /* show time */
 const options = { weekday: 'long', month: 'short', day: 'numeric' };
 const today = new Date();
@@ -55,7 +56,7 @@ function add_to_do(toDo, id, done, trash) {
                 </li>
                 `;
     const position = "beforeend";
-    list.insertAdjacentHTML(position, item);//可以使用appendchild直接插入dom，效率会更高
+    list.insertAdjacentHTML(position, item); //可以使用appendchild直接插入dom，效率会更高
 }
 
 function defReload(array, status){
