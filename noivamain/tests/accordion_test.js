@@ -10,24 +10,21 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }
 
-$(document).ready(function(){
+// Toggling accordion class between active and inactive
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
-    // Changing sign on accordion item header
-    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+        accordionItemHeader.classList.toggle("active");
 
-    accordionItemHeaders.forEach(accordionItemHeader => {
-        accordionItemHeader.addEventListener("click", event => {
-            accordionItemHeader.classList.toggle("active");
+        // Opening and closing the accordion by changning its height
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
 
-            // Opening and closing the accordion
-            const accordionItemBody = accordionItemHeader.nextElementSibling;
-
-            if (accordionItemHeader.classList.contains("active")) {
-                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-            } else {
-                accordionItemBody.style.maxHeight = "0";
-            }
-        });
+        if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        } else {
+            accordionItemBody.style.maxHeight = "0";
+        }
     });
 });
 

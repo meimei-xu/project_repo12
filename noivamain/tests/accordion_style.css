@@ -46,6 +46,8 @@ body, html {
   border: none;
 }
 
+/* ------- SIDEBAR  ------- */
+
 /* The side navigation menu */
 .sidebar {
   max-height: 100%; /* 100% Full-height */
@@ -54,7 +56,7 @@ body, html {
   z-index: 1; /* Stay on top of other elements */
   top: 0; /* Stay at the top */
   bottom: 0;
-  right: 0; /* P z-index: 1;lace on right side of page */
+  right: 0; /* On right side of page */
   background-color: rgb(255, 255, 255, 0.6);
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: scroll; /* Always shows vertical scroll */
@@ -72,6 +74,8 @@ body, html {
   transition: 0.3s;
   font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 40px;
 }
+
+/* ------- ACCORDION  ------- */
 
 /* The sidebar accordion */
 .accordion {
@@ -132,6 +136,36 @@ body, html {
   padding: 20px;
   line-height: 5px;
 }
+
+/* ------- GOALS LIST FUNCTION ------- */
+
+/* Clear icon */
+.clear {
+  width : 30px;
+  height: 30px;
+  position: absolute;
+  right:20px;
+  top: 20px;
+}
+.clear i {
+  font-size: 30px;
+  color: #FFF;
+}
+.clear i:hover {
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+/* ------- GOALS LIST FUNCTION  ------- */
+
+/* Goals list function box */
+.goals-box {
+  background-color: rgb(253, 253, 253, 0.8);
+  margin: 0px 35px 35px; 
+  border-radius: 10px;
+}
+
+/* ------- MUSIC PLAYER FUNCTION  ------- */
 
 /* Music function box */
 .music-box {
@@ -196,6 +230,8 @@ body, html {
   align-items: center;
   justify-content: center;
 }
+
+/* ------- SIDEBAR CLOSE BUTTON  ------- */
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
