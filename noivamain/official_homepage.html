@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage - Official</title>
     <link rel="stylesheet" href="/noivamain/official-homepage_style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+    ></script>
     <script src="/noivamain/official_homepage.js" defer></script>
   </head>
   <body>
@@ -46,88 +49,121 @@
           </div>
         </div>
 
+        <!-- <------------timer----------------- -->
         <div class="accordion-item">
           <div class="accordion-item-header">Timer</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Testing accordion for timer.
+              <div id="container">
+                <p id="work" class="label">Work</p>
+                <p id="break" class="label">Break</p>
+                <p id="cycles" class="label">Loops</p>
+                <!-- work timer -->
+                <div id="work-timer" class="timer">
+                  <p id="w_min">25</p>
+                  <p class="semicolon">:</p>
+                  <p id="w_sec">00</p>
+                </div>
+
+                <p id="counter" class="timer">0</p>
+
+                <!-- break timer -->
+                <div id="break-timer" class="timer">
+                  <p id="b_min">5</p>
+                  <p class="semicolon">:</p>
+                  <p id="b_sec">00</p>
+                </div>
+
+                <button id="start" class="btn">Start</button>
+                <button id="stop" class="btn">Pause</button>
+                <button id="reset" class="btn">Reset</button>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- <------------Music----------------- -->
         <div class="accordion-item">
           <div class="accordion-item-header">Study Music</div>
           <div class="accordion-item-body">
-            <div class="accordion-item-body-content">
+            <div class="accordion-item-body-content-music">
+              <div class="music-box">
+                <div class="music-box-header">Forest White Noise</div>
+                <div class="music-box-cont">
+                  <img
+                    src="/images/playbutton.png"
+                    alt="play"
+                    id="musicIconOne"
+                  />
+                </div>
+
+                <div class="music-control-cont">
+                  <!-- Music file -->
+                  <audio controls loop id="songOne">
+                    <source
+                      src="/music/forestwhitenoise.mp3"
+                      type="audio/mp3"
+                    />
+                  </audio>
+                </div>
+              </div>
 
               <div class="music-box">
-                <div class="music-box-header">
-                    Forest White Noise
-                </div>
+                <div class="music-box-header">Rain White Noise</div>
                 <div class="music-box-cont">
-                    <img src="/images/playbutton.png" alt="play" id="musicIconOne">
-                </div>  
+                  <img
+                    src="/images/playbutton.png"
+                    alt="play"
+                    id="musicIconTwo"
+                  />
+                </div>
 
                 <div class="music-control-cont">
-                     <!-- Music file -->
-                    <audio controls loop id="songOne">
-                        <source src="/music/forestwhitenoise.mp3" type="audio/mp3"> 
-                    </audio>
+                  <!-- Music file -->
+                  <audio controls loop id="songTwo">
+                    <source src="/music/rainwhitenoise.mp3" type="audio/mp3" />
+                  </audio>
                 </div>
+              </div>
 
-            </div>
-
-            <div class="music-box">
-                <div class="music-box-header">
-                    Rain White Noise
-                </div>
+              <div class="music-box">
+                <div class="music-box-header">Lofi-Study Music</div>
                 <div class="music-box-cont">
-                    <img src="/images/playbutton.png" alt="play" id="musicIconTwo">
-                </div> 
+                  <img
+                    src="/images/playbutton.png"
+                    alt="play"
+                    id="musicIconThree"
+                  />
+                </div>
 
                 <div class="music-control-cont">
-                    <!-- Music file -->
-                    <audio controls loop id="songTwo">
-                        <source src="/music/rainwhitenoise.mp3" type="audio/mp3"> 
-                    </audio>
+                  <!-- Music file -->
+                  <audio controls loop id="songThree">
+                    <source src="/music/lofimusic.mp3" type="audio/mp3" />
+                  </audio>
                 </div>
-                
-            </div>
+              </div>
 
-            <div class="music-box">
-                <div class="music-box-header">
-                    Lofi-Study Music
-                </div>
+              <div class="music-box">
+                <div class="music-box-header">Instrumental Music</div>
                 <div class="music-box-cont">
-                    <img src="/images/playbutton.png" alt="play" id="musicIconThree">
-                </div> 
+                  <img
+                    src="/images/playbutton.png"
+                    alt="play"
+                    id="musicIconFour"
+                  />
+                </div>
 
                 <div class="music-control-cont">
-                    <!-- Music file -->
-                    <audio controls loop id="songThree">
-                        <source src="/music/lofimusic.mp3" type="audio/mp3"> 
-                    </audio>
+                  <!-- Music file -->
+                  <audio controls loop id="songFour">
+                    <source
+                      src="/music/instrumentalmusic.mp3"
+                      type="audio/mp3"
+                    />
+                  </audio>
                 </div>
-
-            </div>
-
-            <div class="music-box">
-                <div class="music-box-header">
-                    Instrumental Music
-                </div>
-                <div class="music-box-cont">
-                    <img src="/images/playbutton.png" alt="play" id="musicIconFour">
-                </div> 
-                
-                <div class="music-control-cont">
-                    <!-- Music file -->
-                    <audio controls loop id="songFour">
-                        <source src="/music/instrumentalmusic.mp3" type="audio/mp3"> 
-                    </audio>
-                </div>
-
-            </div>
-
+              </div>
             </div>
           </div>
         </div>
