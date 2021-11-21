@@ -246,7 +246,11 @@ p {
   border-radius: 30px;
   margin: 10px;
   font-family: "Dosis", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+.btn:hover{background-color: #0f7970;}
 
 #start {
   grid-area: 3 / 2 / 3 / 2;
