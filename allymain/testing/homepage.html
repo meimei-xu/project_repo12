@@ -39,11 +39,15 @@
         <!-- Modal content -->
         <div class="modal-content">
           <div class="imagecontain">
-            <img src="/images/pausebutton.png" alt="tree" />
+            <img
+              id="profilepic"
+              src="/images/pausebutton.png"
+              alt="profile pic"
+            />
           </div>
-          <button id="changeusername" class="username">User Name</button>
+          <p class="username" id="userName">Username</p>
+          <p class="password" id="pass">Password:xxxxxxxxxxxx</p>
           <button class="close">&times;</button>
-          <a href="/allymain/userlog/login.html"><img src="" alt="" /></a>
         </div>
       </div>
       <!-- -------------------------------- -->
@@ -79,18 +83,22 @@
                 <p id="cycles" class="label">Loops</p>
                 <!-- work timer -->
                 <div id="work-timer" class="timer">
-                  <p id="w_min">25</p>
+                  <p id="w_min">00</p>
                   <p class="semicolon">:</p>
-                  <p id="w_sec">00</p>
+                  <p id="w_sec">05</p>
+                  <audio id="finw">
+                    <source src="/music/lofimusic.mp3" type="audio/mpeg" />
+                  </audio>
                 </div>
 
                 <p id="counter" class="timer">0</p>
 
                 <!-- break timer -->
                 <div id="break-timer" class="timer">
-                  <p id="b_min">5</p>
+                  <p id="b_min">00</p>
                   <p class="semicolon">:</p>
-                  <p id="b_sec">00</p>
+                  <p id="b_sec">05</p>
+                  <audio id="finb" src="/music/instrumentalmusic.mp3"></audio>
                 </div>
 
                 <button id="start" class="btn">Start</button>
