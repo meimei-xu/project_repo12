@@ -1,20 +1,22 @@
+/* Adding fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
+
 body{
   padding: 0;
   margin: 0;
   background-color:rgba(0,0,0, 0.1);
-  font-family: 'Titillium Web', sans-serif;
 }
 /*  -----container-----  */
 .container{
   padding: 10px;
-  width: 380px;
+  width: 400px;
   margin: 0 auto;
 }
 /*  -----header-----  */
 .header{
-  width: 380px;
-  height: 200px;
-  background-color:rgba(241, 10, 60);
+  width: 400px;
+  height: 220px;
+  background-color:#267c54;
   border-radius: 15px 15px 0 0;
   position: relative;
 }
@@ -45,13 +47,13 @@ body{
   left: 10px;
   color: #FFF;
   font-size: 25px;
-  font-family: 'Titillium Web' sans-serif;
+  font-family: 'Dosis', sans-serif; 
 }
 
 .display{
   position: absolute;
   height: 45px;
-  width: 380px;
+  width: 400px;
   top: 160px;
 }
 
@@ -61,10 +63,11 @@ body{
   font-size: 25px;
   color: #fff;
   bottom: 13px;
+  transition: 0.2s;
 }
 .display i.All:hover{
   cursor: pointer;
-  color: rgb(236, 245, 114);
+  color: rgb(176, 199, 192);
 }
 
 .display i.fulfill{
@@ -73,10 +76,11 @@ body{
   font-size: 25px;
   color: #fff;
   bottom: 13px;
+  transition: 0.2s;
 }
 .display i.fulfill:hover{
   cursor: pointer;
-  color: rgb(236, 245, 114);
+  color: rgb(176, 199, 192);
 }
 
 .display i.unfinished{
@@ -85,18 +89,19 @@ body{
   font-size: 25px;
   color: #fff;
   bottom: 13px;
+  transition: 0.2s;
 }
 .display i.unfinished:hover{
   cursor: pointer;
-  color: rgb(236, 245, 114);
+  color: rgb(176, 199, 192);
 }
 
 /*  -----content-----  */
 .content{
-  width: 380px;
-  height: 350px;
+  width: 400px;
+  height: 250px;
   max-height: 350px;
-  background-color: white; 
+  background-color: rgb(253, 253, 253, 0.8); 
   border-radius: 0 0 0 0;
   overflow: auto;
 }
@@ -113,7 +118,7 @@ body{
 .item{
   font-size: 15px;
   color: #000;
-  width: 380px;
+  width: 400px;
   height: 45px;
   min-height: 45px;
   border-bottom: 1px solid rgba(0,0,0, 0.1);
@@ -142,15 +147,17 @@ body{
   font-size: 20px;
   left: 50px;
   top: 10px;
-  background-color: white;
+  background-color: rgb(253, 253, 253, 0.8);
   width: 285px;
   overflow: hidden;
-  border: none;    
+  border: none; 
+  font-family: 'Dosis', sans-serif; font-weight: 500;   
 }
 
 .item input:disabled{
   color: #000;
   font-size: 20px;
+  font-family: 'Dosis', sans-serif; font-weight: 500;
 }
 
 .item i.de{
@@ -161,7 +168,7 @@ body{
 }
 
 .item i.de:hover{
-  color: red;
+  color: rgb(59, 52, 158);
   cursor: pointer;
 }
 
@@ -178,36 +185,38 @@ body{
 .add-to-do{
   position: relative;
   width: auto;
-  height: 40px;
-  background-color: #fff;
+  height: 45px;
+  background-color: rgb(253, 253, 253, 0.8);
   padding: 10px;
   border-top: 1px solid rgba(0,0,0, 0.1);
+  border-radius: 0 0 15px 15px;
 }
 
 .add-to-do i{
   position: absolute;
   font-size: 40px;
-  color: #4162f6;
+  color: #107c73;
 }
 
 .add-to-do i:hover{
   cursor: pointer;
-  text-shadow: 1px 2px 3px blue;
+  text-shadow: 1px 2px 3px #0b544e;
 }
 
 .add-to-do input{
   position: absolute;
   left: 50px;
   height: 35px;
-  width: 310px;
+  width: 320px;
   background-color: transparent;
   border: none;
   font-size: 20px;
   padding-left: 10px;
+  font-family: 'Dosis', sans-serif; font-weight: 500; 
 }
 
 .add-to-do input::placeholder{
-  color: #4162f6;
-  font-family: 'Titillium Web', sans-serif;
+  color: #106d59;
+  font-family: 'Dosis', sans-serif; font-weight: 500; 
   font-size: 20px;
 }

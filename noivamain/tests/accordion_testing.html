@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage - accordion</title>
     <link rel="stylesheet" href="/noivamain/tests/accordion_style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      defer
-    ></script>
+
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/noivamain/tests/to_do.css">
+    
     <script src="/noivamain/tests/accordion_test.js" defer></script>
   </head>
   <body>
@@ -39,7 +35,7 @@
           <div class="accordion-item-header">Long-Term Goals</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              <p>Testing accordion for long-term goals.</p>
+              Testing accordion for long-term goals.
             </div>
           </div>
         </div>
@@ -48,7 +44,36 @@
           <div class="accordion-item-header">Daily Tasks</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Testing accordion for daily tasks.
+              
+              <div class="container">
+                <div class="header">
+                    <div class="clear"> 
+                        <i class="fa fa-refresh"></i>
+                    </div>
+                    <div class="display">                
+                        <span id="date"></span>
+                        <i class="fa fa-pencil-square-o All"></i>
+                        <i class="fa fa-check-square-o fulfill"></i>
+                        <i class="fa fa-square-o unfinished"></i>
+                    </div>
+                </div>
+        
+                <div class="content">
+                    <ul id="list"><!--  
+                        <li class="item">
+                            <i class="fa fa-circle-thin co"></i>
+                            <p class="text">Drink Coffee</p>
+                            <i class="fa fa-trash-o de"></i>
+                        </li>    -->
+                    </ul> 
+                </div>
+                <div class="add-to-do">
+                    <i class="fa fa-plus-circle"></i>
+                    <input type="text" id="input" placeholder="Add a to-do">
+                </div>
+            </div>
+            <script src="/noivamain/tests/to_do.js"></script>        
+
             </div>
           </div>
         </div>
@@ -57,7 +82,7 @@
           <div class="accordion-item-header">Timer</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Testing accordion for timer.
+              hello
             </div>
           </div>
         </div>

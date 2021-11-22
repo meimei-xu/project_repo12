@@ -139,31 +139,8 @@ body, html {
 
 /* ------- GOALS LIST FUNCTION ------- */
 
-/* Clear icon */
-.clear {
-  width : 30px;
-  height: 30px;
-  position: absolute;
-  right:20px;
-  top: 20px;
-}
-.clear i {
-  font-size: 30px;
-  color: #FFF;
-}
-.clear i:hover {
-  cursor: pointer;
-  transform: rotate(45deg);
-}
 
 /* ------- GOALS LIST FUNCTION  ------- */
-
-/* Goals list function box */
-.goals-box {
-  background-color: rgb(253, 253, 253, 0.8);
-  margin: 0px 35px 35px; 
-  border-radius: 10px;
-}
 
 /* ------- MUSIC PLAYER FUNCTION  ------- */
 
