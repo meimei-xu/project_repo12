@@ -139,6 +139,14 @@ function timer() {
   }
 }
 
+//play audio when timer is over function
+if (wm.innerText == 0 && ws.innerText == 0) {
+  document.getElementById("finw").play();
+}
+if (bm.innerText == 00 && bs.innerText == 00) {
+  document.getElementById("finb").play();
+}
+
 //Stop Timer Function
 function stopInterval() {
   clearInterval(startTimer);
