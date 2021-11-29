@@ -32,7 +32,98 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
   });
 });
 // <timer---------------------------------------------------------------------------
+// the timer function
+var start = document.getElementById("start");
+var stop = document.getElementById("stop");
+var reset = document.getElementById("reset");
 
+var wm = document.getElementById("w_min");
+var ws = document.getElementById("w_sec");
+
+var bm = document.getElementById("b_min");
+var bs = document.getElementById("b_sec");
+
+//store a reference to a timer variable
+var startTimer;
+
+start.addEventListener("click", function () {
+  if (startTimer === undefined) {
+    startTimer = setInterval(timer, 1000);
+  } else {
+    alert("Timer is already running");
+  }
+});
+
+reset.addEventListener("click", function () {
+  wm.innerText = 25;
+  ws.innerText = "00";
+
+  bm.innerText = 5;
+  bs.innerText = "00";
+
+  document.getElementById("counter").innerText = 0;
+  stopInterval();
+  startTimer = undefined;
+});
+
+stop.addEventListener("click", function () {
+  stopInterval();
+  startTimer = undefined;
+});
+
+//Start Timer Function
+function timer() {
+  //Work Timer Countdown
+  if (ws.innerText != 0) {
+    ws.innerText--;
+    if (ws.innerText < 10) ws.innerText = "0" + ws.innerText;
+  } else if (wm.innerText != 0 && ws.innerText == 0) {
+    ws.innerText = 59;
+    wm.innerText--;
+    if (wm.innerText < 10) wm.innerText = "0" + wm.innerText;
+  }
+
+  //Break Timer Countdown
+  if (wm.innerText == 0 && ws.innerText == 0) {
+    if (bs.innerText != 0) {
+      bs.innerText--;
+      if (bs.innerText < 10) bs.innerText = "0" + bs.innerText;
+    } else if (bm.innerText != 0 && bs.innerText == 0) {
+      bs.innerText = 59;
+      bm.innerText--;
+      if (bm.innerText < 10) bm.innerText = "0" + bm.innerText;
+    }
+  }
+
+  //Increment Counter by one if one full cycle is completed
+  if (
+    wm.innerText == 0 &&
+    ws.innerText == 0 &&
+    bm.innerText == 0 &&
+    bs.innerText == 0
+  ) {
+    wm.innerText = 25;
+    ws.innerText = "00";
+
+    bm.innerText = 5;
+    bs.innerText = "00";
+
+    document.getElementById("counter").innerText++;
+  }
+}
+
+// //play audio when timer is over function
+// if (wm.innerText == 0 && ws.innerText == 0) {
+//   document.getElementById("finw").play();
+// }
+// if (bm.innerText == 00 && bs.innerText == 00) {
+//   document.getElementById("finb").play();
+// }
+
+//Stop Timer Function
+function stopInterval() {
+  clearInterval(startTimer);
+}
 // <music---------------------------------------------------------------------------
 // Playing music and changing the icon
 
