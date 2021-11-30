@@ -1,22 +1,18 @@
-body{
-  padding: 0;
-  margin: 0;
-  background-color:rgba(0,0,0, 0.1);
-  font-family: 'Titillium Web', sans-serif;
-}
+/* Adding fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
+
+
+/*  ----- DAILY TASKS FUNCTION-----  */
+
 /*  -----container-----  */
 .container{
-  padding: 10px;
-  width: 380px;
-  margin: 0 auto;
+    margin: 0px 35px 35px; 
 }
+
 /*  -----header-----  */
 .header{
-  width: 380px;
-  height: 200px;
-  background-color:rgba(211, 21, 21);
-  background-size: 100% 200%;
-  background-repeat: no-repeat;
+  height: 220px;
+  background-color:#267c54;
   border-radius: 15px 15px 0 0;
   position: relative;
 }
@@ -32,6 +28,7 @@ body{
 .clear i{
   font-size: 30px;
   color: #fff;
+  transition: 0.1s;
 }
 
 .clear i:hover{
@@ -46,13 +43,13 @@ body{
   left: 10px;
   color: #FFF;
   font-size: 25px;
-  font-family: 'Titillium Web' sans-serif;
+  font-family: 'Dosis', sans-serif; 
 }
 
 .display{
   position: absolute;
   height: 45px;
-  width: 380px;
+  width: 400px;
   top: 160px;
 }
 
@@ -62,9 +59,11 @@ body{
   font-size: 25px;
   color: #fff;
   bottom: 13px;
+  transition: 0.2s;
 }
 .display i.All:hover{
   cursor: pointer;
+  color: rgb(176, 199, 192);
 }
 
 .display i.fulfill{
@@ -73,9 +72,11 @@ body{
   font-size: 25px;
   color: #fff;
   bottom: 13px;
+  transition: 0.2s;
 }
 .display i.fulfill:hover{
   cursor: pointer;
+  color: rgb(176, 199, 192);
 }
 
 .display i.unfinished{
@@ -84,17 +85,18 @@ body{
   font-size: 25px;
   color: #fff;
   bottom: 13px;
+  transition: 0.2s;
 }
 .display i.unfinished:hover{
   cursor: pointer;
+  color: rgb(176, 199, 192);
 }
+
 /*  -----content-----  */
 .content{
-  width: 380px;
-  height: 350px;
+  height: 260px;
   max-height: 350px;
-  background-color: #FFF; 
-  border-radius: 0 0 0 0;
+  background-color: transparent; 
   overflow: auto;
 }
 
@@ -104,20 +106,21 @@ body{
 }
 
 .fa-check-circle{
-  color: #6eb200;
+  color: #0b544e;
 }
 
 .item{
   font-size: 15px;
   color: #000;
-  width: 380px;
   height: 45px;
   min-height: 45px;
   border-bottom: 1px solid rgba(0,0,0, 0.1);
   list-style: none;
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 16px 0;
+  background-color: rgb(253, 253, 253, 0.8);
+  border-radius: 8px;
 }
 
 .item i.co{
@@ -137,17 +140,19 @@ body{
   padding: 0;
   margin: 0;
   font-size: 20px;
-  left: 50px;
+  left: 60px;
   top: 10px;
-  background-color: #fff;
-  width: 285px;
+  background-color: transparent;
+  width: 435px;
   overflow: hidden;
-  border: none;    
+  border: none; 
+  font-family: 'Dosis', sans-serif; font-weight: 500;   
 }
 
 .item input:disabled{
   color: #000;
   font-size: 20px;
+  font-family: 'Dosis', sans-serif; font-weight: 500;
 }
 
 .item i.de{
@@ -158,13 +163,13 @@ body{
 }
 
 .item i.de:hover{
-  color: red;
+  color: rgb(59, 52, 158);
   cursor: pointer;
 }
 
 .lineThrough{
   text-decoration: line-through;
-  color: #ccc !important;
+  color: rgb(134, 131, 131) !important;
 }
 
 ::-webkit-scrollbar{
@@ -176,35 +181,38 @@ body{
   position: relative;
   width: auto;
   height: 40px;
-  background-color: #fff;
+  background-color: rgb(253, 253, 253, 0.85);
   padding: 10px;
   border-top: 1px solid rgba(0,0,0, 0.1);
+  border-radius: 0 0 15px 15px;
 }
 
 .add-to-do i{
   position: absolute;
   font-size: 40px;
-  color: #4162f6;
+  color: #107c73;
+  left: 15px;
 }
 
 .add-to-do i:hover{
   cursor: pointer;
-  text-shadow: 1px 2px 3px blue;
+  text-shadow: 1px 2px 3px #0b544e;
 }
 
 .add-to-do input{
   position: absolute;
-  left: 50px;
+  left: 65px;
   height: 35px;
-  width: 310px;
+  width: 445px;
   background-color: transparent;
   border: none;
   font-size: 20px;
   padding-left: 10px;
+  font-family: 'Dosis', sans-serif; font-weight: 500; 
 }
 
 .add-to-do input::placeholder{
-  color: #4162f6;
-  font-family: 'Titillium Web', sans-serif;
+  color: #106d59;
+  font-family: 'Dosis', sans-serif; font-weight: 500; 
   font-size: 20px;
 }

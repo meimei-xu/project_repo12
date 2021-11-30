@@ -1,4 +1,4 @@
-// Opening & closing sidebar functions
+// OPENING AND CLOSING SIDEBAR FUNCTION
 
 // Opens sidebar by setting its wideth to 60% of the screen
 function openNav() {
@@ -28,7 +28,7 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     });
 });
 
-// Playing music and changing the icon
+// PLAYING MUSIC AND CHANGING ICON FUNCTION
 
 // Assigning variables to the songs
 var songOne = document.getElementById("songOne");
