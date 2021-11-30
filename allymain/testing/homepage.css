@@ -100,9 +100,9 @@ html {
 .modal-content {
   background-color: #9bc4b8;
   margin: auto;
-  padding: 20px;
-  width: 51%;
-  height: 80%;
+  padding: 10px;
+  width: auto;
+  height: auto;
   margin-left: 566.5px;
   margin-top: -66px;
   border-radius: 10px;
@@ -147,12 +147,24 @@ html {
   background-color: transparent;
   color: #0b544e;
   border: none;
-  float: right;
   font-size: 100px;
   font-family: "Dosis", sans-serif;
-  margin-top: -450px;
+  margin-left: 600px;
+  margin-top: -600px;
+  top: -500px;
 }
-
+.signout {
+  margin-left: -590px;
+  border: none;
+  color: #0b544e;
+  font-size: 40px;
+  background-color: transparent;
+}
+.signout:hover,
+.signout:focus {
+  color: rgb(133, 167, 146);
+  cursor: pointer;
+}
 .close:hover,
 .close:focus {
   color: rgb(133, 167, 146);
@@ -255,7 +267,9 @@ p {
   transition: 0.2s;
 }
 
-.btn:hover{background-color: #0f7970;}
+.btn:hover {
+  background-color: #0f7970;
+}
 
 #start {
   grid-area: 3 / 2 / 3 / 2;
