@@ -31,23 +31,30 @@
       >
 
       <!-- User profile pop up -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
       <!-- Trigger/Open The Modal --------------------------->
       <button id="myBtn" class="modal-btn">User Account</button>
-
       <!-- The Modal -->
       <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
+          <!-- signoutbutton -->
+          <div>
+            <a href="/allymain/userlog/login.html" class="signout">
+              <i class="fa fa-sign-out"></i>
+            </a>
+            <button class="close">&times;</button>
+          </div>
+
+          <!-- profilepic -->
           <div class="imagecontain">
-            <img
-              id="profilepic"
-              src="/images/pausebutton.png"
-              alt="profile pic"
-            />
+            <img id="profilepic" src="/images/pfp_fox.png" alt="profile pic" />
           </div>
           <p class="username" id="userName">Username</p>
           <p class="password" id="pass">Password:xxxxxxxxxxxx</p>
-          <button class="close">&times;</button>
         </div>
       </div>
       <!-- -------------------------------- -->
