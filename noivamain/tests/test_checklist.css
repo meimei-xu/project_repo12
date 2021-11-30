@@ -11,7 +11,7 @@
 
 /*  -----header-----  */
 .header{
-  height: 220px;
+  height: 160px;
   background-color:#267c54;
   border-radius: 15px 15px 0 0;
   position: relative;
@@ -39,7 +39,7 @@
 
 #date{
   position: absolute;
-  bottom: 10px;
+  bottom: 25px;
   left: 10px;
   color: #FFF;
   font-size: 25px;
@@ -49,13 +49,13 @@
 .display{
   position: absolute;
   height: 45px;
-  width: 400px;
-  top: 160px;
+  width: 99%;
+  top: 110px;
 }
 
 .display i.All{
   position: absolute;
-  right: 60px;
+  right: 70px;
   font-size: 25px;
   color: #fff;
   bottom: 13px;
@@ -68,7 +68,7 @@
 
 .display i.fulfill{
   position: absolute;
-  right: 35px;
+  right: 40px;
   font-size: 25px;
   color: #fff;
   bottom: 13px;
@@ -96,7 +96,7 @@
 .content{
   height: 260px;
   max-height: 350px;
-  background-color: transparent; 
+  background-color: rgb(93, 168, 253); 
   overflow: auto;
 }
 
@@ -118,7 +118,7 @@
   list-style: none;
   position: relative;
   padding: 0;
-  margin: 16px 0;
+  margin: 16px 15px;
   background-color: rgb(253, 253, 253, 0.8);
   border-radius: 8px;
 }
