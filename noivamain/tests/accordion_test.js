@@ -28,6 +28,139 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     });
 });
 
+// TIMER FUNCTION
+
+var start = document.getElementById("start");
+var stop = document.getElementById("stop");
+var reset = document.getElementById("reset");
+
+var wm = document.getElementById("w_min");
+var ws = document.getElementById("w_sec");
+
+var bm = document.getElementById("b_min");
+var bs = document.getElementById("b_sec");
+
+var workRingtone = document.getElementById("finw");
+var breakRingtone = document.getElementById("finb");
+
+var timerMess = document.getElementById("timerMess");
+
+//store a reference to a timer variable
+var startTimer;
+
+start.addEventListener("click", function () {
+  if (startTimer === undefined) {
+    startTimer = setInterval(timer, 1000);
+
+    timerMess.innerText = "Work Time";
+
+  } else {
+    alert("Timer is already running");
+  }
+});
+
+reset.addEventListener("click", function () {
+  wm.innerText = "00";
+  ws.innerText = "05";
+
+  bm.innerText = "00";
+  bs.innerText = 15;
+
+  timerMess.innerText = "Start Timer";
+
+  workRingtone.pause();
+  breakRingtone.pause();
+
+  document.getElementById("counter").innerText = 0;
+  stopInterval();
+  startTimer = undefined;
+});
+
+stop.addEventListener("click", function () {
+  stopInterval();
+  startTimer = undefined;
+
+  workRingtone.pause();
+  breakRingtone.pause();
+
+});
+
+//Start Timer Function
+function timer() {
+
+  //Work Timer Countdown
+  if (ws.innerText != 0) {
+    ws.innerText--;
+    if (ws.innerText < 10) ws.innerText = "0" + ws.innerText;
+  } else if (wm.innerText != 0 && ws.innerText == 0) {
+    ws.innerText = 59;
+    wm.innerText--;
+    if (wm.innerText < 10) wm.innerText = "0" + wm.innerText;
+  }
+
+  //Break Timer Countdown
+  if (wm.innerText == 0 && ws.innerText == 0) {
+
+    // Change timer message
+    timerMess.innerText = "Break Time";
+
+    if (bs.innerText == 15 && bm.innerText == 0) {
+        workRingtone.play(); 
+    }
+    
+    if (bs.innerText != 0) {
+        bs.innerText--;
+
+      if (bs.innerText < 10) bs.innerText = "0" + bs.innerText;
+    } else if (bm.innerText != 0 && bs.innerText == 0) {
+      bs.innerText = 59;
+      bm.innerText--;
+
+      if (bm.innerText < 10) bm.innerText = "0" + bm.innerText;
+    }
+  }
+
+  //Increment Counter by one if one full cycle is completed
+  if (
+    wm.innerText == 0 &&
+    ws.innerText == 0 &&
+    bm.innerText == 0 &&
+    bs.innerText == 0
+
+  ) {
+
+    // Break ringtone goes off
+    endBreak();
+
+    wm.innerText = "00";
+    ws.innerText = "10";
+
+    bm.innerText = "00";
+    bs.innerText = "15";
+
+    timerMess.innerText = "Work Time";
+
+    document.getElementById("counter").innerText++;
+  }
+}
+
+// Play ringtone when timer is over function
+
+/* Work time ringtone
+function endWork() {
+    workRingtone.play();
+}
+*/
+// Break time
+function endBreak() {
+    breakRingtone.play(); 
+}
+
+// Stop Timer Function
+function stopInterval() {
+  clearInterval(startTimer);
+}
+
 // PLAYING MUSIC AND CHANGING ICON FUNCTION
 
 // Assigning variables to the songs
