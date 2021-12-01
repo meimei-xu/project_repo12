@@ -1,4 +1,4 @@
-// Opening & closing sidebar functions
+// <-------------------SIDEBAR FUNCTION------------------>
 
 // Opens sidebar by setting its wideth to 60% of the screen
 function openNav() {
@@ -11,6 +11,8 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("menuHamb").style.display = "block";
 }
+
+// < ---------ACCORDION FUNCTION---------------->
 
 // Switches the accordion header to "active" and back
 const accordionItemHeaders = document.querySelectorAll(
@@ -31,7 +33,9 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     }
   });
 });
-// <timer---------------------------------------------------------------------------
+
+// <----------------------TIMER--------------------------------->
+
 // the timer function
 var start = document.getElementById("start");
 var stop = document.getElementById("stop");
@@ -124,7 +128,8 @@ function timer() {
 function stopInterval() {
   clearInterval(startTimer);
 }
-// <music---------------------------------------------------------------------------
+// <----------------------MUSIC----------------------------------->
+
 // Playing music and changing the icon
 
 // Assigning variables to the songs
