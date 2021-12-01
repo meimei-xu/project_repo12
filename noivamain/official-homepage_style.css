@@ -1,8 +1,7 @@
 /* Adding fonts from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
 
-body,
-html {
+body, html {
   height: 100%;
   margin: 0;
 }
@@ -11,17 +10,17 @@ html {
 .bg {
   /* The image used */
   background-image: url(/images/homebackground.png);
-
+  
   /* Full height */
   height: 160vh;
-
+  
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* The logo placement */
+/* The logo placement and size */
 .logo {
   position: absolute;
   top: 20px;
@@ -32,22 +31,22 @@ html {
 
 /* The sidebar button */
 .menubtn {
-  border-radius: 100px;
-  background-color: #0b544e;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  padding: 5px 20px 10px 20px;
+  border-radius: 100px;  
+  background-color: #0b544e; 
+  position: absolute; 
+  top: 30px; 
+  right: 30px; 
+  padding: 5px 20px 10px 20px;  
   display: inline-block;
-  font-family: "Dosis", sans-serif;
-  font-weight: 700;
-  font-size: 65px;
+  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 65px; 
   text-align: center;
   text-decoration: none;
-  color: rgb(253, 253, 253);
-  cursor: pointer;
+  color:rgb(253, 253, 253); 
+  cursor:pointer;
   border: none;
 }
+
+/* ------- SIDEBAR  ------- */
 
 /* The side navigation menu */
 .sidebar {
@@ -57,7 +56,7 @@ html {
   z-index: 1; /* Stay on top of other elements */
   top: 0; /* Stay at the top */
   bottom: 0;
-  right: 0; /* P z-index: 1;lace on right side of page */
+  right: 0; /* On right side of page */
   background-color: rgb(255, 255, 255, 0.6);
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: scroll; /* Always shows vertical scroll */
@@ -73,10 +72,10 @@ html {
   color: #0b544e;
   display: block;
   transition: 0.3s;
-  font-family: "Dosis", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
+  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 40px;
 }
+
+/* ------- ACCORDION  ------- */
 
 /* The sidebar accordion */
 .accordion {
@@ -96,12 +95,11 @@ html {
 
 /* The accordion item header */
 .accordion-item-header {
-  color: rgb(253, 253, 253);
+  color:rgb(253, 253, 253);
   padding: 40px;
   min-height: 20px; /* edit this later on */
   line-height: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 35px;
+  font-family: 'Open Sans', sans-serif; font-size: 35px;
   text-align: center;
   position: relative;
   cursor: pointer;
@@ -109,7 +107,7 @@ html {
 }
 
 .accordion-item-header:hover {
-  color: rgb(133, 167, 146);
+  color:rgb(133, 167, 146);
 }
 
 /* Symbol on accordion item header when not active */
@@ -129,33 +127,32 @@ html {
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 /* Content of accordion item body */
 .accordion-item-body-content {
-  color: rgb(253, 253, 253);
+  color:rgb(253, 253, 253);
   padding: 20px;
   line-height: 5px;
 }
-.accordion-item-body-content {
-  background-color: rgb(253, 253, 253, 0.8);
-  margin: 0px 35px 35px;
-  border-radius: 10px;
-}
-/* <---------------------Timer------------------------------ */
+
+/* ---------- TIMER FUNCTION ------------- */
+
 #container {
-  height: 400px;
-  width: 400px;
+  width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  background-color: rgb(253, 253, 253, 0.8);
+  border-radius: 10px 10px 0 0;
 }
 
 /*timers*/
+
 .label {
-  font-size: 100px;
+  padding: 60px 0;
   font-family: "Dosis", sans-serif;
   color: #0b544e;
   align-self: center;
@@ -235,11 +232,30 @@ p {
 #stop {
   grid-area: 3 / 4 / 3 / 4;
 }
-/* <---------------------Music------------------------------ */
+
+.message-box{
+  font-family: "Dosis", sans-serif; font-size: 25px; font-weight: 600;
+  color: #0b544e;
+  padding: 5px 0 40px;
+  text-align: center;
+  position: relative;
+  background-color: rgb(253, 253, 253, 0.8);
+  margin: 0 auto 30px;
+  width: 90%;
+  border-radius: 0 0 10px 10px;
+  
+}
+
+/* ---------- TIMER FUNCTION ------------- */
+
+
+/* ------- MUSIC PLAYER FUNCTION  ------- */
+
 /* Music function box */
 .music-box {
   background-color: rgb(253, 253, 253, 0.8);
-  margin: 0px 35px 35px;
+  width: 90%;
+  margin: 0 auto 30px;
   border-radius: 10px;
 }
 
@@ -249,14 +265,12 @@ p {
   text-align: center;
   position: relative;
   padding: 40px;
-  font-family: "Dosis", sans-serif;
-  font-weight: 600;
-  font-size: 35px;
+  font-family: 'Dosis', sans-serif; font-weight: 600; font-size: 35px;
 }
 
 /* Music function box container */
 .music-box-cont {
-  color: #0b544e;
+  color:#0b544e;
   padding-bottom: 20px;
   display: flex;
   align-items: center;
@@ -289,18 +303,10 @@ p {
 }
 
 /* Hover effect over music buttons */
-#musicIconOne:hover {
-  opacity: 0.8;
-}
-#musicIconTwo:hover {
-  opacity: 0.8;
-}
-#musicIconThree:hover {
-  opacity: 0.8;
-}
-#musicIconFour:hover {
-  opacity: 0.8;
-}
+#musicIconOne:hover {opacity: 0.8;}
+#musicIconTwo:hover {opacity: 0.8;}
+#musicIconThree:hover {opacity: 0.8;}
+#musicIconFour:hover {opacity: 0.8;}
 
 .music-control-cont {
   padding-top: 5px;
@@ -309,21 +315,21 @@ p {
   align-items: center;
   justify-content: center;
 }
-/* ---------------------Music>-------------- */
+
+/* ------- SIDEBAR CLOSE BUTTON  ------- */
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
-  font-family: "Dosis", sans-serif;
-  font-weight: 500;
-  font-size: 125px;
+  font-family: 'Dosis', sans-serif; font-weight: 500; font-size: 125px;
   text-decoration: none;
-  color: #0b544e;
+  color:#0b544e;
   margin-left: 50px;
   transition: 0.3s;
 }
+
 
 /* Hover effect on close button */
 .sidebar .closebtn:hover {
@@ -333,19 +339,14 @@ p {
 /* Footer */
 .footer {
   background-color: #0b544e;
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  color: rgb(253, 253, 253);
+  font-family: 'Open Sans', sans-serif; font-size: 20px;
+  color:rgb(253, 253, 253);
   padding: 8px;
   text-align: center;
 }
 
 /* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }

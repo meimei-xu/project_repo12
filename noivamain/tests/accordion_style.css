@@ -254,7 +254,8 @@ p {
 /* Music function box */
 .music-box {
   background-color: rgb(253, 253, 253, 0.8);
-  margin: 0px 35px 35px; 
+  width: 90%;
+  margin: 0 auto 30px;
   border-radius: 10px;
 }
 

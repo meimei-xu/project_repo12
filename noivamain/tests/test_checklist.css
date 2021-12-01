@@ -5,16 +5,19 @@
 /*  ----- DAILY TASKS FUNCTION-----  */
 
 /*  -----container-----  */
-.container{
-    margin: 0px 35px 35px; 
+.container-daily{
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 /*  -----header-----  */
 .header{
-  height: 160px;
-  background-color:#267c54;
+  height: 150px;
+  background-color:rgb(253, 253, 253, 0.8);
   border-radius: 15px 15px 0 0;
   position: relative;
+  border-bottom: 3px solid rgba(0,0,0, 0.1);
 }
 
 .clear{
@@ -27,7 +30,7 @@
 
 .clear i{
   font-size: 30px;
-  color: #fff;
+  color: #0b544e;
   transition: 0.1s;
 }
 
@@ -39,11 +42,12 @@
 
 #date{
   position: absolute;
-  bottom: 25px;
-  left: 10px;
-  color: #FFF;
-  font-size: 25px;
+  bottom: 30px;
+  left: 15px;
+  color: #0b544e;
+  font-size: 30px;
   font-family: 'Dosis', sans-serif; 
+  font-weight: 600;
 }
 
 .display{
@@ -57,46 +61,50 @@
   position: absolute;
   right: 70px;
   font-size: 25px;
-  color: #fff;
-  bottom: 13px;
+  font-weight: bold;
+  color: #0b544e;
+  bottom: 17px;
   transition: 0.2s;
+  cursor: pointer;
 }
 .display i.All:hover{
   cursor: pointer;
-  color: rgb(176, 199, 192);
+  color: #0f7970;
 }
 
 .display i.fulfill{
   position: absolute;
   right: 40px;
   font-size: 25px;
-  color: #fff;
-  bottom: 13px;
+  font-weight: bold;
+  color: #0b544e;
+  bottom: 17px;
   transition: 0.2s;
+  cursor: pointer;
 }
 .display i.fulfill:hover{
-  cursor: pointer;
-  color: rgb(176, 199, 192);
+  color: #0f7970;
 }
 
 .display i.unfinished{
   position: absolute;
   right: 10px;
   font-size: 25px;
-  color: #fff;
-  bottom: 13px;
+  font-weight: bold;
+  color: #0b544e;
+  bottom: 17px;
   transition: 0.2s;
+  cursor: pointer;
 }
 .display i.unfinished:hover{
-  cursor: pointer;
-  color: rgb(176, 199, 192);
+  color: #0f7970;
 }
 
 /*  -----content-----  */
 .content{
   height: 260px;
   max-height: 350px;
-  background-color: rgb(93, 168, 253); 
+  background-color: rgb(253, 253, 253, 0.8);
   overflow: auto;
 }
 
@@ -106,7 +114,7 @@
 }
 
 .fa-check-circle{
-  color: #0b544e;
+  color: white;
 }
 
 .item{
@@ -119,7 +127,7 @@
   position: relative;
   padding: 0;
   margin: 16px 15px;
-  background-color: rgb(253, 253, 253, 0.8);
+  background-color: #0b544e;
   border-radius: 8px;
 }
 
@@ -129,6 +137,7 @@
   padding-left: 5px;
   left: 15px;
   top: 10px;
+  color: white;
 }
 
 .item i.co:hover{
@@ -140,19 +149,20 @@
   padding: 0;
   margin: 0;
   font-size: 20px;
+  color: white;
   left: 60px;
   top: 10px;
   background-color: transparent;
-  width: 435px;
+  width: 78%;
   overflow: hidden;
   border: none; 
   font-family: 'Dosis', sans-serif; font-weight: 500;   
 }
 
 .item input:disabled{
-  color: #000;
+  color: white;
   font-size: 20px;
-  font-family: 'Dosis', sans-serif; font-weight: 500;
+  font-family: 'Dosis', sans-serif; font-weight: 400;
 }
 
 .item i.de{
@@ -160,16 +170,18 @@
   font-size: 25px;
   right: 15px;
   top: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .item i.de:hover{
-  color: rgb(59, 52, 158);
-  cursor: pointer;
+  color: rgba(255, 66, 66, 0.973);
 }
 
 .lineThrough{
   text-decoration: line-through;
-  color: rgb(134, 131, 131) !important;
+  color: rgb(184, 181, 181) !important;
 }
 
 ::-webkit-scrollbar{
@@ -181,16 +193,16 @@
   position: relative;
   width: auto;
   height: 40px;
-  background-color: rgb(253, 253, 253, 0.85);
+  background-color: rgb(253, 253, 253, 0.8);
   padding: 10px;
-  border-top: 1px solid rgba(0,0,0, 0.1);
+  border-top: 3px solid rgba(0,0,0, 0.1);
   border-radius: 0 0 15px 15px;
 }
 
 .add-to-do i{
   position: absolute;
   font-size: 40px;
-  color: #107c73;
+  color: #0b544e;
   left: 15px;
 }
 
@@ -212,7 +224,7 @@
 }
 
 .add-to-do input::placeholder{
-  color: #106d59;
-  font-family: 'Dosis', sans-serif; font-weight: 500; 
+  color: #585858;
+  font-family: 'Dosis', sans-serif; font-weight: 600; 
   font-size: 20px;
 }

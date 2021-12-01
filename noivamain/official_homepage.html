@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage - Official</title>
     <link rel="stylesheet" href="/noivamain/official-homepage_style.css" />
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      defer
-    ></script>
+
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/noivamain/tests/test_checklist.css">
     <script src="/noivamain/official_homepage.js" defer></script>
+    
   </head>
   <body>
     <!-- Background -->
@@ -44,7 +44,36 @@
           <div class="accordion-item-header">Daily Tasks</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-              Testing accordion for daily tasks.
+
+              <div class="container-daily">
+                <div class="header">
+                    <div class="clear"> 
+                        <i class="fa fa-refresh"></i>
+                    </div>
+                    <div class="display">                
+                        <span id="date"></span>
+                        <i class="fa fa-pencil-square-o All"></i>
+                        <i class="fa fa-check-square-o fulfill"></i>
+                        <i class="fa fa-square-o unfinished"></i>
+                    </div>
+                </div>
+        
+                <div class="content">
+                    <ul id="list"><!--  
+                        <li class="item">
+                            <i class="fa fa-circle-thin co"></i>
+                            <p class="text">Drink Coffee</p>
+                            <i class="fa fa-trash-o de"></i>
+                        </li>    -->
+                    </ul> 
+                </div>
+                <div class="add-to-do">
+                    <i class="fa fa-plus-circle"></i>
+                    <input type="text" id="input" placeholder="Add a to-do">
+                </div>
+            </div>
+            <script src="/noivamain/tests/test_checklist.js"></script>        
+
             </div>
           </div>
         </div>
@@ -54,30 +83,44 @@
           <div class="accordion-item-header">Timer</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
+
               <div id="container">
                 <p id="work" class="label">Work</p>
                 <p id="break" class="label">Break</p>
                 <p id="cycles" class="label">Loops</p>
+                
                 <!-- work timer -->
                 <div id="work-timer" class="timer">
-                  <p id="w_min">25</p>
+                  <p id="w_min">00</p>
                   <p class="semicolon">:</p>
-                  <p id="w_sec">00</p>
+                  <p id="w_sec">05</p>
+
+                  <audio id="finw">
+                    <source src="/music/work-ringtone.mp3" type="audio/mp3" />
+                  </audio>
+
                 </div>
 
                 <p id="counter" class="timer">0</p>
 
                 <!-- break timer -->
                 <div id="break-timer" class="timer">
-                  <p id="b_min">5</p>
+                  <p id="b_min">00</p>
                   <p class="semicolon">:</p>
-                  <p id="b_sec">00</p>
+                  <p id="b_sec">15</p>
+
+                  <audio id="finb" src="/music/break-ringtone.mp3" type="audio/mp3" ></audio>
+               
                 </div>
 
                 <button id="start" class="btn">Start</button>
                 <button id="stop" class="btn">Pause</button>
                 <button id="reset" class="btn">Reset</button>
+
               </div>
+
+                <div id="timerMess" class="message-box">Start Timer</div>
+
             </div>
           </div>
         </div>

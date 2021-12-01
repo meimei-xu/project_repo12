@@ -36,7 +36,8 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 
 // <----------------------TIMER--------------------------------->
 
-// the timer function
+// TIMER FUNCTION
+
 var start = document.getElementById("start");
 var stop = document.getElementById("stop");
 var reset = document.getElementById("reset");
@@ -47,23 +48,39 @@ var ws = document.getElementById("w_sec");
 var bm = document.getElementById("b_min");
 var bs = document.getElementById("b_sec");
 
+var workRingtone = document.getElementById("finw");
+var breakRingtone = document.getElementById("finb");
+
+var timerMess = document.getElementById("timerMess");
+
 //store a reference to a timer variable
 var startTimer;
 
 start.addEventListener("click", function () {
   if (startTimer === undefined) {
     startTimer = setInterval(timer, 1000);
+
+    // Change timer message
+    timerMess.innerText = "Work Time";
+
   } else {
     alert("Timer is already running");
   }
 });
 
 reset.addEventListener("click", function () {
-  wm.innerText = 25;
-  ws.innerText = "00";
+  wm.innerText = "00";
+  ws.innerText = "05";
 
-  bm.innerText = 5;
-  bs.innerText = "00";
+  bm.innerText = "00";
+  bs.innerText = 15;
+
+  // Change timer message
+  timerMess.innerText = "Start Timer";
+
+  // Pauses ringtones when reset button is clicked
+  workRingtone.pause();
+  breakRingtone.pause();
 
   document.getElementById("counter").innerText = 0;
   stopInterval();
@@ -73,10 +90,16 @@ reset.addEventListener("click", function () {
 stop.addEventListener("click", function () {
   stopInterval();
   startTimer = undefined;
+
+   // Pauses ringtones when pause button is clicked
+  workRingtone.pause();
+  breakRingtone.pause();
+
 });
 
 //Start Timer Function
 function timer() {
+
   //Work Timer Countdown
   if (ws.innerText != 0) {
     ws.innerText--;
@@ -89,12 +112,22 @@ function timer() {
 
   //Break Timer Countdown
   if (wm.innerText == 0 && ws.innerText == 0) {
+
+    // Change timer message
+    timerMess.innerText = "Break Time";
+
+    if (bs.innerText == 15 && bm.innerText == 0) {
+        workRingtone.play(); 
+    }
+    
     if (bs.innerText != 0) {
-      bs.innerText--;
+        bs.innerText--;
+
       if (bs.innerText < 10) bs.innerText = "0" + bs.innerText;
     } else if (bm.innerText != 0 && bs.innerText == 0) {
       bs.innerText = 59;
       bm.innerText--;
+
       if (bm.innerText < 10) bm.innerText = "0" + bm.innerText;
     }
   }
@@ -105,29 +138,30 @@ function timer() {
     ws.innerText == 0 &&
     bm.innerText == 0 &&
     bs.innerText == 0
-  ) {
-    wm.innerText = 25;
-    ws.innerText = "00";
 
-    bm.innerText = 5;
-    bs.innerText = "00";
+  ) {
+
+    // Break ringtone goes off
+    breakRingtone.play();
+
+    wm.innerText = "00";
+    ws.innerText = "10";
+
+    bm.innerText = "00";
+    bs.innerText = "15";
+
+    // Change timer message
+    timerMess.innerText = "Work Time";
 
     document.getElementById("counter").innerText++;
   }
 }
 
-// //play audio when timer is over function
-// if (wm.innerText == 0 && ws.innerText == 0) {
-//   document.getElementById("finw").play();
-// }
-// if (bm.innerText == 00 && bs.innerText == 00) {
-//   document.getElementById("finb").play();
-// }
-
-//Stop Timer Function
+// Stop Timer Function
 function stopInterval() {
   clearInterval(startTimer);
 }
+
 // <----------------------MUSIC----------------------------------->
 
 // Playing music and changing the icon

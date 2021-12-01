@@ -52,6 +52,7 @@ start.addEventListener("click", function () {
   if (startTimer === undefined) {
     startTimer = setInterval(timer, 1000);
 
+    // Change timer message
     timerMess.innerText = "Work Time";
 
   } else {
@@ -66,8 +67,10 @@ reset.addEventListener("click", function () {
   bm.innerText = "00";
   bs.innerText = 15;
 
+  // Change timer message
   timerMess.innerText = "Start Timer";
 
+  // Pauses ringtones when reset button is clicked
   workRingtone.pause();
   breakRingtone.pause();
 
@@ -80,6 +83,7 @@ stop.addEventListener("click", function () {
   stopInterval();
   startTimer = undefined;
 
+   // Pauses ringtones when pause button is clicked
   workRingtone.pause();
   breakRingtone.pause();
 
@@ -138,6 +142,7 @@ function timer() {
     bm.innerText = "00";
     bs.innerText = "15";
 
+    // Change timer message
     timerMess.innerText = "Work Time";
 
     document.getElementById("counter").innerText++;
