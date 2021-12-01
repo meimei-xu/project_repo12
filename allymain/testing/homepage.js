@@ -100,6 +100,7 @@ stop.addEventListener("click", function () {
 
 //Start Timer Function
 function timer() {
+  
   //Work Timer Countdown
   if (ws.innerText != 0) {
     ws.innerText--;

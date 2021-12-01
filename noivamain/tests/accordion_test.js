@@ -130,7 +130,7 @@ function timer() {
   ) {
 
     // Break ringtone goes off
-    endBreak();
+    breakRingtone.play();
 
     wm.innerText = "00";
     ws.innerText = "10";
@@ -142,18 +142,6 @@ function timer() {
 
     document.getElementById("counter").innerText++;
   }
-}
-
-// Play ringtone when timer is over function
-
-/* Work time ringtone
-function endWork() {
-    workRingtone.play();
-}
-*/
-// Break time
-function endBreak() {
-    breakRingtone.play(); 
 }
 
 // Stop Timer Function
