@@ -36,7 +36,7 @@
 
 .clear i:hover{
   cursor: pointer;
-  text-shadow: 1px 3px 5px #000;
+  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
   transform: rotate(45deg);
 }
 
@@ -70,6 +70,7 @@
 .display i.All:hover{
   cursor: pointer;
   color: #0f7970;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .display i.fulfill{
@@ -80,10 +81,11 @@
   color: #0b544e;
   bottom: 17px;
   transition: 0.2s;
-  cursor: pointer;
 }
 .display i.fulfill:hover{
   color: #0f7970;
+  cursor: pointer;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .display i.unfinished{
@@ -94,10 +96,11 @@
   color: #0b544e;
   bottom: 17px;
   transition: 0.2s;
-  cursor: pointer;
 }
 .display i.unfinished:hover{
   color: #0f7970;
+  cursor: pointer;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 /*  -----content-----  */
@@ -204,18 +207,19 @@
   font-size: 40px;
   color: #0b544e;
   left: 15px;
+  transition: 0.2s;
 }
 
 .add-to-do i:hover{
   cursor: pointer;
-  text-shadow: 1px 2px 3px #0b544e;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .add-to-do input{
   position: absolute;
   left: 65px;
   height: 35px;
-  width: 445px;
+  width: 83%;
   background-color: transparent;
   border: none;
   font-size: 20px;
