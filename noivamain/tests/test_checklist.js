@@ -171,6 +171,7 @@ list.addEventListener("click", function (event) {
 }, false);
 
 function completeToDo(element) {
+    // If UNCHECK is in the classlist, it will remove it and add CHECK to classlist and vice versa
     element.classList.toggle(UNCHECK);
     element.classList.toggle(CHECK);
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);

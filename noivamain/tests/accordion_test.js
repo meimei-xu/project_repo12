@@ -1,6 +1,6 @@
 // OPENING AND CLOSING SIDEBAR FUNCTION
 
-// Opens sidebar by setting its wideth to 60% of the screen
+// Opens sidebar by setting its width to 60% of the screen
 function openNav() {
     document.getElementById("mySidebar").style.width = "60%";
 }
