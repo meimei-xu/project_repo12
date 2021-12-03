@@ -1,3 +1,4 @@
+// Accessing all the necessary elements from HTML document and assigning them to a variable
 const dateElement = document.getElementById('date');
 const clear = document.querySelector('.clear');
 const list = document.getElementById('list');
@@ -7,6 +8,7 @@ const show_all = document.querySelector('.All');
 const show_finished = document.querySelector('.fulfill');
 const show_unfinished = document.querySelector('.unfinished');
 
+// Assigning checkbox elements to a constant value
 const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
@@ -19,13 +21,15 @@ clear.addEventListener("click", function () {
     location.reload();
 });
 
-/* show time */
+// Show time 
 const options = { weekday: 'long', month: 'short', day: 'numeric' };
 const today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
+// Storing user's to-do items
 let LIST, id;
 let data = localStorage.getItem("TODO");
+
 //get historical data from localstorage
 if (data) {
     LIST = JSON.parse(data);
@@ -46,15 +50,20 @@ function loadList(array) {
 function add_to_do(toDo, id, done, trash) {
     if (trash)
         return;
+    // If "done" is set to true, "DONE" is assigned to value of "CHECK", if set to false, it is assigned value of "UNCHECK"
     const DONE = done ? CHECK : UNCHECK;
+
+    // If "done" is set to true, "LINE" is assigned to value of "LINE_THROUGH", if set to false, it is assigned an empty string
     const LINE = done ? LINE_THROUGH : "";
 
+    // Format of each to-do item
     const item = `<li class="item">
                     <i class="fa ${DONE} co" job="complete" id="${id}"></i>
                     <input disabled="disabled" class="text ${LINE}" job="edit" value="${toDo}" id="${id}" ">
                     <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
                 </li>
                 `;
+    // Positions each to-do item one after the other
     const position = "beforeend";
     list.insertAdjacentHTML(position, item); //可以使用appendchild直接插入dom，效率会更高
 }
@@ -109,15 +118,23 @@ show_unfinished.addEventListener("click", function () {
 });
 
 input.addEventListener("keypress", function (even) {
+    // Checks if user pressed "enter" key
     if (event.keyCode === 13) {
         const toDo = input.value;
+        // Checks if user's to-do item is empty or not
         if (toDo) {
             add_to_do(toDo, id, false, false);
 
-            LIST.push({ name: toDo, id: id, done: false, trash: false });
+            // If user's to-do item is not empty, it pushes the value they entered to the to-do list
+            LIST.push({ name: toDo, id: id, done: false, trash: false }); // By default "done" and "trash" are set to false
 
+            // Stores user's to-do item in their local storage
             localStorage.setItem("TODO", JSON.stringify(LIST));
+
+            // Increments to-do item ID by 1 every time user adds a one
             id++;
+
+            // Clears the text user inputted in add-to-do place holder when user adds a to-do item
             input.value = "";
         }
     }
