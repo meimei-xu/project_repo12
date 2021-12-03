@@ -1,14 +1,17 @@
+/*
 body {
   margin: 0;
   background: #009578;
   overflow: auto;
 }
+*/
 
 #app {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
   padding: 55px;
   gap: 24px;
+  
 }
 
 .note {
@@ -32,7 +35,7 @@ body {
   font-size: 120px;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: background 0.2s;
+  transition: 0.2s;
 }
 
 .add-note:hover {
