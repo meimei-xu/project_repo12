@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-:root{
-    --bittersweet: #ff6f59;
-}
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +9,7 @@
 body{
     line-height: 1.5;
     font-weight: 300;
+    color: #0b544e;
 }
 .note{
     max-width: 1080px;
@@ -39,21 +37,23 @@ body{
     padding: 0.55rem;
     margin-bottom: 0.8rem;
     border-radius: 2px;
+    color: black;
 }
 #note-content{
     resize: none;
+    overflow-wrap: break-word;
 }
 #note-title:focus,
 #note-content:focus{
     outline: 0;
 }
 .btn{
-    background: var(--bittersweet);
+    background: #0b544e;
     border: 2px solid var(--bittersweet);
-    color: #fff;
+    color: white;
     padding: 0.55rem 0;
     width: 120px;
-    border-radius: 2px;
+    border-radius: 3px;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
@@ -70,6 +70,7 @@ body{
     background: var(--bittersweet);
     padding: 2rem;
     border-radius: 2px;
+    background-color: #0b544e;
 }
 .note-item{
     background: #fff;
@@ -84,11 +85,35 @@ body{
 .note-item p{
     padding-bottom: 0.8rem;
 }
-.note-item .btn{
+.note-item .btn1{
     margin-top: 0.8rem;
+    margin-right: 10px;
+    height: 60px;
+    width: 150px;
     background: #fff;
-    border: 2px solid var(--bittersweet);
-    color: var(--bittersweet);
+    border: 2px solid #0b544e;
+    color:rgb(248, 59, 59);
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.note-item .btn1:hover {
+    background: rgb(207, 206, 206);
+}
+
+.note-item .btn2{
+    margin-top: 0.8rem;
+    height: 60px;
+    width: 150px;
+    background: #fff;
+    border: 2px solid #0b544e;
+    color: green;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.note-item .btn2:hover {
+    background: rgb(207, 206, 206);
 }
 
 @media(min-width: 992px){

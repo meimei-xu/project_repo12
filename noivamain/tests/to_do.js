@@ -12,6 +12,9 @@ function eventListeners(){
     document.getElementById('add-note-btn').addEventListener('click', addNewNote);
     noteListDiv.addEventListener('click', deleteNote);
     document.getElementById('delete-all-btn').addEventListener('click', deleteAllNotes);
+
+    noteListDiv.addEventListener('click', completeNote);
+
 }
 
 eventListeners();
@@ -60,9 +63,13 @@ function createNote(noteItem){
     div.innerHTML = `
         <h3>${noteItem.title}</h3>
         <p>${noteItem.content}</p>
-        <button type = "button" class = "btn delete-note-btn">
+        <button type = "button" class = "btn1 delete-note-btn">
         <span><i class = "fas fa-trash"></i></span>
         Remove
+        </button>
+        <button type = "button" class = "btn2 checkbox-note-btn">
+        <span><i class="fa fa-check-square"></i></span>
+        Complete
         </button>
     `;
     noteListDiv.appendChild(div);
@@ -96,6 +103,15 @@ function deleteNote(e){
         localStorage.setItem('notes', JSON.stringify(newNotesList));
     }
 }
+
+// complete a note
+function completeNote(e) {
+  if(e.target.classList.contains('checkbox-note-btn')){
+    const doComplete = confirm("Are you sure you want to complete goals?");
+  }
+
+}
+
 
 // delete all notes
 function deleteAllNotes(){
