@@ -11,33 +11,36 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="clear"> 
-                <i class="fa fa-refresh"></i>
-            </div>
-            <div class="display">                
-                <span id="date"></span>
-                <i class="fa fa-pencil-square-o All"></i>
-                <i class="fa fa-check-square-o fulfill"></i>
-                <i class="fa fa-square-o unfinished"></i>
-            </div>
+    <header>
+        <div class="container">
+            <h1>My Notes App</h1>
+            <form action="">
+                <input type="text" id="note-title" placeholder="Note title">
+                <textarea id="note-text" placeholder="Note Details"></textarea>
+            
+                <button id="add-btn">Add Note</button>
+            </form>
         </div>
+    </header>
 
-        <div class="content">
-            <ul id="list"><!--  
-                <li class="item">
-                    <i class="fa fa-circle-thin co"></i>
-                    <p class="text">Drink Coffee</p>
-                    <i class="fa fa-trash-o de"></i>
-                </li>    -->
-            </ul> 
+    <section>
+        <div class="container">
+            <h2>Your Notes</h2>
+            <hr>
+            <div id="notes">
+        
+                    <div class="note">
+                        <p class="note-counter">Note ${index + 1}</p>
+                        <h3 class="note-title"> $element.title </h3>
+                        <p class="note-text"> $element.text</p>
+                        <button class="note-btn">Delete Note</button>
+                        <button class="notr-btn edit-btn">Delete Note</button>
+                    </div>
+                
+            </div>
         </div>
-        <div class="add-to-do">
-            <i class="fa fa-plus-circle"></i>
-            <input type="text" id="input" placeholder="Add a to-do">
-        </div>
-    </div>
+    </section>
+    
     <script src="/noivamain/tests/to_do.js"></script>
     
 </body>

@@ -1,203 +1,104 @@
-const dateElement = document.getElementById('date');
-const clear = document.querySelector('.clear');
-const list = document.getElementById('list');
-const input = document.querySelector('input');
-const addButton = document.querySelector('.fa-plus-circle');
-const show_all = document.querySelector('.All');
-const show_finished = document.querySelector('.fulfill');
-const show_unfinished = document.querySelector('.unfinished');
+// Add note to local storage
+let addBtn = document.getElementById("add-btn");
+addBtn.addEventListener("click", function(e) {
 
-const CHECK = "fa-check-circle";
-const UNCHECK = "fa-circle-thin";
-const LINE_THROUGH = "lineThrough";
-const CHANGE = "editable";
+  let addTitle = document.getElementById("note-title");
+  let addTxt = document.getElementById("note-text");
+  
+    if (addTitle.value == "" || addTxt.value == "") {
+        return alert("Please add Note Title and Details")
+    }
 
-var status = "all", timer = null, delay = 260, click = 0; //double click
-
-clear.addEventListener("click", function () {
-    localStorage.clear();
-    location.reload();
+  let notes = localStorage.getItem("notes");
+  if (notes == null) {
+    notesObj = [];
+  } else {
+    notesObj = JSON.parse(notes);
+  }
+  let myObj = {
+    title: addTitle.value,
+    text: addTxt.value
+  }
+  notesObj.push(myObj);
+  localStorage.setItem("notes", JSON.stringify(notesObj));
+  addTxt.value = "";
+  addTitle.value = "";
+//   console.log(notesObj);
+  showNotes();
 });
 
-/* show time */
-const options = { weekday: 'long', month: 'short', day: 'numeric' };
-const today = new Date();
-dateElement.innerHTML = today.toLocaleDateString("en-US", options);
-
-let LIST, id;
-let data = localStorage.getItem("TODO");
-//get historical data from localstorage
-if (data) {
-    LIST = JSON.parse(data);
-    id = LIST.length;
-    loadList(LIST);
-}
-else {
-    LIST = []
-    id = 0;
-}
-
-function loadList(array) {
-    array.forEach(element => {
-        add_to_do(element.name, element.id, element.done, element.trash);
-    });
-}
-
-function add_to_do(toDo, id, done, trash) {
-    if (trash)
-        return;
-    const DONE = done ? CHECK : UNCHECK;
-    const LINE = done ? LINE_THROUGH : "";
-
-    const item = `<li class="item">
-                    <i class="fa ${DONE} co" job="complete" id="${id}"></i>
-                    <input disabled="disabled" class="text ${LINE}" job="edit" value="${toDo}" id="${id}" ">
-                    <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
-                </li>
-                `;
-    const position = "beforeend";
-    list.insertAdjacentHTML(position, item); //可以使用appendchild直接插入dom，效率会更高
+// Function to show elements from localStorage
+function showNotes() {
+  let notes = localStorage.getItem("notes");
+  if (notes == null) {
+    notesObj = [];
+  } else {
+    notesObj = JSON.parse(notes);
+  }
+  let html = "";
+  notesObj.forEach(function(element, index) {
+    html += `
+        <div class="note">
+            <p class="note-counter">Note ${index + 1}</p>
+            <h3 class="note-title"> ${element.title} </h3>
+            <p class="note-text"> ${element.text}</p>
+            <button id="${index}"onclick="deleteNote(this.id)" class="note-btn">Delete Note</button>
+            <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn">Edit Note</button>
+        </div>
+            `;
+  });
+  let notesElm = document.getElementById("notes");
+  if (notesObj.length != 0) {
+    notesElm.innerHTML = html;
+  } else {
+    notesElm.innerHTML = `No Notes Yet! Add a note using the form above.`;
+  }
 }
 
-function defReload(array, status){
-    if(status === "all"){
-        array.forEach(element=>{
-            add_to_do(element.name, element.id, element.done, element.trash)
-        });
-    }
-    else if(status === "completed"){
-        array.forEach(element => {
-            if (element.done) {
-                add_to_do(element.name, element.id, element.done, element.trash);
-            }
-        });
-    }
-    else{
-        array.forEach(element => {
-            if (!element.done) {
-                add_to_do(element.name, element.id, element.done, element.trash);
-            }
-        });
-    }
-}
-
-show_all.addEventListener("click", function () {
-    var i, list_length = list.childNodes.length;
-    status = "all";
-    for (i = 0; i < list_length; i++) {
-        list.removeChild(list.lastChild);
-    }
-    defReload(LIST,"all");
-});
-
-show_finished.addEventListener("click", function () {
-    var i, list_length = list.childNodes.length;
-    status = "completed";
-    for (i = 0; i < list_length; i++) {
-        list.removeChild(list.lastChild);
-    }
-    defReload(LIST,"completed");
-});
-
-show_unfinished.addEventListener("click", function () {
-    var i, list_length = list.childNodes.length;
-    status = "active";
-    for (i = 0; i < list_length; i++) {
-        list.removeChild(list.lastChild);
-    }
-    defReload(LIST,"active");
-});
-
-input.addEventListener("keypress", function (even) {
-    if (event.keyCode === 13) {
-        const toDo = input.value;
-        if (toDo) {
-            add_to_do(toDo, id, false, false);
-
-            LIST.push({ name: toDo, id: id, done: false, trash: false });
-
-            localStorage.setItem("TODO", JSON.stringify(LIST));
-            id++;
-            input.value = "";
+// Function to delete a note
+function deleteNote(index) {
+//   console.log("I am deleting", index);
+    let confirmDel = confirm("Delete this note?");
+    if (confirmDel == true) {
+        let notes = localStorage.getItem("notes");
+        if (notes == null) {
+            notesObj = [];
+        } else {
+            notesObj = JSON.parse(notes);
         }
+
+        notesObj.splice(index, 1);
+        localStorage.setItem("notes", JSON.stringify(notesObj));
+        showNotes();
     }
-});
-
-addButton.addEventListener('click', function () {
-    const toDo = input.value;
-    if (toDo) {
-        add_to_do(toDo, id, false, false);
-
-        LIST.push({ name: toDo, id: id, done: false, trash: false });
-
-        localStorage.setItem("TODO", JSON.stringify(LIST));
-        id++;
-        input.value = "";
-    }
-});
-
-list.addEventListener("click", function (event) {
-    const element = event.target;
-    const elementJob = element.attributes.job.value;
-
-    if (elementJob === 'complete') {
-        completeToDo(element);
-    } else if (elementJob === 'delete') {
-        removeToDo(element);
-    }
-    else if (elementJob === 'edit') {
-        editTodo(element);
-    }
-
-    localStorage.setItem("TODO", JSON.stringify(LIST));
-
-}, false);
-
-function completeToDo(element) {
-    element.classList.toggle(UNCHECK);
-    element.classList.toggle(CHECK);
-    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
-
-    LIST[element.id].done = LIST[element.id].done ? false : true;
-    if(status === "active" && LIST[element.id].done){
-        element.parentNode.parentNode.removeChild(element.parentNode);
-    }
-    else if(status === "completed" && !LIST[element.id].done){
-        element.parentNode.parentNode.removeChild(element.parentNode);
-    }
-    else if(LIST[element.id].done){
-        var temp = element.parentNode, realParent = element.parentNode.parentNode;
-        element.parentNode.parentNode.removeChild(element.parentNode);
-        realParent.appendChild(temp);
-    }
+  
 }
 
-function removeToDo(element) {
-    element.parentNode.parentNode.removeChild(element.parentNode);
-    LIST[element.id].trash = true;
-}
+// Function to Edit the Note
+function editNote(index) {
+    let notes = localStorage.getItem("notes");
+    let addTitle = document.getElementById("note-title");
+    let addTxt = document.getElementById("note-text");
 
-function editTodo(element) {
-    var newTodo, content = element.parentNode.querySelector(".text"), preText;
-    click++;
-    if (click === 1) {
-        timer = setTimeout(function () {
-            click = 0;
-        }, (delay));
+    if (addTitle.value !== "" || addTxt.value !== "") {
+      return alert("Please clear the form before editing a note")
+    } 
+
+    if (notes == null) {
+      notesObj = [];
     } else {
-        click = 0;
-        clearTimeout(timer);
-        preText = content.value;
-        content.disabled = false;
-        content.focus();
-        content.onblur = () => {
-            newTodo = content.value;
-            if (preText !== newTodo) {
-                LIST[element.id].name = newTodo;
-                localStorage.setItem("TODO", JSON.stringify(LIST));
-            }
-            content.disabled = true;
-        };
+      notesObj = JSON.parse(notes);
     }
+    console.log(notesObj);
 
+    notesObj.findIndex((element, index) => {
+      addTitle.value = element.title;
+      addTxt.value = element.text;
+    })
+    notesObj.splice(index, 1);
+        localStorage.setItem("notes", JSON.stringify(notesObj));
+        showNotes();
 }
+
+
+showNotes();
