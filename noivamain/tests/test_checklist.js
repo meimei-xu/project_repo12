@@ -17,7 +17,7 @@ const CHANGE = "editable";
 var status = "all", timer = null, delay = 260, click = 0; //double click
 
 clear.addEventListener("click", function () {
-    localStorage.clear();
+    localStorage.removeItem('TODO');
     location.reload();
 });
 
