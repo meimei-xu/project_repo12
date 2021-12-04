@@ -2,30 +2,32 @@
 
 // Opens sidebar by setting its width to 60% of the screen
 function openNav() {
-    document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.width = "60%";
 }
-  
-// Closes/hides sidebar by setting its width to 0 
+
+// Closes/hides sidebar by setting its width to 0
 function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("mySidebar").style.width = "0";
 }
 
 // Toggling accordion class between active and inactive
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+const accordionItemHeaders = document.querySelectorAll(
+  ".accordion-item-header"
+);
 
-accordionItemHeaders.forEach(accordionItemHeader => {
-    accordionItemHeader.addEventListener("click", event => {
-        accordionItemHeader.classList.toggle("active");
+accordionItemHeaders.forEach((accordionItemHeader) => {
+  accordionItemHeader.addEventListener("click", (event) => {
+    accordionItemHeader.classList.toggle("active");
 
-        // Opening and closing the accordion by changning its height
-        const accordionItemBody = accordionItemHeader.nextElementSibling;
+    // Opening and closing the accordion by changning its height
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
 
-        if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        } else {
-            accordionItemBody.style.maxHeight = "0";
-        }
-    });
+    if (accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    } else {
+      accordionItemBody.style.maxHeight = "0";
+    }
+  });
 });
 
 // TIMER FUNCTION
@@ -54,7 +56,6 @@ start.addEventListener("click", function () {
 
     // Change timer message
     timerMess.innerText = "Work Time";
-
   } else {
     alert("Timer is already running");
   }
@@ -83,15 +84,13 @@ stop.addEventListener("click", function () {
   stopInterval();
   startTimer = undefined;
 
-   // Pauses ringtones when pause button is clicked
+  // Pauses ringtones when pause button is clicked
   workRingtone.pause();
   breakRingtone.pause();
-
 });
 
 //Start Timer Function
 function timer() {
-
   //Work Timer Countdown
   if (ws.innerText != 0) {
     ws.innerText--;
@@ -104,16 +103,15 @@ function timer() {
 
   //Break Timer Countdown
   if (wm.innerText == 0 && ws.innerText == 0) {
-
     // Change timer message
     timerMess.innerText = "Break Time";
 
     if (bs.innerText == 15 && bm.innerText == 0) {
-        workRingtone.play(); 
+      workRingtone.play();
     }
-    
+
     if (bs.innerText != 0) {
-        bs.innerText--;
+      bs.innerText--;
 
       if (bs.innerText < 10) bs.innerText = "0" + bs.innerText;
     } else if (bm.innerText != 0 && bs.innerText == 0) {
@@ -130,9 +128,7 @@ function timer() {
     ws.innerText == 0 &&
     bm.innerText == 0 &&
     bs.innerText == 0
-
   ) {
-
     // Break ringtone goes off
     breakRingtone.play();
 
@@ -164,102 +160,102 @@ var songFour = document.getElementById("songFour");
 
 // Assigning variables to the music icons to toggle between play and pause
 var musicIconOne = document.getElementById("musicIconOne");
-var musicIconTwo = document.getElementById("musicIconTwo")
-var musicIconThree = document.getElementById("musicIconThree")
-var musicIconFour = document.getElementById("musicIconFour")
+var musicIconTwo = document.getElementById("musicIconTwo");
+var musicIconThree = document.getElementById("musicIconThree");
+var musicIconFour = document.getElementById("musicIconFour");
 
 // Playing and pausing song one
-musicIconOne.onclick = function() {
-    if (songOne.paused) {
-        // Song one plays
-        songOne.play();
+musicIconOne.onclick = function () {
+  if (songOne.paused) {
+    // Song one plays
+    songOne.play();
 
-        // All other songs pause
-        songTwo.pause();
-        songThree.pause();
-        songFour.pause();
+    // All other songs pause
+    songTwo.pause();
+    songThree.pause();
+    songFour.pause();
 
-        // Song one icon changes to pause
-        musicIconOne.src = '/images/pausebutton.png';
+    // Song one icon changes to pause
+    musicIconOne.src = "/images/pausebutton.png";
 
-        // All other song icons change to play
-        musicIconTwo.src = '/images/playbutton.png';
-        musicIconThree.src = '/images/playbutton.png';
-        musicIconFour.src = '/images/playbutton.png';
-    } else {
-        songOne.pause();
-        musicIconOne.src = '/images/playbutton.png';
-    }
-}
+    // All other song icons change to play
+    musicIconTwo.src = "/images/playbutton.png";
+    musicIconThree.src = "/images/playbutton.png";
+    musicIconFour.src = "/images/playbutton.png";
+  } else {
+    songOne.pause();
+    musicIconOne.src = "/images/playbutton.png";
+  }
+};
 
 // Playing and pausing song two
-musicIconTwo.onclick = function() {
-    if (songTwo.paused) {
-        // Song two plays
-        songTwo.play();
+musicIconTwo.onclick = function () {
+  if (songTwo.paused) {
+    // Song two plays
+    songTwo.play();
 
-        // All other songs pause
-        songOne.pause();
-        songThree.pause();
-        songFour.pause();
+    // All other songs pause
+    songOne.pause();
+    songThree.pause();
+    songFour.pause();
 
-        // Song two icon changes to pause
-        musicIconTwo.src = '/images/pausebutton.png';
+    // Song two icon changes to pause
+    musicIconTwo.src = "/images/pausebutton.png";
 
-        // All other song icons change to play
-        musicIconOne.src = '/images/playbutton.png';
-        musicIconThree.src = '/images/playbutton.png';
-        musicIconFour.src = '/images/playbutton.png';
-    } else {
-        songTwo.pause();
-        musicIconTwo.src = '/images/playbutton.png';
-    }
-}
+    // All other song icons change to play
+    musicIconOne.src = "/images/playbutton.png";
+    musicIconThree.src = "/images/playbutton.png";
+    musicIconFour.src = "/images/playbutton.png";
+  } else {
+    songTwo.pause();
+    musicIconTwo.src = "/images/playbutton.png";
+  }
+};
 
 // Playing and pausing song three
-musicIconThree.onclick = function() {
-    if (songThree.paused) {
-        // Song three plays
-        songThree.play();
+musicIconThree.onclick = function () {
+  if (songThree.paused) {
+    // Song three plays
+    songThree.play();
 
-        // All other songs pause
-        songOne.pause();
-        songTwo.pause();
-        songFour.pause();
+    // All other songs pause
+    songOne.pause();
+    songTwo.pause();
+    songFour.pause();
 
-        // Song three icon changes to pause
-        musicIconThree.src = '/images/pausebutton.png';
+    // Song three icon changes to pause
+    musicIconThree.src = "/images/pausebutton.png";
 
-        // All other song icons change to play
-        musicIconOne.src = '/images/playbutton.png';
-        musicIconTwo.src = '/images/playbutton.png';
-        musicIconFour.src = '/images/playbutton.png';
-    } else {
-        songThree.pause();
-        musicIconThree.src = '/images/playbutton.png';
-    }
-}
+    // All other song icons change to play
+    musicIconOne.src = "/images/playbutton.png";
+    musicIconTwo.src = "/images/playbutton.png";
+    musicIconFour.src = "/images/playbutton.png";
+  } else {
+    songThree.pause();
+    musicIconThree.src = "/images/playbutton.png";
+  }
+};
 
 // Playing and pausing song four
-musicIconFour.onclick = function() {
-    if (songFour.paused) {
-        // Song four plays
-        songFour.play();
+musicIconFour.onclick = function () {
+  if (songFour.paused) {
+    // Song four plays
+    songFour.play();
 
-        // All other songs pause
-        songOne.pause();
-        songTwo.pause();
-        songThree.pause();
+    // All other songs pause
+    songOne.pause();
+    songTwo.pause();
+    songThree.pause();
 
-        // Song four icon changes to pause
-        musicIconFour.src = '/images/pausebutton.png';
+    // Song four icon changes to pause
+    musicIconFour.src = "/images/pausebutton.png";
 
-        // All other song icons change to play
-        musicIconOne.src = '/images/playbutton.png';
-        musicIconTwo.src = '/images/playbutton.png';
-        musicIconThree.src = '/images/playbutton.png';
-    } else {
-        songFour.pause();
-        musicIconFour.src = '/images/playbutton.png';
-    }
-}
+    // All other song icons change to play
+    musicIconOne.src = "/images/playbutton.png";
+    musicIconTwo.src = "/images/playbutton.png";
+    musicIconThree.src = "/images/playbutton.png";
+  } else {
+    songFour.pause();
+    musicIconFour.src = "/images/playbutton.png";
+  }
+};

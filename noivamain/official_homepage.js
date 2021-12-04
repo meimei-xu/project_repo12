@@ -33,7 +33,33 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     }
   });
 });
+//User profile pop up function-------------
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+//------------------------------------------
 // <----------------------TIMER--------------------------------->
 
 // TIMER FUNCTION
@@ -62,7 +88,6 @@ start.addEventListener("click", function () {
 
     // Change timer message
     timerMess.innerText = "Work Time";
-
   } else {
     alert("Timer is already running");
   }
@@ -91,15 +116,13 @@ stop.addEventListener("click", function () {
   stopInterval();
   startTimer = undefined;
 
-   // Pauses ringtones when pause button is clicked
+  // Pauses ringtones when pause button is clicked
   workRingtone.pause();
   breakRingtone.pause();
-
 });
 
 //Start Timer Function
 function timer() {
-
   //Work Timer Countdown
   if (ws.innerText != 0) {
     ws.innerText--;
@@ -112,16 +135,15 @@ function timer() {
 
   //Break Timer Countdown
   if (wm.innerText == 0 && ws.innerText == 0) {
-
     // Change timer message
     timerMess.innerText = "Break Time";
 
     if (bs.innerText == 15 && bm.innerText == 0) {
-        workRingtone.play(); 
+      workRingtone.play();
     }
-    
+
     if (bs.innerText != 0) {
-        bs.innerText--;
+      bs.innerText--;
 
       if (bs.innerText < 10) bs.innerText = "0" + bs.innerText;
     } else if (bm.innerText != 0 && bs.innerText == 0) {
@@ -138,9 +160,7 @@ function timer() {
     ws.innerText == 0 &&
     bm.innerText == 0 &&
     bs.innerText == 0
-
   ) {
-
     // Break ringtone goes off
     breakRingtone.play();
 
