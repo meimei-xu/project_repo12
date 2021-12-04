@@ -32,6 +32,17 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 
+//When the user clicks on signout btn, alert pops up
+function confirmSignOut() {
+  var confirmLogout = confirm("Are you sure you want to logout?");
+  if (confirmLogout == true) {
+    redirectfunction();
+  }
+}
+function redirectfunction() {
+  window.location = "/allymain/userlog/login.html";
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -100,7 +111,6 @@ stop.addEventListener("click", function () {
 
 //Start Timer Function
 function timer() {
-  
   //Work Timer Countdown
   if (ws.innerText != 0) {
     ws.innerText--;
