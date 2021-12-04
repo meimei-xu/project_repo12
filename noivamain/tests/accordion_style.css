@@ -105,6 +105,26 @@ body, html {
   transition: 0.3s;
 }
 
+.accordion-item-header:hover {
+  color:rgb(133, 167, 146);
+}
+
+/* Symbol on accordion item header when not active */
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+/* Symbol on accordion item header when active */
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+/* Accordion header icons */
+
 .accordion-item-header i {
   position: absolute;
   left: 50px;
@@ -138,23 +158,7 @@ body, html {
 
 }
 
-.accordion-item-header:hover {
-  color:rgb(133, 167, 146);
-}
-
-/* Symbol on accordion item header when not active */
-.accordion-item-header::after {
-  content: "\002B";
-  font-size: 30px;
-  position: absolute;
-  top: 40px;
-  right: 40px;
-}
-
-/* Symbol on accordion item header when active */
-.accordion-item-header.active::after {
-  content: "\2212";
-}
+/* Accordion header icons */
 
 /* Container of accordion item body */
 .accordion-item-body {
