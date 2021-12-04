@@ -209,6 +209,40 @@ html {
   content: "\2212";
 }
 
+/* Accordion header icons */
+.accordion-item-header i {
+  position: absolute;
+  left: 50px;
+}
+
+.accordion-item-header i.goals {
+  font-size: 70px;
+  bottom: 15px;
+}
+
+.accordion-item-header i.daily {
+  font-size: 60px;
+  bottom: 20px;
+}
+
+.accordion-item-header i.time {
+  font-size: 70px;
+  bottom: 15px;
+}
+
+.accordion-item-header i.music {
+  font-size: 60px;
+  bottom: 20px;
+}
+
+.accordion-header-text {
+  font-size: 35px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+}
+
 /* Container of accordion item body */
 .accordion-item-body {
   max-height: 0;
@@ -293,7 +327,7 @@ p {
 
 /*buttons*/
 
-.btn {
+.timer-btn {
   align-self: center;
   justify-self: center;
   width: 100px;
@@ -309,7 +343,7 @@ p {
   transition: 0.2s;
 }
 
-.btn:hover {
+.timer-btn:hover {
   background-color: #0f7970;
 }
 
