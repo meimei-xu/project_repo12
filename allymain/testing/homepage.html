@@ -71,13 +71,51 @@
           <div class="accordion-item-header">Long-Term Goals</div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content-longterm">
-              <div id="app">
-                <button class="add-note" type="button">+</button>
+              <div class="note">
+                <div class="note-input">
+                  <h3>Add A New Note:</h3>
+                  <div class="note-wrapper">
+                    <input
+                      type="text"
+                      id="note-title"
+                      placeholder="Title of the goal"
+                    />
+                    <textarea
+                      rows="5"
+                      placeholder="Write notes here ... "
+                      id="note-content"
+                    ></textarea>
+                    <button type="button" class="btn" id="add-note-btn">
+                      <span><i class="fas fa-plus"></i></span>
+                      Add Note
+                    </button>
+                  </div>
+                </div>
+
+                <div class="note-list"></div>
+
+                <button type="button" class="btn" id="delete-all-btn">
+                  <span><i class="fas fa-trash"></i></span>
+                  Delete All
+                </button>
               </div>
             </div>
           </div>
           <link rel="stylesheet" href="/allymain/testing/notes.css" />
           <script src="/allymain/testing/notes.js" defer></script>
+          <!-- Font Awesome CDN -->
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+          />
+
+          <!-- Awesome Fonts Stylesheet-->
+          <link
+            href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"
+            rel="stylesheet"
+          />
         </div>
         <!-- -------------------------------- -->
 
