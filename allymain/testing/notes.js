@@ -116,8 +116,19 @@ function completeNote(e) {
   }
 }
 // plant a tree function
+// function planttree() {
+//   var img = document.createElement("img");
+//   img.setAttribute("class", "tree");
+//   img.src = "/images/pfp_fox.png";
+//   var background = document.getElementById("background-mountain");
+//   background.appendChild(img);
+// }
+
 function planttree() {
-  var img = document.createElement("img");
+  var img1 = document.createElement("img");
+  var img2 = document.createElement("img");
+  var img3 = document.createElement("img");
+
   img.setAttribute("class", "tree");
   img.src = "/images/pfp_fox.png";
   var background = document.getElementById("background-mountain");
