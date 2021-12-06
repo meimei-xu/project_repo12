@@ -11,7 +11,7 @@ html {
 .bg {
   /* The image used */
   background-image: url(/images/homebackground.png);
-
+  z-index: -1;
   /* Full height */
   height: 160vh;
 

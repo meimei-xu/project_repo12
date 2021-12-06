@@ -109,8 +109,19 @@ function deleteNote(e) {
 // complete a note
 function completeNote(e) {
   if (e.target.classList.contains("checkbox-note-btn")) {
-    const doComplete = confirm("Are you sure you want to complete goals?");
+    var doComplete = confirm("Are you sure you want to complete goals?");
+    if (doComplete == true) {
+      planttree();
+    }
   }
+}
+// plant a tree function
+function planttree() {
+  var img = document.createElement("img");
+  img.setAttribute("class", "tree");
+  img.src = "/images/pfp_fox.png";
+  var background = document.getElementById("background-mountain");
+  background.appendChild(img);
 }
 
 // delete all notes

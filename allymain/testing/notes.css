@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap");
-
+.tree {
+  width: 60px;
+  margin: 30px;
+  position: relative;
+  top: 480px;
+}
 .note {
   max-width: 1080px;
   margin: 3rem auto;
