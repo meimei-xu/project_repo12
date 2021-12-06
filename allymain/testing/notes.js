@@ -67,7 +67,7 @@ function createNote(noteItem) {
         <h3>${noteItem.title}</h3>
         <p>${noteItem.content}</p>
         <button type = "button" class = "btn1 delete-note-btn">
-        <span><i class = "fas fa-trash"></i></span>
+        <span><i class = "fa fa-trash"></i></span>
         Remove
         </button>
         <button type = "button" class = "btn2 checkbox-note-btn">
