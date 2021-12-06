@@ -115,22 +115,43 @@ function completeNote(e) {
     }
   }
 }
-// plant a tree function
+//plant a tree function
 // function planttree() {
 //   var img = document.createElement("img");
 //   img.setAttribute("class", "tree");
-//   img.src = "/images/pfp_fox.png";
+//   img.src = "/images/tree1.png";
 //   var background = document.getElementById("background-mountain");
 //   background.appendChild(img);
 // }
 
 function planttree() {
+  var img;
   var img1 = document.createElement("img");
   var img2 = document.createElement("img");
   var img3 = document.createElement("img");
 
-  img.setAttribute("class", "tree");
-  img.src = "/images/pfp_fox.png";
+  img1.setAttribute("class", "tree");
+  img1.src = "/images/tree1.png";
+
+  img2.setAttribute("class", "tree");
+  img2.src = "/images/tree2.png";
+
+  img3.setAttribute("class", "tree");
+  img3.src = "/images/tree3.png";
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  var randomNum = getRandomInt(3);
+  if (randomNum == 0) {
+    img = img1;
+  } else if (randomNum == 1) {
+    img = img2;
+  } else {
+    img = img3;
+  }
+
   var background = document.getElementById("background-mountain");
   background.appendChild(img);
 }
