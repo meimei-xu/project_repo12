@@ -12,18 +12,16 @@
       rel="stylesheet"
     />
 
-    
-
+    <!-- CSS for daily tasks -->
     <link rel="stylesheet" href="/noivamain/tests/test_checklist.css" />
 
     <link rel="stylesheet" href="/allymain/testing/notes.css" />
 
-    
     <script src="/noivamain/official_homepage.js" defer></script>
   </head>
   <body>
     <!-- Background -->
-    <div class="bg"></div>
+    <div class="bg" id="background-mountain"></div>
 
     <!-- Logo -->
     <img src="/images/logo.png" alt="Logo" class="logo" />
@@ -37,7 +35,7 @@
 
       <!-- Use profile link -->
       <!-- User profile pop up -->
-      
+
       <!-- Trigger/Open The Modal --------------------------->
       <button id="myBtn" class="modal-btn">User Account</button>
       <!-- The Modal -->
@@ -64,7 +62,6 @@
 
       <!-- Accordion within sidebar -->
       <div class="accordion">
-
         <!-- ---------------long term goal------------ -->
         <div class="accordion-item">
           <div class="accordion-item-header">
@@ -73,7 +70,6 @@
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content-longterm">
-              
               <div class="note">
                 <div class="note-input">
                   <h3>Add A New Note:</h3>
@@ -107,46 +103,45 @@
           
           <script src="/allymain/testing/notes.js"></script>
 
+          <script src="/allymain/testing/notes.js" defer></script>
         </div>
         <!-- -------------------------------- -->
         <div class="accordion-item">
-         
           <div class="accordion-item-header">
             <i class="fa fa-calendar daily"></i>
             <div class="accordion-header-text">Daily Tasks</div>
           </div>
           <div class="accordion-item-body">
             <div class="accordion-item-body-content">
-
-               <div class="container-daily">
+              <div class="container-daily">
                 <div class="header">
-                    <div class="clear"> 
-                        <i class="fa fa-refresh"></i>
-                    </div>
-                    <div class="display">                
-                        <span id="date"></span>
-                        <i class="fa fa-pencil-square-o All"></i>
-                        <i class="fa fa-check-square-o fulfill"></i>
-                        <i class="fa fa-square-o unfinished"></i>
-                    </div>
+                  <div class="clear">
+                    <i class="fa fa-refresh"></i>
+                  </div>
+                  <div class="display">
+                    <span id="date"></span>
+                    <i class="fa fa-pencil-square-o All"></i>
+                    <i class="fa fa-check-square-o fulfill"></i>
+                    <i class="fa fa-square-o unfinished"></i>
+                  </div>
                 </div>
-        
+
                 <div class="content">
-                    <ul id="list"><!--  
+                  <ul id="list">
+                    <!--  
                         <li class="item">
                             <i class="fa fa-circle-thin co"></i>
                             <p class="text">Drink Coffee</p>
                             <i class="fa fa-trash-o de"></i>
                         </li>    -->
-                    </ul> 
+                  </ul>
                 </div>
                 <div class="add-to-do">
-                    <i class="fa fa-plus-circle"></i>
-                    <input type="text" id="input" placeholder="Add a to-do">
+                  <i class="fa fa-plus-circle"></i>
+                  <input type="text" id="input" placeholder="Add a to-do" />
                 </div>
-            </div>
-            <script src="/noivamain/tests/test_checklist.js"></script>        
-
+              </div>
+              <script src="/noivamain/tests/test_checklist.js"></script>
             </div>
           </div>
         </div>
