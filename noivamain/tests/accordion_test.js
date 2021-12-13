@@ -10,7 +10,7 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
 }
 
-// Toggling accordion class between active and inactive
+// Toggling accordion between adding and removing active class
 const accordionItemHeaders = document.querySelectorAll(
   ".accordion-item-header"
 );

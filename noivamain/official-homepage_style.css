@@ -11,7 +11,8 @@ html {
 .bg {
   /* The image used */
   background-image: url(/images/homebackground.png);
-
+  z-index: -1;
+  
   /* Full height */
   height: 160vh;
 
@@ -74,7 +75,7 @@ html {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -131,14 +132,18 @@ html {
 }
 /* The Close Button */
 .close {
+  /* position: absolute; */
   background-color: transparent;
   color: #0b544e;
   border: none;
   font-size: 100px;
   font-family: "Dosis", sans-serif;
-  margin-left: 600px;
+
+  margin-right: 0px;
   margin-top: -600px;
   top: -500px;
+
+  transition: 0.2s;
 }
 .signout {
   margin-left: -590px;
@@ -146,15 +151,16 @@ html {
   color: #0b544e;
   font-size: 40px;
   background-color: transparent;
+  transition: 0.2s;
 }
 .signout:hover,
 .signout:focus {
-  color: rgb(133, 167, 146);
+  color: #259976;
   cursor: pointer;
 }
 .close:hover,
 .close:focus {
-  color: rgb(133, 167, 146);
+  color: #259976;
   text-decoration: none;
   cursor: pointer;
 }

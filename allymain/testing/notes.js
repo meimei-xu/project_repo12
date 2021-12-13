@@ -111,7 +111,18 @@ function completeNote(e) {
   if (e.target.classList.contains("checkbox-note-btn")) {
     var doComplete = confirm("Are you sure you want to complete goals?");
     if (doComplete == true) {
+      
+      // Plants a tree 
       planttree();
+
+      // Deletes note 
+      e.target.parentElement.remove(); // removing from DOM
+      let divID = e.target.parentElement.dataset.id;
+      let notes = getDataFromStorage();
+      let newNotesList = notes.filter((item) => {
+        return item.id !== parseInt(divID);
+      });
+      localStorage.setItem("notes", JSON.stringify(newNotesList));
     }
   }
 }

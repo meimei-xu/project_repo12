@@ -109,7 +109,6 @@ function completeNote(e) {
   if(e.target.classList.contains('checkbox-note-btn')){
     const doComplete = confirm("Are you sure you want to complete goals?");
   }
-
 }
 
 

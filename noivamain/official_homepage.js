@@ -106,11 +106,11 @@ start.addEventListener("click", function () {
 });
 
 reset.addEventListener("click", function () {
-  wm.innerText = "00";
-  ws.innerText = "05";
+  wm.innerText = 25;
+  ws.innerText = "00";
 
-  bm.innerText = "00";
-  bs.innerText = 15;
+  bm.innerText = "05";
+  bs.innerText = "00";
 
   // Change timer message
   timerMess.innerText = "Start Timer";
