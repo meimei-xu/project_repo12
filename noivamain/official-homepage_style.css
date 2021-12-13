@@ -92,14 +92,13 @@ html {
   z-index: 2; /* Sit on top */
   right: 0;
   top: 0;
-  bottom: 0; 
   width: 60%; 
-  height: 100%; 
+  background-color: #9bc4b8;
+  height: 100%;
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #9bc4b8;
   text-align: center;
 }
 
