@@ -72,81 +72,63 @@ html {
 /* The sidebar user profile link */
 /* User Profile pop up <--------------------------------------------------------*/
 /* The Modal (background) */
+
+.modal-btn {
+  position: relative;
+  background-color: transparent;
+  color: #0b544e;
+  font-family: "Dosis", sans-serif; font-weight: 600; font-size: 45px;
+  margin-left: 75px;
+  padding-bottom: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 2; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
+  right: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  bottom: 0; 
+  width: 60%; 
+  height: 100%; 
 }
 
 /* Modal Content */
 .modal-content {
   background-color: #9bc4b8;
-  margin: auto;
-  padding: 10px;
-  width: auto;
-  height: auto;
-  margin-left: 566.5px;
-  margin-top: -66px;
-  border-radius: 10px;
   text-align: center;
 }
-.modal-content img {
-  width: 400px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* To change username */
-.username {
-  padding-top: 10px;
-  font-family: "Dosis", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  color: #0b544e;
-}
-.modal-btn {
-  background-color: transparent;
-  color: #0b544e;
-  font-family: "Dosis", sans-serif;
-  font-weight: 700;
-  font-size: 50px;
-  padding-right: 50px;
-  padding-left: 65px;
-  padding-bottom: 15px;
-  outline: none;
-  border: none;
-}
-/* Password */
-.password {
-  font-family: "Dosis", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 10px;
-  color: #0b544e;
-}
+
 /* The Close Button */
 .close {
-  /* position: absolute; */
+  position: absolute;
   background-color: transparent;
   color: #0b544e;
   border: none;
   font-size: 100px;
   font-family: "Dosis", sans-serif;
-
-  margin-right: 0px;
-  margin-top: -600px;
-  top: -500px;
-
+  right: 20px;
+  top: 0px;
+  padding: 0;
+  line-height: 50px;
   transition: 0.2s;
 }
+
+.close:hover,
+.close:focus {
+  color: #259976;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .signout {
-  margin-left: -590px;
+  position: absolute;
+  top: 15px;
+  left: 40px;
   border: none;
   color: #0b544e;
   font-size: 40px;
@@ -158,12 +140,30 @@ html {
   color: #259976;
   cursor: pointer;
 }
-.close:hover,
-.close:focus {
-  color: #259976;
-  text-decoration: none;
-  cursor: pointer;
+
+.modal-content img {
+  width: 400px;
+  height: 400px;
+  padding: 45px 0 20px;
 }
+/* To change username */
+.username {
+  padding-top: 10px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #0b544e;
+}
+
+/* Password */
+.password {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 25px 0 45px;
+  color: #0b544e;
+}
+
 /* pop up>----------------------------------------------------------------------- */
 
 /* ------- ACCORDION  ------- */
