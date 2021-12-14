@@ -25,7 +25,7 @@
     <script src="/noivamain/official_homepage.js" defer></script>
   </head>
   <body>
-    
+
     <!-- Background -->
     <div class="bg" id="background-mountain"></div>
 
@@ -34,16 +34,16 @@
 
     <!-- Sidebar -->
     <div class="sidebar" id="mySidebar">
+
       <!-- Sidebar close button-->
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
+        >&times;</a>
 
-      <!-- Use profile link -->
       <!-- User profile pop up -->
 
       <!-- Trigger/Open The Modal --------------------------->
-      <button id="myBtn" class="modal-btn">User Account</button>
+      <button id="myBtn" class="modal-btn">User Profile</button>
+
       <!-- The Modal -->
       <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -61,7 +61,7 @@
             <img id="profilepic" src="/images/pfp_fox.png" alt="profile pic" />
           </div>
           <p class="username" id="userName">Username</p>
-          <p class="password" id="pass">Password:xxxxxxxxxxxx</p>
+          <p class="password" id="pass">Password: xxxxxxxxxxxx</p>
         </div>
       </div>
       <!-- -------------------------------- -->
@@ -75,35 +75,36 @@
             <div class="accordion-header-text">Long-Term Goals</div>
           </div>
           <div class="accordion-item-body">
-            <div class="accordion-item-body-content-longterm">
-              <div class="note">
-                <div class="note-input">
-                  <h3>Add A New Note:</h3>
-                  <div class="note-wrapper">
-                    <input
-                      type="text"
-                      id="note-title"
-                      placeholder="Title of the goal"
-                    />
-                    <textarea
-                      rows="5"
-                      placeholder="Write notes here ... "
-                      id="note-content"
-                    ></textarea>
-                    <button type="button" class="btn" id="add-note-btn">
-                      <span><i class="fa fa-plus"></i></span>
-                      Add Note
-                    </button>
+            <div class="accordion-item-body-content">
+
+              <div class="note-box">
+
+                <div class="note">
+                  <div class="note-input">
+                    <h3>Add A New Goal:</h3>
+                    <div class="note-wrapper">
+                      <input type="text" id="note-title" placeholder="Title of the Goal"/>
+                      <textarea
+                        rows="5"
+                        placeholder="Write notes here ... "
+                        id="note-content"
+                      ></textarea>
+                      <button type="button" class="add-btn" id="add-note-btn">
+                        <span><i class="fa fa-plus"></i></span>
+                        Add Goal
+                      </button>
+                    </div>
                   </div>
+
+                  <div class="note-list"></div>
+
+                  <button type="button" class="delete-btn" id="delete-all-btn">
+                    <span><i class="fa fa-trash-o"></i></span>
+                    Delete All
+                  </button>
                 </div>
-
-                <div class="note-list"></div>
-
-                <button type="button" class="btn" id="delete-all-btn">
-                  <span><i class="fa fa-trash-o"></i></span>
-                  Delete All
-                </button>
               </div>
+
             </div>
           </div>
           

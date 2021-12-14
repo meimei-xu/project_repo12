@@ -48,6 +48,11 @@ html {
   color: rgb(253, 253, 253);
   cursor: pointer;
   border: none;
+  transition: 0.2s;
+}
+
+.menubtn:hover {
+  background-color: #0f7970;
 }
 
 /* ------- SIDEBAR  ------- */
@@ -77,14 +82,16 @@ html {
   position: relative;
   background-color: transparent;
   color: #0b544e;
-  font-family: "Dosis", sans-serif; font-weight: 600; font-size: 45px;
+  font-family: "Dosis", sans-serif; font-weight: 600; font-size: 42px;
   margin-left: 75px;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
   outline: none;
   border: none;
   cursor: pointer;
   transition: 0.2s;
 }
+
+.modal-btn:hover {color: #0f7970;}
 
 .modal {
   display: none; /* Hidden by default */
@@ -93,7 +100,7 @@ html {
   right: 0;
   top: 0;
   width: 60%; 
-  background-color: #9bc4b8;
+  background-color: #95c5cefb;
   height: 100%;
 }
 
@@ -106,9 +113,10 @@ html {
 .close {
   position: absolute;
   background-color: transparent;
-  color: #0b544e;
+  color: white;
+  /* color: #0b544e; */
   border: none;
-  font-size: 100px;
+  font-size: 120px;
   font-family: "Dosis", sans-serif;
   right: 20px;
   top: 0px;
@@ -119,7 +127,7 @@ html {
 
 .close:hover,
 .close:focus {
-  color: #259976;
+  color: #0f7970;
   text-decoration: none;
   cursor: pointer;
 }
@@ -129,14 +137,15 @@ html {
   top: 15px;
   left: 40px;
   border: none;
-  color: #0b544e;
-  font-size: 40px;
+  color: white;
+  /* color: #0b544e; */
+  font-size: 55px;
   background-color: transparent;
   transition: 0.2s;
 }
 .signout:hover,
 .signout:focus {
-  color: #259976;
+  color: #0f7970;
   cursor: pointer;
 }
 
@@ -147,10 +156,10 @@ html {
 }
 /* To change username */
 .username {
-  padding-top: 10px;
+  padding-top: 5px;
   font-family: "Dosis", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 50px;
   color: #0b544e;
 }
 
@@ -158,8 +167,8 @@ html {
 .password {
   font-family: "Dosis", sans-serif;
   font-weight: 600;
-  font-size: 20px;
-  padding: 25px 0 45px;
+  font-size: 30px;
+  padding: 20px 0 45px;
   color: #0b544e;
 }
 
@@ -171,7 +180,7 @@ html {
 .accordion {
   width: 80%;
   max-width: 800px;
-  margin-top: 35px;
+  margin-top: 25px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -179,7 +188,7 @@ html {
 /* The accordion individual items */
 .accordion-item {
   background-color: #0b544e;
-  margin: 35px 0;
+  margin: 0 0 30px;
   border-radius: 15px;
 }
 
@@ -256,16 +265,15 @@ html {
 
 /* Content of accordion item body */
 .accordion-item-body-content {
-  color: rgb(253, 253, 253);
   padding: 20px;
-  line-height: 5px;
+  /* line-height: 5px; */
 }
-.accordion-item-body-content-longterm {
+/* .accordion-item-body-content-longterm {
   background-color: rgb(253, 253, 253, 0.8);
   margin: 0px 35px 35px;
   border-radius: 10px;
   align-items: center;
-}
+} */
 
 /* ---------- TIMER FUNCTION ------------- */
 
@@ -274,7 +282,7 @@ html {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 0.8fr);
   background-color: rgb(253, 253, 253, 0.8);
   border-radius: 10px 10px 0 0;
 }
@@ -282,7 +290,7 @@ html {
 /*timers*/
 
 .label {
-  padding: 60px 0;
+  padding: 50px 0;
   font-family: "Dosis", sans-serif;
   color: #0b544e;
   align-self: center;
@@ -335,7 +343,7 @@ p {
   align-self: center;
   justify-self: center;
   width: 100px;
-  height: 30px;
+  height: 35px;
   font-size: 20px;
   background-color: #0b544e;
   color: white;
@@ -368,7 +376,7 @@ p {
   font-size: 25px;
   font-weight: 600;
   color: #0b544e;
-  padding: 5px 0 40px;
+  padding: 5px 0 30px;
   text-align: center;
   position: relative;
   background-color: rgb(253, 253, 253, 0.8);
@@ -394,7 +402,7 @@ p {
   color: #0b544e;
   text-align: center;
   position: relative;
-  padding: 40px;
+  padding: 20px;
   font-family: "Dosis", sans-serif;
   font-weight: 600;
   font-size: 35px;
@@ -461,10 +469,10 @@ p {
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
-  top: 0;
+  top: -25px;
   right: 25px;
   font-family: "Dosis", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 125px;
   text-decoration: none;
   color: #0b544e;
@@ -474,7 +482,7 @@ p {
 
 /* Hover effect on close button */
 .sidebar .closebtn:hover {
-  color: #259976;
+  color: #0f7970;
 }
 
 /* Footer */
@@ -483,7 +491,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: rgb(253, 253, 253);
-  padding: 8px;
+  padding: 15px;
   text-align: center;
 }
 

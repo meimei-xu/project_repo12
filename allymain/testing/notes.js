@@ -9,6 +9,9 @@ function Note(id, title, content) {
 // all eventlisteners
 function eventListeners() {
   document.addEventListener("DOMContentLoaded", displayNotes);
+
+  // Add an eventlistner that when content is loaded, trees will display
+
   document.getElementById("add-note-btn").addEventListener("click", addNewNote);
   noteListDiv.addEventListener("click", deleteNote);
   document
@@ -135,6 +138,7 @@ function completeNote(e) {
 //   background.appendChild(img);
 // }
 
+// Plant a tree function
 function planttree() {
   var img;
   var img1 = document.createElement("img");

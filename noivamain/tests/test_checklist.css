@@ -42,7 +42,7 @@
 
 #date{
   position: absolute;
-  bottom: 30px;
+  bottom: 17px;
   left: 15px;
   color: #0b544e;
   font-size: 30px;
@@ -108,7 +108,8 @@
   height: 260px;
   max-height: 350px;
   background-color: rgb(253, 253, 253, 0.8);
-  overflow: auto;
+  overflow-y: scroll;
+  /* overflow: auto; */
 }
 
 .content ul{
