@@ -113,17 +113,21 @@ html {
 .close {
   position: absolute;
   background-color: transparent;
-  color: white;
-  /* color: #0b544e; */
+  color: white; 
   border: none;
-  font-size: 120px;
-  font-family: "Dosis", sans-serif;
+  font-size: 120px; 
+  font-family: "Dosis", sans-serif; 
   right: 20px;
-  top: 0px;
+  top: 10px;
   padding: 0;
-  line-height: 50px;
+  margin: auto;
+  height: 50px; 
   transition: 0.2s;
-}
+  text-decoration: none;
+  display: flex;
+  /* justify-content: space-around; */
+  line-height: 35px;
+} 
 
 .close:hover,
 .close:focus {
