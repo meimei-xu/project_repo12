@@ -13,7 +13,7 @@ function jsonReader(filePath, cb) {
     }
   });
 }
-jsonReader("basedata.json", (err, customer) => {
+jsonReader("./noivamain/database/readJSON.json", (err, customer) => {
   if (err) {
     console.log(err);
     return;

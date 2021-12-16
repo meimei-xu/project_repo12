@@ -61,6 +61,7 @@ p {
   overflow-x: scroll;
 }
 
+
 .contact-form form {
   position: relative;
   display: block;
@@ -78,7 +79,7 @@ p {
 
 .contact-form label {
   display: block;
-  color: var(--color-gray-light);
+  color: var(--color-gray-dark);
   font-family: Lato, sans-serif;
   font-size: 90%;
   line-height: 1.125;
@@ -95,9 +96,7 @@ p {
   margin-left: 0.25rem;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.contact-form input{
   display: block;
   margin-top: 0.25rem;
   padding: 0.5rem 0.75rem;

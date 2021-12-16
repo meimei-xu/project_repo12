@@ -1,9 +1,8 @@
 
-
 const fs = require('fs');
 
 let student = {
-    name: 'Linda',
+    name: 'Ally',
     age: 64, 
     gender: 'Female',
     department: 'French',
@@ -12,9 +11,8 @@ let student = {
 
 let data = JSON.stringify(student, null, 2);  
 
-fs.writeFileSync('./noivamain/database/database.json', data, finished);
+fs.writeFileSync('./noivamain/database/writeJSON.json', data, finished);
 
-function finished(err)
-{
+function finished(err) {
     console.log('success');
 }
