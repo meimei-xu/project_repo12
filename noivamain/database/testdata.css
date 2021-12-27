@@ -1,146 +1,79 @@
-:root {
-  --color-lightest: #f9fdfe;
-  --color-gray-light: #cdcfcf;
-  --color-gray-medium: #686a69;
-  --color-gray-dark: #414643;
-  --color-darkest: #2a2f2c;
+h3 {
+  text-align: center;
 }
 
-*,
-::before,
-::after {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* Heydon Pickering’s lobotomized owl. Details: https://bit.ly/1H7MXUD */
-* + * {
-  margin-top: 1rem;
-}
-
-/* Set up fonts, colors and all that jazz. */
-body {
-  background: var(--color-lightest);
-  color: var(--color-gray-medium);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 18px;
-  line-height: 1.45;
-}
-
-/* Headings use a different font because they’re hipsters. */
-h1,
-h2 {
-  color: var(--color-darkest);
-  font-size: 110%;
-  line-height: 1.1;
-}
-
-h1 {
-  font-size: 125%;
-}
-
-/* Set up general layout rules for outer containers. */
-.contact-form,
-.results {
-  width: 90vw;
-  max-width: 550px;
-  margin: 8vh auto;
-}
-
-p {
-  margin-top: 0.5rem;
-  font-size: 87.5%;
-}
-
-.results pre {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: var(--color-gray-light);
-  border: 1px solid var(--color-gray-light);
-  overflow-x: scroll;
-}
-
-
-.contact-form form {
-  position: relative;
+img {
   display: block;
-  margin: 0;
-  padding: 1rem 0 2rem;
-  border-top: 1px solid var(--color-gray-light);
-  border-bottom: 1px solid var(--color-gray-light);
-  overflow: hidden;
+  margin: auto;
+  height: 150px;
+  width: 150px;
 }
 
-.input-group {
-  margin-top: 0.25rem;
-  padding: 0.5rem 1rem;
-}
-
-.contact-form label {
+.input {
+  margin: 6px;
+  padding: 10px;
   display: block;
-  color: var(--color-gray-dark);
-  font-family: Lato, sans-serif;
-  font-size: 90%;
-  line-height: 1.125;
+  margin: auto;
+  color: palevioletred;
+  font-size: 30px;
 }
 
-.group-label {
-  display: inline-block;
-  margin-right: 1rem;
-  font-size: 90%;
-}
-
-.contact-form label.inline {
-  display: inline-block;
-  margin-left: 0.25rem;
-}
-
-.contact-form input{
+input {
+  width: 90%;
   display: block;
-  margin-top: 0.25rem;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--color-gray-light);
-  width: 100%;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  transition: 150ms border-color linear;
+  margin-left: 12px;
+  background: none;
+  background-color: lightyellow;
 }
 
-.contact-form input[type=checkbox],
-.contact-form input[type=radio] {
-  display: inline-block;
-  width: auto;
-}
-
-.contact-form input[type=checkbox]:not(:first-of-type),
-.contact-form input[type=radio]:not(:first-of-type) {
-  margin-left: 1rem;
-}
-
-.contact-form input:focus,
-.contact-form input:active {
-  border-color: var(--color-gray-medium);
-}
-
-.contact-form button {
+select {
+  width: 90%;
   display: block;
-  margin: 0.5rem 1rem 0;
-  padding: 0 1rem 0.125rem;
-  background-color: var(--color-gray-medium);
-  border: 0;
-  color: var(--color-lightest);
-  font-family: lato, sans-serif;
-  font-size: 100%;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
-  text-transform: uppercase;
-  transition: 150ms all linear;
+  margin-left: 12px;
+  background: none;
+  background-color: lightyellow;
 }
 
-.contact-form button:hover,
-.contact-form button:active,
-.contact-form button:focus {
-  background: var(--color-darkest);
-  cursor: pointer;
+#heading {
+  font-family: cursive;
+  text-align: center;
+  color: green;
+  padding-top: 20px;
+
+}
+
+#form_page {
+  height: 500px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+
+}
+
+#form_body {
+  border-radius: 12px;
+  height: 330px;
+  width: 450px;
+  background-color: beige;
+  border: 1px solid pink;
+  margin: auto;
+  margin-top: 12px;
+}
+
+#text {
+  color: red;
+  width: 100px;
+}
+
+#head {
+  border-bottom: 2px solid red;
+  height: 100px;
+  background-color: aliceblue;
+}
+
+#submit {
+  background-color: white;
+  width: 70px;
 }
