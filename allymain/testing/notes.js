@@ -13,10 +13,10 @@ function eventListeners() {
   // Add an eventlistner that when content is loaded, trees will display
 
   document.getElementById("add-note-btn").addEventListener("click", addNewNote);
+  
   noteListDiv.addEventListener("click", deleteNote);
-  document
-    .getElementById("delete-all-btn")
-    .addEventListener("click", deleteAllNotes);
+  
+  document.getElementById("delete-all-btn").addEventListener("click", deleteAllNotes);
 
   noteListDiv.addEventListener("click", completeNote);
 }
