@@ -1,17 +1,20 @@
-const fs = require('fs');
+const fs = require('fs')
 
-let student = {
-    name: 'Ally',
-    age: 64, 
-    gender: 'Female',
-    department: 'French',
-    car: 'Toyota' 
-};
-
-let data = JSON.stringify(student, null, 2);  
-
-fs.writeFileSync('./noivamain/database/writeJSON.json', data, finished);
-
-function finished(err) {
-    console.log('success');
+const student = {
+    name: "Ally",
+    age: 20,
+    gender: "Female",
+    department: "French",
+    car: "Toyota"
 }
+
+const data = JSON.stringify(student, null, 2);  
+
+fs.writeFileSync('./noivamain/database/writeJSON.json', data, err => {
+    if (err) {
+        console.log('Error writing file', err)
+    } else {
+        console.log('Successfully wrote file')
+    }
+});
+
