@@ -1,26 +1,23 @@
 /* Adding fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
-
-
-/*  ----- DAILY TASKS FUNCTION-----  */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap");
 
 /*  -----container-----  */
-.container-daily{
+.container-daily {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 30px;
 }
 
 /*  -----header-----  */
-.header{
+.header {
   height: 150px;
-  background-color:rgb(253, 253, 253, 0.8);
+  background-color: rgb(253, 253, 253, 0.8);
   border-radius: 15px 15px 0 0;
   position: relative;
-  border-bottom: 3px solid rgba(0,0,0, 0.1);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
-.clear{
+.clear {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -28,36 +25,36 @@
   right: 20px;
 }
 
-.clear i{
+.clear i {
   font-size: 30px;
   color: #0b544e;
   transition: 0.1s;
 }
 
-.clear i:hover{
+.clear i:hover {
   cursor: pointer;
   text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.6);
   transform: rotate(45deg);
 }
 
-#date{
+#date {
   position: absolute;
   bottom: 17px;
   left: 15px;
   color: #0b544e;
   font-size: 30px;
-  font-family: 'Dosis', sans-serif; 
+  font-family: "Dosis", sans-serif;
   font-weight: 600;
 }
 
-.display{
+.display {
   position: absolute;
   height: 45px;
   width: 99%;
   top: 110px;
 }
 
-.display i.All{
+.display i.All {
   position: absolute;
   right: 70px;
   font-size: 25px;
@@ -67,13 +64,13 @@
   transition: 0.2s;
   cursor: pointer;
 }
-.display i.All:hover{
+.display i.All:hover {
   cursor: pointer;
   color: #0f7970;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.display i.fulfill{
+.display i.fulfill {
   position: absolute;
   right: 40px;
   font-size: 25px;
@@ -82,13 +79,13 @@
   bottom: 17px;
   transition: 0.2s;
 }
-.display i.fulfill:hover{
+.display i.fulfill:hover {
   color: #0f7970;
   cursor: pointer;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.display i.unfinished{
+.display i.unfinished {
   position: absolute;
   right: 10px;
   font-size: 25px;
@@ -97,14 +94,14 @@
   bottom: 17px;
   transition: 0.2s;
 }
-.display i.unfinished:hover{
+.display i.unfinished:hover {
   color: #0f7970;
   cursor: pointer;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 /*  -----content-----  */
-.content{
+.content {
   height: 260px;
   max-height: 350px;
   background-color: rgb(253, 253, 253, 0.8);
@@ -112,21 +109,21 @@
   /* overflow: auto; */
 }
 
-.content ul{
+.content ul {
   padding: 0;
   margin: 0;
 }
 
-.fa-check-circle{
+.fa-check-circle {
   color: white;
 }
 
-.item{
+.item {
   font-size: 15px;
   color: #000;
   height: 45px;
   min-height: 45px;
-  border-bottom: 1px solid rgba(0,0,0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   list-style: none;
   position: relative;
   padding: 0;
@@ -135,7 +132,7 @@
   border-radius: 8px;
 }
 
-.item i.co{
+.item i.co {
   position: absolute;
   font-size: 25px;
   padding-left: 5px;
@@ -144,11 +141,11 @@
   color: white;
 }
 
-.item i.co:hover{
+.item i.co:hover {
   cursor: pointer;
 }
 
-.item input.text{
+.item input.text {
   position: absolute;
   padding: 0;
   margin: 0;
@@ -159,17 +156,19 @@
   background-color: transparent;
   width: 78%;
   overflow: hidden;
-  border: none; 
-  font-family: 'Dosis', sans-serif; font-weight: 500;   
+  border: none;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
 }
 
-.item input:disabled{
+.item input:disabled {
   color: white;
   font-size: 20px;
-  font-family: 'Dosis', sans-serif; font-weight: 400;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
 }
 
-.item i.de{
+.item i.de {
   position: absolute;
   font-size: 25px;
   right: 15px;
@@ -179,31 +178,31 @@
   transition: 0.2s;
 }
 
-.item i.de:hover{
+.item i.de:hover {
   color: rgba(255, 66, 66, 0.973);
 }
 
-.lineThrough{
+.lineThrough {
   text-decoration: line-through;
   color: rgb(184, 181, 181) !important;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
 /* ------ add item ------*/
-.add-to-do{
+.add-to-do {
   position: relative;
   width: auto;
   height: 40px;
   background-color: rgb(253, 253, 253, 0.8);
   padding: 10px;
-  border-top: 3px solid rgba(0,0,0, 0.1);
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
 }
 
-.add-to-do i{
+.add-to-do i {
   position: absolute;
   font-size: 40px;
   color: #0b544e;
@@ -211,12 +210,12 @@
   transition: 0.2s;
 }
 
-.add-to-do i:hover{
+.add-to-do i:hover {
   cursor: pointer;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-.add-to-do input{
+.add-to-do input {
   position: absolute;
   left: 65px;
   height: 35px;
@@ -225,11 +224,13 @@
   border: none;
   font-size: 20px;
   padding-left: 10px;
-  font-family: 'Dosis', sans-serif; font-weight: 500; 
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
 }
 
-.add-to-do input::placeholder{
+.add-to-do input::placeholder {
   color: #585858;
-  font-family: 'Dosis', sans-serif; font-weight: 600; 
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
   font-size: 20px;
 }

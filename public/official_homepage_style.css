@@ -82,7 +82,9 @@ html {
   position: relative;
   background-color: transparent;
   color: #0b544e;
-  font-family: "Dosis", sans-serif; font-weight: 600; font-size: 42px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
   margin-left: 75px;
   padding-bottom: 0px;
   outline: none;
@@ -91,7 +93,9 @@ html {
   transition: 0.2s;
 }
 
-.modal-btn:hover {color: #0f7970;}
+.modal-btn:hover {
+  color: #0f7970;
+}
 
 .modal {
   display: none; /* Hidden by default */
@@ -99,7 +103,7 @@ html {
   z-index: 2; /* Sit on top */
   right: 0;
   top: 0;
-  width: 60%; 
+  width: 60%;
   background-color: #95c5cefb;
   height: 100%;
 }
@@ -113,21 +117,21 @@ html {
 .close {
   position: absolute;
   background-color: transparent;
-  color: white; 
+  color: white;
   border: none;
-  font-size: 120px; 
-  font-family: "Dosis", sans-serif; 
+  font-size: 120px;
+  font-family: "Dosis", sans-serif;
   right: 20px;
   top: 10px;
   padding: 0;
   margin: auto;
-  height: 50px; 
+  height: 50px;
   transition: 0.2s;
   text-decoration: none;
   display: flex;
   /* justify-content: space-around; */
   line-height: 35px;
-} 
+}
 
 .close:hover,
 .close:focus {
