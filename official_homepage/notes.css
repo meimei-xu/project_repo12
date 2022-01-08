@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap");
+
+.note-box {
+  background-color: rgb(253, 253, 253, 0.8);
+  width: 90%;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.note {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.note-input h3 {
+  color: #0b544e;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.note-wrapper {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#note-title,
+#note-content {
+  width: 95%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.05rem;
+  font-family: "Dosis", sans-serif;
+  padding: 0.7rem;
+  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  color: black;
+}
+
+#note-content {
+  resize: none;
+}
+#note-title:focus,
+#note-content:focus {
+  outline: 0;
+}
+
+.add-btn {
+  background: #0b544e;
+  border: none;
+  color: white;
+  padding: 0.55rem 0;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+}
+.add-btn:focus {
+  outline: 0;
+}
+.add-btn:hover {
+  background: #0f7970;
+}
+
+.note-list {
+  margin: 20px 0 30px;
+  padding: 5px 0;
+  height: 225px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  background-color: #0b544e;
+}
+
+.note-item {
+  background: rgb(255, 255, 255, 0.9);
+  width: 75%;
+  margin: 25px auto;
+  padding: 0.2rem 1.5rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+  overflow-wrap: break-word;
+}
+
+.note-item h3 {
+  margin-bottom: 1rem;
+  font-family: "Dosis", sans-serif;
+}
+
+.note-item p {
+  padding-bottom: 0.8rem;
+  font-family: "Dosis", sans-serif;
+}
+
+.note-item .btn1 {
+  margin-top: 0.8rem;
+  margin-right: 10px;
+  height: 50px;
+  width: 100px;
+  background: #fff;
+  border: 2px solid rgb(248, 59, 59);
+  color: rgb(248, 59, 59);
+  font-size: 15px;
+  border-radius: 10px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.note-item .btn1:hover {
+  background: rgba(255, 201, 201, 0.4);
+}
+
+.note-item .btn2 {
+  margin-top: 0.8rem;
+  height: 50px;
+  width: 100px;
+  background: #fff;
+  border: 2px solid rgb(40, 141, 40);
+  color: rgb(40, 141, 40);
+  font-size: 15px;
+  border-radius: 10px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.note-item .btn2:hover {
+  background: rgba(154, 255, 154, 0.4);
+}
+
+.delete-btn {
+  background: #0b544e;
+  border: none;
+  color: white;
+  padding: 0.55rem 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+}
+.delete-btn:focus {
+  outline: 0;
+}
+.delete-btn:hover {
+  background: #df4c4c;
+}
+
+.tree {
+  width: 60px;
+  margin: 30px;
+  position: relative;
+  top: 480px;
+}
+
+@media (min-width: 992px) {
+  .note-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*** alert ***/
+.warning {
+  border-color: rgba(255, 111, 89, 0.8) !important;
+}
+
+.extend {
+  color: transparent;
+}
