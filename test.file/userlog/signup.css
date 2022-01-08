@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+
+/*background*/
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/loginbackground.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Signup block */
+.signup {
+  width: 360px;
+  padding: 5% 0 0;
+  margin: auto;
+}
+/* Move block into transparent background*/
+.form {
+  border-radius: 15px;
+  position: relative;
+  z-index: l;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+/*User info box*/
+.form input {
+  border-radius: 40px;
+  font-family: "Open sans", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+/* "Signup" button */
+.form button {
+  margin-bottom: -10px;
+  position: relative;
+  border-radius: 40px;
+  font-family: "Open sans", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(40, 78, 121);
+  width: 70%;
+  border: 0;
+  padding: 15px;
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: rgb(100, 145, 197);
+}
+/*title*/
+.form h1 {
+  color: rgb(40, 78, 121);
+  font-family: "Dosis", sans-serif;
+}
+
+/*Log in white background*/
+.Login-block {
+  border-radius: 15px;
+  position: relative;
+  z-index: l;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+/*paragraph*/
+.Login-block p {
+  color: rgb(40, 78, 121);
+  font-family: "Open-sans", sans-serif;
+  margin-bottom: -19px;
+  margin-right: 80px;
+}
+/*link*/
+.Login-block a {
+  color: rgb(40, 78, 121);
+  font-family: "Open-sans", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: -140px;
+}
+.Login-block a:hover {
+  color: rgb(100, 145, 197);
+}

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Open+Sans&display=swap");
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/loginbackground.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-page {
+  width: 360px;
+  padding: 5% 0 0;
+  margin: auto;
+}
+
+/*the transparent background*/
+.form {
+  border-radius: 15px;
+  position: relative;
+  z-index: l;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  border-radius: 40px;
+  font-family: "Open sans", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  margin: auto;
+  position: relative;
+  border-radius: 40px;
+  font-family: "Open sans", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(40, 78, 121);
+  width: 70%;
+  border: 0;
+  padding: 15px;
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: rgb(100, 145, 197);
+}
+
+.message {
+  position: relative;
+  top: 20px;
+  font-family: "Open sans", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13;
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgb(40, 78, 121);
+}
+.message:hover {
+  color: rgb(100, 145, 197);
+}
+
+.title {
+  font-family: "Dosis", sans-serif;
+  color: rgb(40, 78, 121);
+}
+
+.signup-block {
+  width: 360px;
+  padding: 0px;
+  margin: auto;
+}
+.signup-form {
+  border-radius: 15px;
+  position: relative;
+  z-index: l;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 40px;
+}
+
+.signup {
+  position: relative;
+  font-family: "Open sans", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+  bottom: 4.5px;
+  right: 60px;
+  color: rgb(40, 78, 121);
+}
+.signup:hover {
+  color: rgb(100, 145, 197);
+}
+
+.note {
+  position: relative;
+  font-family: "Open sans", sans-serif;
+  cursor: pointer;
+  float: left;
+  bottom: 20px;
+  left: 60px;
+  color: rgb(40, 78, 121);
+}

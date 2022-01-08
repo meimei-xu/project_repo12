@@ -1,0 +1,387 @@
+/* Adding fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* The background image */
+.bg {
+  /* The image used */
+  background-image: url(/images/homebackground.png);
+  
+  /* Full height */
+  height: 160vh;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* The logo placement and size */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 110px;
+  height: 110px;
+}
+
+/* The sidebar button */
+.menubtn {
+  border-radius: 100px;  
+  background-color: #0b544e; 
+  position: absolute; 
+  top: 30px; 
+  right: 30px; 
+  padding: 5px 20px 10px 20px;  
+  display: inline-block;
+  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 65px; 
+  text-align: center;
+  text-decoration: none;
+  color:rgb(253, 253, 253); 
+  cursor:pointer;
+  border: none;
+}
+
+/* ------- SIDEBAR  ------- */
+
+/* The side navigation menu */
+.sidebar {
+  max-height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top of other elements */
+  top: 0; /* Stay at the top */
+  bottom: 0;
+  right: 0; /* On right side of page */
+  background-color: rgb(255, 255, 255, 0.6);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: scroll; /* Always shows vertical scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 40px; /* Place content 40px from the top */
+  padding-bottom: 20px;
+}
+
+/* The sidebar user profile link */
+.sidebar a.user-profile {
+  padding: 25px 5px 10px 45%;
+  text-decoration: none;
+  color: #0b544e;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Dosis', sans-serif; font-weight: 700; font-size: 40px;
+}
+
+/* ------- ACCORDION  ------- */
+
+/* The sidebar accordion */
+.accordion {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 35px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* The accordion individual items */
+.accordion-item {
+  background-color: #0b544e;
+  margin: 35px 0;
+  border-radius: 15px;
+}
+
+/* The accordion item header */
+.accordion-item-header {
+  font-family: 'Open Sans', sans-serif; 
+  color:rgb(253, 253, 253);
+  padding: 40px;
+  min-height: 20px; /* edit this later on */
+  line-height: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.accordion-item-header:hover {
+  color:rgb(133, 167, 146);
+}
+
+/* Symbol on accordion item header when not active */
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+/* Symbol on accordion item header when active */
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+/* Accordion header icons */
+
+.accordion-item-header i {
+  position: absolute;
+  left: 50px;
+}
+
+.accordion-item-header i.goals {
+  font-size: 70px;
+  bottom: 15px;
+}
+
+.accordion-item-header i.daily {
+  font-size: 60px;
+  bottom: 20px;
+}
+
+.accordion-item-header i.time {
+  font-size: 70px;
+  bottom: 15px;
+}
+
+.accordion-item-header i.music {
+  font-size: 60px;
+  bottom: 20px;
+}
+
+.accordion-header-text {
+  font-size: 35px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Accordion header icons */
+
+/* Container of accordion item body */
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+/* Content of accordion item body */
+.accordion-item-body-content {
+  color:rgb(253, 253, 253);
+  padding: 20px;
+  line-height: 5px;
+}
+
+/* ---------- TIMER FUNCTION ------------- */
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: rgb(253, 253, 253, 0.8);
+  border-radius: 10px 10px 0 0;
+}
+
+/*timers*/
+
+.label {
+  padding: 60px 0;
+  font-family: "Dosis", sans-serif;
+  color: #0b544e;
+  align-self: center;
+  justify-self: center;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#work {
+  grid-area: 1 / 2 / 1 / 2;
+}
+#break {
+  grid-area: 1 / 4 / 1 / 4;
+}
+#cycles {
+  grid-area: 1 / 3 / 1 / 3;
+}
+
+.timer {
+  color: #0b544e;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  font-size: 30px;
+  font-family: "Dosis", sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#counter {
+  grid-area: 2 / 3 / 2 / 3;
+  color: rgb(133, 167, 146);
+}
+
+#work-timer {
+  grid-area: 2 / 2 / 2 / 2;
+}
+
+#break-timer {
+  grid-area: 2 / 4 / 2 / 4;
+}
+
+/*buttons*/
+
+.btn {
+  align-self: center;
+  justify-self: center;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #0b544e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  font-family: "Dosis", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #0f7970;
+}
+
+#start {
+  grid-area: 3 / 2 / 3 / 2;
+}
+
+#reset {
+  grid-area: 3 / 3 / 3 / 3;
+}
+
+#stop {
+  grid-area: 3 / 4 / 3 / 4;
+}
+
+.message-box{
+  font-family: "Dosis", sans-serif; font-size: 25px; font-weight: 600;
+  color: #0b544e;
+  padding: 5px 0 40px;
+  text-align: center;
+  position: relative;
+  background-color: rgb(253, 253, 253, 0.8);
+  margin: 0 auto 30px;
+  width: 90%;
+  border-radius: 0 0 10px 10px;  
+}
+
+/* ---------- TIMER FUNCTION ------------- */
+
+
+/* ------- MUSIC PLAYER FUNCTION  ------- */
+
+/* Music function box */
+.music-box {
+  background-color: rgb(253, 253, 253, 0.8);
+  width: 90%;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+}
+
+/* Music function box header */
+.music-box-header {
+  color: #0b544e;
+  text-align: center;
+  position: relative;
+  padding: 40px;
+  font-family: 'Dosis', sans-serif; font-weight: 600; font-size: 35px;
+}
+
+/* Music function box container */
+.music-box-cont {
+  color:#0b544e;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Music function individual icons */
+#musicIconOne {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#musicIconTwo {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#musicIconThree {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#musicIconFour {
+  width: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect over music buttons */
+#musicIconOne:hover {opacity: 0.8;}
+#musicIconTwo:hover {opacity: 0.8;}
+#musicIconThree:hover {opacity: 0.8;}
+#musicIconFour:hover {opacity: 0.8;}
+
+.music-control-cont {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------- SIDEBAR CLOSE BUTTON  ------- */
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-family: 'Dosis', sans-serif; font-weight: 500; font-size: 125px;
+  text-decoration: none;
+  color:#0b544e;
+  margin-left: 50px;
+  transition: 0.3s;
+}
+
+
+/* Hover effect on close button */
+.sidebar .closebtn:hover {
+  color: #0f7970;
+}
+
+/* Footer */
+.footer {
+  background-color: #0b544e;
+  font-family: 'Open Sans', sans-serif; font-size: 20px;
+  color:rgb(253, 253, 253);
+  padding: 8px;
+  text-align: center;
+}
+
+/* On smaller screens, where height is less than 450px, change style of sidebar (less padding and smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
