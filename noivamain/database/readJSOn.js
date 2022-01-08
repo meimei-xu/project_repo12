@@ -18,5 +18,5 @@ jsonReader("./noivamain/database/readJSON.json", (err, customer) => {
     console.log(err);
     return;
   }
-  console.log(customer.address); // => "Infinity Loop Drive"
+  console.log(customer.address); // will print to console "Infinity Loop Drive"
 });
