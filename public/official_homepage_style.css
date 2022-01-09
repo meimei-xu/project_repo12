@@ -10,7 +10,7 @@ html {
 /* The background image */
 .bg {
   /* The image used */
-  background-image: url(/images/homebackground.png);
+  background-image: url(/public/images/homebackground.png);
   z-index: -1;
 
   /* Full height */
