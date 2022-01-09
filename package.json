@@ -1,0 +1,28 @@
+{
+  "name": "grow.your.forest",
+  "version": "1.0.0",
+  "description": "this is study web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meimei-xu/project_repo12.git"
+  },
+  "keywords": [
+    "study",
+    "app",
+    "web",
+    "application"
+  ],
+  "author": "Ally Guo and Noiva Chiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meimei-xu/project_repo12/issues"
+  },
+  "homepage": "https://github.com/meimei-xu/project_repo12#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
