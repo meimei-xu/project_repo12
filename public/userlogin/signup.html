@@ -14,10 +14,10 @@
     <div class="form">
       <form class="signup-form">
         <h1>GROW YOUR FOREST</h1>
-        <input type="text" placeholder="Create Your Username" />
-        <input type="password" placeholder="Create Your Password" />
-        <input type="email" placeholder="Enter Your Email" />
-        <button>SIGN UP</button>
+        <input id="name" type="text" placeholder="Create Your Username" />
+        <input id="pw" type="password" placeholder="Create Your Password" />
+        <input id="mail" type="email" placeholder="Enter Your Email" />
+        <button id="signup_button">SIGN UP</button>
       </form>
     </div>
 
@@ -26,5 +26,35 @@
       <p>Have an Account?</p>
       <a href="/public/userlogin/login.html">Log in</a>
     </form>
+
+    <!-- displaying the saved object -->
+    <div id="theResult"><p></p></div>
+
+    <script>
+      let information = [];
+      //example{username:allyguo, password:12345, id:1jndf83}
+      const userInfo = (ev) => {
+        //ev is the click event
+        ev.preventDefault(); //stop the form from submitting, so the page will not refresh and data will not be lost
+        let info = {
+          id: Date.now(),
+          theirName: document.getElementById("name").value,
+          theirPass: document.getElementById("pw").value,
+          theirmail: document.getElementById("mail").value,
+        };
+        information.push(info);
+        document.querySelector("form").reset(); //reset the form
+
+        //displaying only
+        let display = document.querySelector("#theResult p");
+        display.textContent = "\n" + JSON.stringify(information, "\t", 2);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("signup_button")
+          .addEventListener("click", userInfo);
+      });
+    </script>
   </body>
 </html>
