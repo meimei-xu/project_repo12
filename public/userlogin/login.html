@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="login-page"></div>
+
     <div class="form">
       <form class="login-form">
         <h1 class="title">GROW YOUR FOREST</h1>
@@ -16,12 +17,40 @@
         <input id="pw" type="password" placeholder="Password" value=""/>
         <button id="login_button">LOG IN</button>
         <a class="message" href="/public/userlogin/forgotpass.html">Forgot Password?</a>
-      </form>
-      
+      </form>    
     </div>
+
+    <div id="theResult"><p></p></div>
+
     <div class="signup-block"></div>
     <form class="signup-form">
       <p class="note">Don't have an account?</p>
       <a class="signup" href="signup.html">Sign up</a>
+
+      <script>
+        let information = [];
+        //example{username:allyguo, password:12345, id:1jndf83}
+        const userInfo = (ev) =>{
+          //ev is the click event
+          ev.preventDefault(); //stop the form from submitting, so the page will not refresh and data will not be lost
+          let info ={
+            id: Date.now(),
+            theirName: document.getElementById('name').value,
+            theirPass: document.getElementById('pw').value
+          }
+          information.push(info);
+          document.querySelector('form').reset();//reset the form
+
+          //displaying only
+          let display = document.querySelector('#theResult p');
+          display.textContent = '\n' + JSON.stringify(information, '\t', 2);
+
+        }
+
+
+        document.addEventListener('DOMContentLoaded',()=>{
+          document.getElementById('login_button').addEventListener('click',userInfo)
+        })
+      </script>
   </body>
 </html>
