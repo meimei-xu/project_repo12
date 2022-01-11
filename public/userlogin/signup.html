@@ -55,6 +55,30 @@
           .getElementById("signup_button")
           .addEventListener("click", userInfo);
       });
+// ------------------------------------------------------------------------
+      document
+        .getElementById("signup_button")
+        .addEventListener("click", (event) => {
+          // const userData = 1;
+          // const options = {
+          //   method: "POST",
+          //   headers: {
+          //     "Content-Type": "application/json",
+          //   },
+          //   body: "hello",
+          // };
+          fetch("/api", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: {
+              lat: 45.32400664486258,
+              long: -75.93388939764168,
+              _id: "e2jHFnl1W6JMCHUn",
+            },
+          });
+        });
     </script>
   </body>
 </html>
