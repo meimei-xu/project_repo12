@@ -2,7 +2,10 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+const users = [];
+
 app.set("view-engine", "ejs");
+app.use(express.urlencoded({ extended: false }));
 
 //getting the sign up page html
 app.use("/public", express.static(path.join(__dirname, "public")));
@@ -14,12 +17,18 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { name: "ally" });
 });
 
+//login get and post
 app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
+app.post("/login", (req, res) => {});
 
+//signup get and post
 app.get("/signup", (req, res) => {
   res.render("signup.ejs");
+});
+app.post("/signup", (req, res) => {
+  console.log(req.body.name);
 });
 
 app.listen(3002, (err) => {

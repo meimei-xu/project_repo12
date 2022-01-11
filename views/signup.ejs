@@ -11,19 +11,37 @@
     <!--Signup block-->
     <div class="signup"></div>
     <div class="form">
-      <form class="signup-form">
+      <form action="/signup" method="POST" class="signup-form">
         <h1>GROW YOUR FOREST</h1>
-        <input id="name" type="text" placeholder="Create Your Username" />
-        <input id="pw" type="password" placeholder="Create Your Password" />
-        <input id="mail" type="email" placeholder="Enter Your Email" />
-        <button id="signup_button">SIGN UP</button>
+        <input
+          name="name"
+          id="name"
+          type="text"
+          placeholder="Create Your Username"
+          required
+        />
+        <input
+          name="pw"
+          id="pw"
+          type="password"
+          placeholder="Create Your Password"
+          required
+        />
+        <input
+          name="mail"
+          id="mail"
+          type="email"
+          placeholder="Enter Your Email"
+          required
+        />
+        <button type="submit" id="signup_button">SIGN UP</button>
       </form>
     </div>
 
     <!--Log-in block-->
     <form class="Login-block">
       <p>Have an Account?</p>
-      <a href="/public/userlogin/login.html">Log in</a>
+      <a href="/login">Log in</a>
     </form>
   </body>
 </html>
