@@ -2,10 +2,18 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-//getting the html
-app.use("/public", express.static(path.join(__dirname, "public")));
+app.set("view-engine", "ejs");
+//getting the sign up page html
+// app.use("/public", express.static(path.join(__dirname, "public")));
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "public", "userlogin", "signup.html"));
+// });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "userlogin", "signup.html"));
+  res.render("index.ejs", { name: "ally" });
+});
+
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
 });
 
 app.listen(3002, (err) => {
