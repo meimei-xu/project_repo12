@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="/public/userlogin/loginstyle.css" />
   </head>
   <body>
+    <% if(messages. error){ %> 
+      <%= messages.error  %> 
+      <% } %> 
     <div class="login-page"></div>
 
     <div class="form">
       <form action="/login" method="post" class="login-form">
         <h1 class="title">GROW YOUR FOREST</h1>
         <input name="name" id="name" type="text" placeholder="Username" value="" required/>
-        <input name="pw" id="pw" type="password" placeholder="Password" value="" required/>
+        <input name="password" id="pw" type="password" placeholder="Password" value="" required/>
         <button type="submit" id="login_button">LOG IN</button>
         <a class="message" href="/public/userlogin/forgotpass.html">Forgot Password?</a>
       </form>    
