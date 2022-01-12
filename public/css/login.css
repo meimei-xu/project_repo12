@@ -1,21 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Open+Sans&display=swap");
 
-/*background*/
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/loginbackground.png);
+    url(/public/media/images/loginbackground.png);
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
 
-/* Signup block */
-.signup {
+.login-page {
   width: 360px;
   padding: 5% 0 0;
   margin: auto;
 }
-/* Move block into transparent background*/
+
+/*the transparent background*/
 .form {
   border-radius: 15px;
   position: relative;
@@ -26,7 +25,7 @@ body {
   padding: 45px;
   text-align: center;
 }
-/*User info box*/
+
 .form input {
   border-radius: 40px;
   font-family: "Open sans", sans-serif;
@@ -39,9 +38,9 @@ body {
   box-sizing: border-box;
   font-size: 14px;
 }
-/* "Signup" button */
+
 .form button {
-  margin-bottom: -10px;
+  margin: auto;
   position: relative;
   border-radius: 40px;
   font-family: "Open sans", sans-serif;
@@ -59,38 +58,63 @@ body {
 .form button:hover {
   background-color: rgb(100, 145, 197);
 }
-/*title*/
-.form h1 {
+
+.message {
+  position: relative;
+  top: 20px;
+  font-family: "Open sans", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13;
+  cursor: pointer;
+  white-space: nowrap;
   color: rgb(40, 78, 121);
-  font-family: "Dosis", sans-serif;
+}
+.message:hover {
+  color: rgb(100, 145, 197);
 }
 
-/*Log in white background*/
-.Login-block {
+.title {
+  font-family: "Dosis", sans-serif;
+  color: rgb(40, 78, 121);
+}
+
+.signup-block {
+  width: 360px;
+  padding: 0px;
+  margin: auto;
+}
+.signup-form {
   border-radius: 15px;
   position: relative;
   z-index: l;
   background: rgba(255, 255, 255, 0.5);
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
+  padding: 40px;
 }
-/*paragraph*/
-.Login-block p {
-  color: rgb(40, 78, 121);
-  font-family: "Open-sans", sans-serif;
-  margin-bottom: -19px;
-  margin-right: 80px;
-}
-/*link*/
-.Login-block a {
-  color: rgb(40, 78, 121);
-  font-family: "Open-sans", sans-serif;
+
+.signup {
+  position: relative;
+  font-family: "Open sans", sans-serif;
   font-weight: bold;
   text-decoration: none;
-  margin-right: -140px;
+  cursor: pointer;
+  float: right;
+  bottom: 4.5px;
+  right: 60px;
+  color: rgb(40, 78, 121);
 }
-.Login-block a:hover {
+.signup:hover {
   color: rgb(100, 145, 197);
+}
+
+.note {
+  position: relative;
+  font-family: "Open sans", sans-serif;
+  cursor: pointer;
+  float: left;
+  bottom: 20px;
+  left: 60px;
+  color: rgb(40, 78, 121);
 }

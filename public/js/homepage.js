@@ -223,7 +223,7 @@ function playSongOne() {
     songOne.play();
 
     // Song one icon changes to pause
-    musicIconOne.src = "/images/pausebutton.png";
+    musicIconOne.src = "/public/media/images/pausebutton.png";
 
     // All other songs pause
     pauseSongTwo();
@@ -242,7 +242,7 @@ function playSongTwo() {
     songTwo.play();
 
     // Song two icon changes to pause
-    musicIconTwo.src = "/images/pausebutton.png";
+    musicIconTwo.src = "/public/media/images/pausebutton.png";
 
     // All other songs pause
     pauseSongOne();
@@ -261,7 +261,7 @@ function playSongThree() {
     songThree.play();
 
     // Song three icon changes to pause
-    musicIconThree.src = "/images/pausebutton.png";
+    musicIconThree.src = "/public/media/images/pausebutton.png";
 
     // All other songs pause
     pauseSongOne();
@@ -280,7 +280,7 @@ function playSongFour() {
     songFour.play();
 
     // Song four icon changes to pause
-    musicIconFour.src = "/images/pausebutton.png";
+    musicIconFour.src = "/public/media/images/pausebutton.png";
 
     // All other songs pause
     pauseSongOne();
@@ -296,20 +296,20 @@ function playSongFour() {
 
 function pauseSongOne() {
   songOne.pause();
-  musicIconOne.src = "/images/playbutton.png";
+  musicIconOne.src = "/public/media/images/playbutton.png";
 }
 
 function pauseSongTwo() {
   songTwo.pause();
-  musicIconTwo.src = "/images/playbutton.png";
+  musicIconTwo.src = "/public/media/images/playbutton.png";
 }
 
 function pauseSongThree() {
   songThree.pause();
-  musicIconThree.src = "/images/playbutton.png";
+  musicIconThree.src = "/public/media/images/playbutton.png";
 }
 
 function pauseSongFour() {
   songFour.pause();
-  musicIconFour.src = "/images/playbutton.png";
+  musicIconFour.src = "/public/media/images/playbutton.png";
 }

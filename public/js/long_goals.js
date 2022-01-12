@@ -146,13 +146,13 @@ function planttree() {
   var img3 = document.createElement("img");
 
   img1.setAttribute("class", "tree");
-  img1.src = "/images/tree1.png";
+  img1.src = "/public/media/images/tree1.png";
 
   img2.setAttribute("class", "tree");
-  img2.src = "/images/tree2.png";
+  img2.src = "/public/media/images/tree2.png";
 
   img3.setAttribute("class", "tree");
-  img3.src = "/images/tree3.png";
+  img3.src = "/public/media/images/tree3.png";
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
