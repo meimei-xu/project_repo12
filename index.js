@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { name: "ally" });
+  res.render("index.ejs", { name: req.user.name });
 });
 
 //login get and post
