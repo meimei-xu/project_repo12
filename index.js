@@ -1,13 +1,14 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const bcrypt = require("bcrypt");
 
 const users = [];
 
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 
-//getting the sign up page html
+//getting the static files
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public"));
@@ -27,8 +28,20 @@ app.post("/login", (req, res) => {});
 app.get("/signup", (req, res) => {
   res.render("signup.ejs");
 });
-app.post("/signup", (req, res) => {
-  console.log(req.body.name);
+app.post("/signup", async (req, res) => {
+  try {
+    const pass = await bcrypt.hash(req.body.pw, 10);
+    users.push({
+      id: Date.now().toString(),
+      name: req.body.name,
+      password: pass,
+      email: req.body.mail,
+    });
+    res.redirect("/login");
+  } catch {
+    res.redirect("/register");
+  }
+  console.log(users);
 });
 
 app.listen(3002, (err) => {
