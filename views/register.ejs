@@ -4,27 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grow Your Forest_Forgot Password</title>
-    <link rel="stylesheet" href="/public/css/register.css" />
+    <title>Grow Your Forest</title>
+    <link rel="stylesheet" href="/css/register.css" />
   </head>
 
   <body>
+
+    <!-- Background -->
+    <div class="bg"></div>
+
+    <!-- Logo -->
+    <img class="logo" src="/media/images/logo.png" alt="Logo"/>
+    
     <!--Signup block-->
-    <div class="signup"></div>
     <div class="form">
-      <form class="signup-form">
-        <h1 >GROW YOUR FOREST</h1>
-        <input type="text" placeholder="Create Your Username" />
-        <input type="password" placeholder="Create Your Password" />
-        <input type="email" placeholder="Enter Your Email" />
-        <button>SIGN UP</button>
+      <form method="POST" action="/users/register" class="signup-form">
+        <h1>GROW YOUR FOREST</h1>
+        <div id="form-group">
+          <input name="name" type="text" placeholder="Enter Your Name"/>
+        </div>
+        <div id="form-group">
+          <input name="email" type="email" placeholder="Enter Your Email"/>
+        </div>
+        <div id="form-group">
+          <input name="username" type="text" placeholder="Create Your Username"/>
+        </div>
+        <div id="form-group">
+          <input name="password" type="password" placeholder="Create Your Password"/>
+        </div>
+        <div id="form-group">
+          <input name="password2" type="password" placeholder="Confirm Your Password"/>
+        </div>
+        <input type="submit" value="REGISTER"/>
       </form>
     </div>
 
     <!--Log-in block-->
-    <form class="Login-block">
-      <p>Have an Account?</p>
-      <a href="login.html">Log in</a>
-    </form>
+    <div class="login-block">
+      <p class="note">Have an Account?</p>
+      <a class="login" href="/users/login">Login</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; growyourforest.com | Designed by Ally Guo & Noiva Chiu</p>
+    </div>
+
   </body>
 </html>

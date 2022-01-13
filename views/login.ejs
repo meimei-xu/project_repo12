@@ -4,23 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plant Your Tree</title>
-    <link rel="stylesheet" href="/public/css/login.css" />
+    <title>Grow Your Forest</title>
+    <link rel="stylesheet" href="/css/login.css"  type="text/css"/>
   </head>
   <body>
-    <div class="login-page"></div>
+
+    <!-- Background -->
+    <div class="bg"></div>
+
+    <!-- Logo -->
+    <img class="logo" src="/media/images/logo.png" alt="Logo"/>
+
     <div class="form">
-      <form class="login-form">
-        <h1 class="title">GROW YOUR FOREST</h1>
-        <input id="name" type="text" placeholder="Username" value=""/>
-        <input id="pw" type="password" placeholder="Password" value=""/>
-        <button id="login_button">LOG IN</button>
-      </form>
-      
+      <form method="POST" action="/users/login" class="login-form">
+        <h1>GROW YOUR FOREST</h1>
+        <div id="form-group">
+          <input name="username" type="text" placeholder="Enter Your Username"/>
+        </div>
+        <div id="form-group">
+          <input name="password" type="password" placeholder="Enter Your Password"/>
+        </div>
+        <input type="submit" value="LOGIN"/>
+      </form>  
     </div>
-    <div class="signup-block"></div>
-    <form class="signup-form">
+
+    <div class="signup-block">
       <p class="note">Don't have an account?</p>
-      <a class="signup" href="register.html">Sign up</a>
+      <a class="signup" href="/users/register">Register</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; growyourforest.com | Designed by Ally Guo & Noiva Chiu</p>
+    </div>
+
   </body>
 </html>
