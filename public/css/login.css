@@ -1,46 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Open+Sans&display=swap");
 
-body {
+/* body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/public/media/images/loginbackground.png);
+    url(/media/images/loginbackground.png);
   height: 100vh;
   background-size: cover;
   background-position: center;
+} */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
-.login-page {
-  width: 360px;
-  padding: 5% 0 0;
-  margin: auto;
+/* The background image */
+.bg {
+  /* The image used */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/media/images/loginbackground.png);
+
+  /* Behind other elements */
+  z-index: -1;
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/*the transparent background*/
+/* The logo placement and size */
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 110px;
+  height: 110px;
+}
+
 .form {
-  border-radius: 15px;
-  position: relative;
-  z-index: l;
-  background: rgba(255, 255, 255, 0.5);
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
+  margin: 0 auto;
   text-align: center;
+  width: 40%;
+  padding: 0;
+  margin: auto;
+  z-index: l;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
+/*title*/
+.form h1 {
+  color: rgb(40, 78, 121);
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  padding: 10px 0;
+}
+
+/*User info box*/
 .form input {
   border-radius: 40px;
   font-family: "Open sans", sans-serif;
   outline: 1;
   background: #f2f2f2;
-  width: 100%;
+  width: 80%;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
 }
-
-.form button {
-  margin: auto;
+/* "Signup" button */
+.form input[type=submit] {
+  margin: 10px 0 30px;
   position: relative;
   border-radius: 40px;
   font-family: "Open sans", sans-serif;
@@ -55,43 +95,25 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-.form button:hover {
+.form input[type=submit]:hover {
   background-color: rgb(100, 145, 197);
 }
 
-.message {
-  position: relative;
-  top: 20px;
-  font-family: "Open sans", sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 13;
-  cursor: pointer;
-  white-space: nowrap;
-  color: rgb(40, 78, 121);
-}
-.message:hover {
-  color: rgb(100, 145, 197);
-}
-
-.title {
-  font-family: "Dosis", sans-serif;
-  color: rgb(40, 78, 121);
-}
-
 .signup-block {
-  width: 360px;
-  padding: 0px;
-  margin: auto;
-}
-.signup-form {
   border-radius: 15px;
-  position: relative;
+  position: absolute;
   z-index: l;
   background: rgba(255, 255, 255, 0.5);
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 40px;
+  width: 40%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 120px;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup {
@@ -100,21 +122,39 @@ body {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-  float: right;
-  bottom: 4.5px;
-  right: 60px;
   color: rgb(40, 78, 121);
 }
 .signup:hover {
   color: rgb(100, 145, 197);
 }
 
+/*note label*/
 .note {
   position: relative;
   font-family: "Open sans", sans-serif;
-  cursor: pointer;
-  float: left;
-  bottom: 20px;
-  left: 60px;
+  margin-right: 10px;
   color: rgb(40, 78, 121);
+}
+
+/* Footer */
+.footer {
+  background-color: #0b544e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: rgb(253, 253, 253);
+  padding: 15px;
+  text-align: center;
+}
+
+/* alert messages */
+.alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success_msg {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }
