@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
+//use npm run devStart
 
 const express = require("express");
 const path = require("path");
@@ -40,7 +41,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { name: req.user.name });
+  res.render("index.ejs");
 });
 
 //login get and post
