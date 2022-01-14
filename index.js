@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("official_homepage.ejs");
 });
 
 //login get and post
