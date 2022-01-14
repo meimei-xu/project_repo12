@@ -17,6 +17,11 @@ const UserSchema = mongoose.Schema({
     password: {
       type: String,
       required: true
+    },
+    // TESTING TREES
+    tree: {
+      type: Number,
+      required: true
     }
 });
   

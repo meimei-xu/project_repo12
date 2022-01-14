@@ -177,15 +177,31 @@ html {
   text-align: center;
 }
 
-/* alert messages */
-.alert-error{
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+/* Alert Messages */
+.alert-danger {
+  color: #c5120f;
+  background-color: #fab7b7;
+  font-family: "Open sans", sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  width: 20%;
+  /* float: right; */
+  right: 0;
+  position: relative; 
+  top: 40px;
+  border-radius: 10px 0 0 10px;
+  margin: 0 0 20px auto;
 }
 
-.alert-success_msg{
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+.alert-success {
+  color: #1c971e;
+  background-color: #b2e79d;
+  font-family: "Open sans", sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  width: 20%;
+  right: 0;
+  position: absolute;
+  top: 40px;
+  border-radius: 10px 0 0 10px;
 }

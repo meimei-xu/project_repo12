@@ -8,7 +8,9 @@ let User = require('../models/user');
 
 // Register Form
 router.get('/register', function(req, res){
-    res.render('register');
+    res.render('register', {
+        errors: {}
+    });
 });
 
 // Register Process
@@ -19,6 +21,9 @@ router.post('/register', function(req, res){
     const username = req.body.username;
     const password = req.body.password;
     const password2 = req.body.password2;
+
+    //Testing Trees
+    let tree = 0;
     
     req.checkBody('name', 'Name is required').notEmpty();
     req.checkBody('email', 'Email is required').notEmpty();
@@ -32,14 +37,16 @@ router.post('/register', function(req, res){
 
     if (errors) {
         res.render('register', {
-        errors: errors
+            errors:errors
         });
+        // req.flash('danger', 'Entered Wrong things');
     } else {
         let newUser = new User({
-            name: req.body.name,
-            email: req.body.email,
-            username: req.body.username,
-            password: req.body.password
+            name: name,
+            email: email,
+            username: username,
+            password: password,
+            tree: tree
         });
 
         bcrypt.genSalt(10, function(err, salt){
@@ -53,7 +60,7 @@ router.post('/register', function(req, res){
                         console.log(err);
                         return;
                     } else {
-                        req.flash('success','You are now registered and can log in');
+                        req.flash('success','Registration Successful');
                         res.redirect('/users/login');
                     }
                 });
@@ -80,7 +87,7 @@ router.post('/login', function(req, res, next){
 // Logout
 router.get('/logout', function(req, res){
     req.logout();
-    req.flash('success', 'You are logged out');
+    req.flash('success', 'Loggout Successful');
     res.redirect('/');
 });
 
