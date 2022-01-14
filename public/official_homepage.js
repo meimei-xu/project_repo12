@@ -62,7 +62,7 @@ function confirmSignOut() {
 }
 
 function redirectfunction() {
-  window.location = "/public/userlogin/login.html";
+  window.location = "/login";
 }
 
 // When the user clicks anywhere outside of the modal, close it
