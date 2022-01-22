@@ -39,7 +39,7 @@ router.post('/register', function(req, res){
         res.render('register', {
             errors:errors
         });
-        // req.flash('danger', 'Entered Wrong things');
+        
     } else {
         let newUser = new User({
             name: name,

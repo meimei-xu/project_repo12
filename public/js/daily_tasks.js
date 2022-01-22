@@ -65,7 +65,7 @@ function add_to_do(toDo, id, done, trash) {
                 `;
     // Positions each to-do item one after the other
     const position = "beforeend";
-    list.insertAdjacentHTML(position, item); //可以使用appendchild直接插入dom，效率会更高
+    list.insertAdjacentHTML(position, item); 
 }
 
 function defReload(array, status){

@@ -86,7 +86,7 @@ app.get('*', function(req, res, next){
     next();
 });
 
-// Register Route
+// Login Route - First page users are directed to
 app.get('/', function(req, res){
     res.render('login');
 });

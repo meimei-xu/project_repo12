@@ -116,8 +116,8 @@ function completeNote(e) {
     if (doComplete == true) {
       
       // Plants a tree 
-      planttree();
-
+      plantTree();
+      
       // Deletes note 
       e.target.parentElement.remove(); // removing from DOM
       let divID = e.target.parentElement.dataset.id;
@@ -130,7 +130,7 @@ function completeNote(e) {
   }
 }
 //plant a tree function
-// function planttree() {
+// function plantTree() {
 //   var img = document.createElement("img");
 //   img.setAttribute("class", "tree");
 //   img.src = "/images/tree1.png";
@@ -139,7 +139,7 @@ function completeNote(e) {
 // }
 
 // Plant a tree function
-function planttree() {
+function plantTree() {
   var img;
   var img1 = document.createElement("img");
   var img2 = document.createElement("img");
