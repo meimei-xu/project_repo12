@@ -24,7 +24,12 @@
     <!-- Homepage JavaScript -->
     <script src="/js/homepage.js" defer></script>
   </head>
+
+<% if (user) { %>
+  <body onload="plantTrees()">
+<% } else { %>
   <body>
+<% } %>
 
     <!-- Background -->
     <div class="bg" id="background-mountain"></div>
@@ -67,7 +72,6 @@
            <!-- Display Username if there is an User -->
           <% if (user) { %>
             <p class="username" id="userName">Welcome -- <%= name %> --</p>
-            <p class="username" id="userName"><%= user_id %></p>
           <% } else { %>
             <p class="username" id="userName">-- Username-- </p>
           <% } %>
@@ -120,6 +124,7 @@
           <% if (user) { %>
             <script>
               let user_id = '<%- user_id %>'
+              let trees = '<%- tree %>'
             </script>
           <% } %>
 
@@ -127,8 +132,8 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
           <!-- long-term goals JS file -->
-          <script src="/js/long_goals.js"></script>
           <script src="/js/plant_trees.js"></script>
+          <script src="/js/long_goals.js"></script>
 
         </div>
 

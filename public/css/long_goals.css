@@ -126,6 +126,8 @@
   border-radius: 10px;
   font-family: "Dosis", sans-serif; font-weight: 500;
   transition: 0.2s;
+  text-decoration: none;
+  padding: 13px;
 }
 
 .note-item .btn2:hover {

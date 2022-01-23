@@ -91,8 +91,6 @@ app.get('/', function(req, res){
     res.render('login');
 });
 
-//req.user._id
-
 // Homepage Route
 app.get('/homepage', function(req, res){
     if(req.user){
@@ -102,7 +100,8 @@ app.get('/homepage', function(req, res){
             } else {
                 res.render('homepage', {
                     name: user.name,
-                    user_id: user.id
+                    user_id: user.id,
+                    tree: user.tree
                 });
             }
         });     
@@ -118,29 +117,29 @@ app.put('/homepage/:id', function(req,res){
     
     let data = req.body; 
 
-    User.findOneAndUpdate(query, {$set: data}, function(err, result){
+    User.findById(query, function(err, user){
         if(err){
             console.log(err);
+        } else {
+            let userTree = parseInt(user.tree);
+            let newData = parseInt(data["tree"]);
+
+            console.log("user tree:" + userTree);
+            console.log("data:" + newData);
+
+            let addTree = userTree + newData
+            console.log("user's new trees:" + addTree);
+
+            User.findOneAndUpdate(query, {$set: {"tree": addTree}}, function(err, result){
+                if(err){
+                    console.log(err);
+                }
+                res.send('Tree planted successfully');
+            });
+    
         }
-        res.send('Tree updated successfully');
-    });
+    });   
 });
-
-// User.findById(query, function(err, user){
-//     if(err){
-//         console.log(err);
-//     } else {
-//         let userTree = user.tree
-//         console.log("user tree:" + userTree);
-//         return userTree;
-//     }
-// });   
-
-// console.log(data);
-// console.log(userTree);
-
-// let addTree = data + userTree
-
 
 // Route Files
 let users = require('./routes/users');

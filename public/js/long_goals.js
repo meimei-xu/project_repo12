@@ -73,16 +73,13 @@ function createNote(noteItem) {
         <span><i class = "fa fa-trash"></i></span>
         Remove
         </button>
-        <a href='#' class="addTree btn2" user-id=${user_id}>
+        <a href="javascript:;" class="addTree btn2" user-id=${user_id}>
           <span><i class="fa fa-check-square"></i></span>
          Complete
         </a>
     `;
   noteListDiv.appendChild(div);
 }
-
-{/* <button type = "button" class = "btn2 checkbox-note-btn"></button> */}
-// checkbox-note-btn
 
 // display all the notes form the local storage
 function displayNotes() {
@@ -133,46 +130,45 @@ function deleteNote(e) {
 //     }
 //   }
 // }
-//plant a tree function
-// function plantTree() {
-//   var img = document.createElement("img");
-//   img.setAttribute("class", "tree");
-//   img.src = "/images/tree1.png";
-//   var background = document.getElementById("background-mountain");
-//   background.appendChild(img);
-// }
 
 // Plant a tree function
-function plantTree() {
-  var img;
-  var img1 = document.createElement("img");
-  var img2 = document.createElement("img");
-  var img3 = document.createElement("img");
+function plantTrees() {
 
-  img1.setAttribute("class", "tree");
-  img1.src = "/media/images/tree1.png";
+  let plantTree = parseInt(trees);
+  console.log(plantTree);
 
-  img2.setAttribute("class", "tree");
-  img2.src = "/media/images/tree2.png";
+  for(var i = 0; i < plantTree; i++) {
 
-  img3.setAttribute("class", "tree");
-  img3.src = "/media/images/tree3.png";
+    let img;
+    let img1 = document.createElement("img");
+    let img2 = document.createElement("img");
+    let img3 = document.createElement("img");
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+    img1.setAttribute("class", "tree");
+    img1.src = "/media/images/tree1.png";
+
+    img2.setAttribute("class", "tree");
+    img2.src = "/media/images/tree2.png";
+
+    img3.setAttribute("class", "tree");
+    img3.src = "/media/images/tree3.png";
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    let randomNum = getRandomInt(3);
+    if (randomNum == 0) {
+      img = img1;
+    } else if (randomNum == 1) {
+      img = img2;
+    } else {
+      img = img3;
+    }
+
+    let background = document.getElementById("background-mountain");
+    background.appendChild(img);
   }
-
-  var randomNum = getRandomInt(3);
-  if (randomNum == 0) {
-    img = img1;
-  } else if (randomNum == 1) {
-    img = img2;
-  } else {
-    img = img3;
-  }
-
-  var background = document.getElementById("background-mountain");
-  background.appendChild(img);
 }
 
 // delete all notes
