@@ -13,10 +13,12 @@ function eventListeners() {
   // Add an eventlistner that when content is loaded, trees will display
 
   document.getElementById("add-note-btn").addEventListener("click", addNewNote);
-  
+
   noteListDiv.addEventListener("click", deleteNote);
-  
-  document.getElementById("delete-all-btn").addEventListener("click", deleteAllNotes);
+
+  document
+    .getElementById("delete-all-btn")
+    .addEventListener("click", deleteAllNotes);
 
   noteListDiv.addEventListener("click", completeNote);
 }
@@ -109,16 +111,18 @@ function deleteNote(e) {
   }
 }
 
+let treeCount = 0;
+
 // complete a note
 function completeNote(e) {
   if (e.target.classList.contains("checkbox-note-btn")) {
     var doComplete = confirm("Are you sure you want to complete goals?");
     if (doComplete == true) {
-      
-      // Plants a tree 
+      // Plants a tree
       planttree();
+      localStorage.setItem("trees");
 
-      // Deletes note 
+      // Deletes note
       e.target.parentElement.remove(); // removing from DOM
       let divID = e.target.parentElement.dataset.id;
       let notes = getDataFromStorage();
