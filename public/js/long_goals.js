@@ -18,7 +18,7 @@ function eventListeners() {
   
   document.getElementById("delete-all-btn").addEventListener("click", deleteAllNotes);
 
-  noteListDiv.addEventListener("click", completeNote);
+  // noteListDiv.addEventListener("click", completeNote);
 }
 
 eventListeners();
@@ -73,13 +73,16 @@ function createNote(noteItem) {
         <span><i class = "fa fa-trash"></i></span>
         Remove
         </button>
-        <button type = "button" class = "btn2 checkbox-note-btn">
-        <span><i class="fa fa-check-square"></i></span>
-        Complete
-        </button>
+        <a href='#' class="addTree btn2" user-id=${user_id}>
+          <span><i class="fa fa-check-square"></i></span>
+         Complete
+        </a>
     `;
   noteListDiv.appendChild(div);
 }
+
+{/* <button type = "button" class = "btn2 checkbox-note-btn"></button> */}
+// checkbox-note-btn
 
 // display all the notes form the local storage
 function displayNotes() {
@@ -109,26 +112,27 @@ function deleteNote(e) {
   }
 }
 
-// complete a note
-function completeNote(e) {
-  if (e.target.classList.contains("checkbox-note-btn")) {
-    var doComplete = confirm("Are you sure you want to complete goals?");
-    if (doComplete == true) {
+// // complete a note
+// function completeNote(e) {
+//   if (e.target.classList.contains("checkbox-note-btn")) {
+//     var doComplete = confirm("Are you sure you want to complete goals?");
+//     if (doComplete == true) {
       
-      // Plants a tree 
-      plantTree();
-      
-      // Deletes note 
-      e.target.parentElement.remove(); // removing from DOM
-      let divID = e.target.parentElement.dataset.id;
-      let notes = getDataFromStorage();
-      let newNotesList = notes.filter((item) => {
-        return item.id !== parseInt(divID);
-      });
-      localStorage.setItem("notes", JSON.stringify(newNotesList));
-    }
-  }
-}
+//       // Deletes note 
+//       e.target.parentElement.remove(); // removing from DOM
+//       let divID = e.target.parentElement.dataset.id;
+//       let notes = getDataFromStorage();
+//       let newNotesList = notes.filter((item) => {
+//         return item.id !== parseInt(divID);
+//       });
+//       localStorage.setItem("notes", JSON.stringify(newNotesList));
+
+//       // Plants a tree 
+//       plantTree();
+
+//     }
+//   }
+// }
 //plant a tree function
 // function plantTree() {
 //   var img = document.createElement("img");

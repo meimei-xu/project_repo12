@@ -91,15 +91,18 @@ app.get('/', function(req, res){
     res.render('login');
 });
 
+//req.user._id
+
 // Homepage Route
 app.get('/homepage', function(req, res){
     if(req.user){
-        User.findById(req.user._id, function(err, user){
+        User.findById(req.user.id, function(err, user){
             if(err){
                 console.log(err);
             } else {
                 res.render('homepage', {
-                    name: user.name
+                    name: user.name,
+                    user_id: user.id
                 });
             }
         });     
@@ -107,6 +110,37 @@ app.get('/homepage', function(req, res){
         res.render('homepage');
     }
 });
+
+// Updating User Trees
+app.put('/homepage/:id', function(req,res){
+    
+    let query = {_id: req.params.id}
+    
+    let data = req.body; 
+
+    User.findOneAndUpdate(query, {$set: data}, function(err, result){
+        if(err){
+            console.log(err);
+        }
+        res.send('Tree updated successfully');
+    });
+});
+
+// User.findById(query, function(err, user){
+//     if(err){
+//         console.log(err);
+//     } else {
+//         let userTree = user.tree
+//         console.log("user tree:" + userTree);
+//         return userTree;
+//     }
+// });   
+
+// console.log(data);
+// console.log(userTree);
+
+// let addTree = data + userTree
+
 
 // Route Files
 let users = require('./routes/users');
