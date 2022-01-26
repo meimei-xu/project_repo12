@@ -148,7 +148,7 @@ function timer() {
     // Change timer message
     timerMess.innerText = "Break Time";
 
-    if (bs.innerText == 15 && bm.innerText == 0) {
+    if (bs.innerText == 04 && bm.innerText == 00) {
       workRingtone.play();
     }
 
