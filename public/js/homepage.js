@@ -1,3 +1,5 @@
+// This file codes the overall dynamic front-end of the homepage
+
 // <-------------------SIDEBAR FUNCTION------------------>
 
 // Opens sidebar by setting its wideth to 60% of the screen

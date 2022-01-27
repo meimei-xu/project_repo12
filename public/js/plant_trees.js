@@ -1,3 +1,5 @@
+// This file increases the number of trees user plant when they complete a goal in their database
+
 $(document).ready(function(){
     $('.addTree').on('click', function(e){
 

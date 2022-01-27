@@ -1,3 +1,6 @@
+/* This file constructs a User schema in order to create a user 
+in our database, listing all the required fields for each user */
+
 const mongoose = require('mongoose');
 
 // User Schema
@@ -18,7 +21,6 @@ const UserSchema = mongoose.Schema({
       type: String,
       required: true
     },
-    // TESTING TREES
     tree: {
       type: Number,
       required: true

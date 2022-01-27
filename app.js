@@ -1,3 +1,6 @@
+// This file is the main app of our project
+
+// Requiring node modules
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');

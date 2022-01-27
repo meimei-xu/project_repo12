@@ -1,3 +1,5 @@
+// This file codes the dynamic front-end of the long-term goals function
+
 const noteListDiv = document.querySelector(".note-list");
 let noteID = 1;
 function Note(id, title, content) {
@@ -108,28 +110,6 @@ function deleteNote(e) {
     localStorage.setItem("notes", JSON.stringify(newNotesList));
   }
 }
-
-// // complete a note
-// function completeNote(e) {
-//   if (e.target.classList.contains("checkbox-note-btn")) {
-//     var doComplete = confirm("Are you sure you want to complete goals?");
-//     if (doComplete == true) {
-      
-//       // Deletes note 
-//       e.target.parentElement.remove(); // removing from DOM
-//       let divID = e.target.parentElement.dataset.id;
-//       let notes = getDataFromStorage();
-//       let newNotesList = notes.filter((item) => {
-//         return item.id !== parseInt(divID);
-//       });
-//       localStorage.setItem("notes", JSON.stringify(newNotesList));
-
-//       // Plants a tree 
-//       plantTree();
-
-//     }
-//   }
-// }
 
 // Plant a tree function
 function plantTrees() {

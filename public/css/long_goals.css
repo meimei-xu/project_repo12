@@ -1,3 +1,5 @@
+/* Style sheet for the long-term goals function*/
+
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&family=Open+Sans:wght@500&display=swap");
 
 .note-box {
@@ -168,7 +170,7 @@
   }
 }
 
-/*** alert ***/
+/*** alert messages ***/
 .warning {
   border-color: rgba(255, 111, 89, 0.8) !important;
 }

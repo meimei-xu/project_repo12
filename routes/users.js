@@ -1,3 +1,5 @@
+// This file processes all the HTTP requests users make, such as when they create an account, log in, log out
+
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');

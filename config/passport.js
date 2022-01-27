@@ -1,3 +1,5 @@
+// This file authenticates the user login system using the passport library
+
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
 const config = require('../config/database');

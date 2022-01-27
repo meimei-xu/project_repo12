@@ -1,3 +1,5 @@
+// This file codes the dynamic front-end of the daily tasks function
+
 // Accessing all the necessary elements from HTML document and assigning them to a variable
 const dateElement = document.getElementById('date');
 const clear = document.querySelector('.clear');
