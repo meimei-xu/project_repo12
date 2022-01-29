@@ -9,30 +9,43 @@ Our application aims to provide student with an all in one place study tool and 
 Our application includes:
 - Long-term goal feature
 - Daily task feature
-- Timer
+- Pomodoro Timer
 - Study Music Player
 
 
 ## How to use it
-> If the user merely want to see the core functions of our application, user could clone the main branch of the project and run it with a live server. 
+> If users merely want to see the core functions of our application, users can clone the main branch of the project and run it with a live server or a PHP server. 
 ``` 
-https://github.com/meimei-xu/project_repo12.git 
+https://github.com/meimei-xu/project_repo12
 ```
 
-> If the user want to view the user account system of our applcation, user need to first clone the **final branch** 
+> If users want to view the user account system of our applcation, users need to clone the **final branch** 
 ``` 
-https://github.com/meimei-xu/project_repo12.git 
+https://github.com/meimei-xu/project_repo12/tree/final-branch
 ```
-> After that user should go to the project folder and instal several dependencies. To do this, user need to run:
+> After that, users should go to the project folder and install several dependencies which include:
+> - Express
+> - Express-Messages
+> - Express-Session
+> - Express-Validator (version 5.3.1)
+> - Connect-Flash
+> - Mongoose
+> - Passport
+> - Body-Parser
+> - Bcrypt
+> - nodemon (as a global variable)
+> - EJS
+> 
+> To do this, user need to run:
 ```
-npm install bcryptjs body-parser connect-flash ejs express express-messages express-session express-validator mongoose passport passport-local pug
+$npm install bcryptjs body-parser connect-flash ejs express express-messages express-session express-validator @5.3.1 mongoose passport passport-local nodemon -g
   
 ```
 > To start the server, user need to run 
 ``` 
-npm start
+$npm nodemon
 ```
-> User should see the following:
+> Users should see the following in their terminal:
 ```
 Server started on port 3000...
 Connected to MongoDB
@@ -40,4 +53,4 @@ Connected to MongoDB
 > Finally by going on to localhost:3000, user could use our web application properly! Enjoy your tour!
 
 ## Other information
-The Project is still under development. Some features are not completed and the code might have some errors. Please use it at your own risk!
+The Project is still under development. Some features are not completed and the code might have some errors. Also note that because our MongoDB Atlas database is private, users will not be able to connect to, in which they will need to create their own cluster/database and add their connection string to their code. Please use it at your own risk!
