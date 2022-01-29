@@ -35,6 +35,7 @@ https://github.com/meimei-xu/project_repo12/tree/final-branch
 > - Bcrypt
 > - nodemon (as a global variable)
 > - EJS
+> 
 > To do this, user need to run:
 ```
 npm install bcryptjs body-parser connect-flash ejs express express-messages express-session express-validator @5.3.1 mongoose passport passport-local nodemon -g
