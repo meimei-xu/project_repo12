@@ -38,14 +38,14 @@ https://github.com/meimei-xu/project_repo12/tree/final-branch
 > 
 > To do this, user need to run:
 ```
-npm install bcryptjs body-parser connect-flash ejs express express-messages express-session express-validator @5.3.1 mongoose passport passport-local nodemon -g
+$npm install bcryptjs body-parser connect-flash ejs express express-messages express-session express-validator @5.3.1 mongoose passport passport-local nodemon -g
   
 ```
 > To start the server, user need to run 
 ``` 
-nodemon
+$npm nodemon
 ```
-> User should see the following:
+> Users should see the following in their terminal:
 ```
 Server started on port 3000...
 Connected to MongoDB
