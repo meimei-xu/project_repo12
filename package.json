@@ -1,0 +1,35 @@
+{
+  "name": "project_repo12",
+  "version": "1.0.0",
+  "description": "Our application aims to provide student with an all in one place study tool and allow students to study efficiently. The target audience of our application are students in elementry school, high school, and college.",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^5.3.0",
+    "mongoose": "^6.5.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meimei-xu/project_repo12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meimei-xu/project_repo12/issues"
+  },
+  "homepage": "https://github.com/meimei-xu/project_repo12#readme"
+}
